@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources>
-    <string name="app_name">JonnXorIs</string>
-    <string name="title_activity_main">JonnXorIs</string>
-    <string name="package_name">is.jonnxor</string>
-    <string name="custom_url_scheme">is.jonnxor</string>
-</resources>

@@ -1,6 +1,5 @@
 {
-  "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "npmScope": "jonnxor-is",
+  "npmScope": "jonnxor",
   "affected": {
     "defaultBase": "master"
   },
@@ -15,31 +14,23 @@
     "default": {
       "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"],
-        "accessToken": "MWUwYjY0MGItNDI0YS00YmE5LWEyODctNTgyYmQ5OTE0OTZlfHJlYWQtd3JpdGU="
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e"
+        ],
+        "accessToken": "MDRiMjhhZjgtMDkzMC00ZTI2LWE1MTEtMTc0MTc2NmFmZGU3fHJlYWQtd3JpdGU="
       }
     }
   },
-  "targetDefaults": {
-    "build": {
-      "dependsOn": ["^build"]
-    }
-  },
-  "generators": {
-    "@nrwl/react": {
-      "application": {
-        "style": "@emotion/styled",
-        "linter": "eslint",
-        "babel": true
-      },
-      "component": {
-        "style": "@emotion/styled"
-      },
-      "library": {
-        "style": "@emotion/styled",
-        "linter": "eslint"
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
       }
-    }
+    ]
   },
-  "defaultProject": "client-jonnxor.is"
+  "projects": {}
 }

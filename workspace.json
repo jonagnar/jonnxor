@@ -1,10 +1,7 @@
 {
-  "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
-  "projects": {
-    "api-gateway.jonnxor.is": "apps/api/gateway.jonnxor.is",
-    "api-service.jonnxor.is": "apps/api/service.jonnxor.is",
-    "client-jonnxor.is": "apps/client/jonnxor.is",
-    "client-jonnxor.is-e2e": "apps/client/jonnxor.is-e2e"
+  "projects": {},
+  "cli": {
+    "defaultCollection": "@nrwl/workspace"
   }
 }
