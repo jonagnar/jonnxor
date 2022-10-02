@@ -1,7 +1,9 @@
 {
   "version": 2,
-  "projects": {},
-  "cli": {
-    "defaultCollection": "@nrwl/workspace"
+  "projects": {
+    "api-gateway": "apps/api/gateway",
+    "api-service": "apps/api/service",
+    "client-jonnxor": "apps/client/jonnxor",
+    "client-jonnxor-e2e": "apps/client/jonnxor-e2e"
   }
 }
