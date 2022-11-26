@@ -1,7 +1,9 @@
 {
   "version": 2,
-  "projects": {},
-  "cli": {
-    "defaultCollection": "@nrwl/workspace"
-  }
+  "projects": {
+    "clients-app": "apps/clients/app",
+    "servers-api": "apps/servers/api",
+    "tests-e2e": "apps/tests/e2e"
+  },
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json"
 }
