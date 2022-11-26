@@ -1,0 +1,116 @@
+{
+  "name": "client-jonnxor",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/client/jonnxor/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/client/jonnxor",
+        "index": "apps/client/jonnxor/src/index.html",
+        "baseHref": "/",
+        "main": "apps/client/jonnxor/src/main.tsx",
+        "polyfills": "apps/client/jonnxor/src/polyfills.ts",
+        "tsConfig": "apps/client/jonnxor/tsconfig.app.json",
+        "assets": [
+          "apps/client/jonnxor/src/favicon.ico",
+          "apps/client/jonnxor/src/assets"
+        ],
+        "styles": [],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack"
+      },
+      "configurations": {
+        "development": {
+          "extractLicenses": false,
+          "optimization": false,
+          "sourceMap": true,
+          "vendorChunk": true
+        },
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/client/jonnxor/src/environments/environment.ts",
+              "with": "apps/client/jonnxor/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/webpack:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "client-jonnxor:build",
+        "hmr": true,
+        "proxyConfig": "apps/client/jonnxor/proxy.conf.json"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "client-jonnxor:build:development"
+        },
+        "production": {
+          "buildTarget": "client-jonnxor:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/client/jonnxor/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/client/jonnxor"],
+      "options": {
+        "jestConfig": "apps/client/jonnxor/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "storybook": {
+      "executor": "@nrwl/storybook:storybook",
+      "options": {
+        "uiFramework": "@storybook/react",
+        "port": 4400,
+        "config": {
+          "configFolder": "apps/client/jonnxor/.storybook"
+        }
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@nrwl/storybook:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "uiFramework": "@storybook/react",
+        "outputPath": "dist/storybook/client-jonnxor",
+        "config": {
+          "configFolder": "apps/client/jonnxor/.storybook"
+        }
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    }
+  },
+  "tags": ["client"]
+}
