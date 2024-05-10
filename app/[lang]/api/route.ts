@@ -1,4 +1,4 @@
-import { Locale } from "@/app/[lang]/dictionary";
+import { Locale } from "@lib/dictionary";
 
 export async function GET(
   request: Request,

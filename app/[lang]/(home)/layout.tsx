@@ -1,4 +1,4 @@
-import { Footer } from "@/app/components/footer";
+import { Footer } from "@components/footer";
 
 type Props = Readonly<{
   children: React.ReactNode;

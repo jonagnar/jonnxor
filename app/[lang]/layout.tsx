@@ -1,25 +1,24 @@
-import React from "react";
 import type { Metadata } from "next";
 
 import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 import { Inter } from "next/font/google";
 
-import { type Locale, getDictionary } from "./dictionary";
-import { DictionaryProvider } from "../components/dictionary-provider";
-import { LOCALES } from "@/app/lib/constants";
+import { type Locale, getDictionary } from "@lib/dictionary";
+import { DictionaryProvider } from "@components/dictionary-provider";
+import { LOCALES } from "@lib/constants";
 
 // Import styles of packages that you've installed.
 // All packages except `@mantine/hooks` require styles imports
 import "@mantine/core/styles.css";
 import "@mantine/dates/styles.css";
 import "@mantine/charts/styles.css";
-import "@mantine/notifications/styles.css";
-import "@mantine/code-highlight/styles.css";
 import "@mantine/tiptap/styles.css";
 import "@mantine/dropzone/styles.css";
 import "@mantine/carousel/styles.css";
 import "@mantine/spotlight/styles.css";
 import "@mantine/nprogress/styles.css";
+import "@mantine/notifications/styles.css";
+import "@mantine/code-highlight/styles.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
