@@ -8,7 +8,10 @@ export default function HomeLayout({ children }: Props) {
   return (
     <section>
       {/* Include shared UI here e.g. a header or sidebar */}
-      <main>{children}</main>
+      <nav></nav>
+
+      {children}
+
       <Footer />
     </section>
   );
