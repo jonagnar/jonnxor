@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 import { Inter } from "next/font/google";
 
-import { type Locale, getDictionary } from "./dictionaries";
+import { type Locale, getDictionary } from "./dictionary";
 import { DictionaryProvider } from "../components/dictionary-provider";
 import { LOCALES } from "@/app/lib/constants";
 

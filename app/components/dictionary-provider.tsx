@@ -2,7 +2,7 @@
 
 import { createContext, useContext } from "react";
 
-import { getDictionary } from "@/app/[lang]/dictionaries";
+import { getDictionary } from "@/app/[lang]/dictionary";
 
 type Dictionary = Awaited<ReturnType<typeof getDictionary>>;
 
