@@ -1,0 +1,15 @@
+import { Footer } from "@/app/components/footer";
+
+type Props = Readonly<{
+  children: React.ReactNode;
+}>;
+
+export default function HomeLayout({ children }: Props) {
+  return (
+    <section>
+      {/* Include shared UI here e.g. a header or sidebar */}
+      <main>{children}</main>
+      <Footer />
+    </section>
+  );
+}
