@@ -1,7 +1,6 @@
 "use client";
 
 import { createContext, useContext } from "react";
-
 import { getDictionary } from "@lib/dictionary";
 
 type Dictionary = Awaited<ReturnType<typeof getDictionary>>;

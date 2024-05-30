@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-
 import { LOCALES, getLocale } from "@lib/constants";
 
 export function middleware(request: NextRequest) {
