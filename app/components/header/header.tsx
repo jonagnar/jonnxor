@@ -1,102 +1,55 @@
-import {
-  HoverCard,
-  Group,
-  Button,
-  Text,
-  SimpleGrid,
-  Anchor,
-  Divider,
-  Center,
-  Box,
-  Burger,
-  rem,
-  useMantineTheme,
-} from "@mantine/core";
+"use client";
+
+import { useState } from "react";
 import { MantineLogo } from "@mantinex/mantine-logo";
-import { IconChevronDown } from "@tabler/icons-react";
+import { Container, Group, Burger, type MantineSize } from "@mantine/core";
+
 import classes from "./header.module.css";
 
-export type Props = {
-  drawerOpened: boolean;
-  toggleDrawer: () => void;
-  links: React.ReactNode[];
-};
+const links = [
+  { link: "/learn", label: "Learn" },
+  { link: "/about", label: "Features" },
+  { link: "/pricing", label: "Pricing" },
+  { link: "/community", label: "Community" },
+];
 
-export function Header({ drawerOpened, toggleDrawer, links }: Props) {
-  const theme = useMantineTheme();
+type Props = Readonly<{
+  opened: boolean;
+  toggle: () => void;
+  breakpoint: (string & {}) | MantineSize | undefined;
+}>;
+
+export function Header({ opened, toggle, breakpoint }: Props) {
+  const [active, setActive] = useState(links[0].link);
+
+  const items = links.map((link) => (
+    <a
+      key={link.label}
+      href={link.link}
+      className={classes.link}
+      data-active={active === link.link || undefined}
+      onClick={(event) => {
+        event.preventDefault();
+        setActive(link.link);
+      }}
+    >
+      {link.label}
+    </a>
+  ));
 
   return (
-    <Group justify="space-between" h="100%">
-      <MantineLogo size={30} />
-
-      <Group h="100%" gap={0} visibleFrom="sm">
-        <a href="#" className={classes.link}>
-          Home
-        </a>
-        <HoverCard
-          width={600}
-          position="bottom"
-          radius="md"
-          shadow="md"
-          withinPortal
-        >
-          <HoverCard.Target>
-            <a href="#" className={classes.link}>
-              <Center inline>
-                <Box component="span" mr={5}>
-                  Features
-                </Box>
-                <IconChevronDown
-                  style={{ width: rem(16), height: rem(16) }}
-                  color={theme.colors.blue[6]}
-                />
-              </Center>
-            </a>
-          </HoverCard.Target>
-
-          <HoverCard.Dropdown style={{ overflow: "hidden" }}>
-            <Group justify="space-between" px="md">
-              <Text fw={500}>Features</Text>
-              <Anchor href="#" fz="xs">
-                View all
-              </Anchor>
-            </Group>
-
-            <Divider my="sm" />
-
-            <SimpleGrid cols={2} spacing={0}>
-              {links}
-            </SimpleGrid>
-
-            <div className={classes.dropdownFooter}>
-              <Group justify="space-between">
-                <div>
-                  <Text fw={500} fz="sm">
-                    Get started
-                  </Text>
-                  <Text size="xs" c="dimmed">
-                    Their food sources have decreased, and their numbers
-                  </Text>
-                </div>
-                <Button variant="default">Get started</Button>
-              </Group>
-            </div>
-          </HoverCard.Dropdown>
-        </HoverCard>
-        <a href="#" className={classes.link}>
-          Learn
-        </a>
-        <a href="#" className={classes.link}>
-          Academy
-        </a>
+    <Container size="md" className={classes.inner}>
+      <MantineLogo size={28} />
+      <Group gap={5} visibleFrom="xs">
+        {items}
       </Group>
 
-      <Group visibleFrom="sm">
-        <Button variant="default">Log in</Button>
-        <Button>Sign up</Button>
-      </Group>
-
-      <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />
-    </Group>
+      <Burger
+        size={breakpoint}
+        opened={opened}
+        onClick={toggle}
+        hiddenFrom={breakpoint}
+      />
+    </Container>
   );
 }

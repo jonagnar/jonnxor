@@ -9,9 +9,9 @@ import { Inter } from "next/font/google";
 
 import { LOCALES } from "@lib/constants";
 import { type Locale, getDictionary } from "@lib/dictionary";
-import { DictionaryProvider } from "@components/dictionary-provider";
 
 import { theme } from "./theme";
+import { DictionaryProvider } from "./dictionary-provider";
 
 // Import styles of packages that you've installed.
 // All packages except `@mantine/hooks` require styles imports
