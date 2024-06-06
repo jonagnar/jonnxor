@@ -39,10 +39,10 @@ export function Layout({ children }: Props) {
       }}
       padding="md"
     >
-      <AppShellHeader>
+      <AppShellHeader className="hidden-print">
         <Header opened={opened} toggle={toggle} breakpoint={breakpoint} />
       </AppShellHeader>
-      <AppShellNavbar>
+      <AppShellNavbar className="hidden-print">
         <Navbar />
       </AppShellNavbar>
       <AppShellMain pt={`calc(${rem(60)} + var(--mantine-spacing-md))`}>

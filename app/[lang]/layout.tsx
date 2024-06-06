@@ -26,7 +26,7 @@ import "@mantine/nprogress/styles.css";
 import "@mantine/notifications/styles.css";
 import "@mantine/code-highlight/styles.css";
 
-import classes from "./layout.module.css";
+import "./global.css";
 
 const inter = Inter({ subsets: ["latin"] });
 const defaultColorScheme: MantineColorScheme = "light";
