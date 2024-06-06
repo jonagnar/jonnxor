@@ -2,9 +2,19 @@
 
 import { useState } from "react";
 import { MantineLogo } from "@mantinex/mantine-logo";
-import { Container, Group, Burger, type MantineSize } from "@mantine/core";
+import cx from "clsx";
+import {
+  Container,
+  Group,
+  Burger,
+  type MantineSize,
+  ActionIcon,
+  useComputedColorScheme,
+  useMantineColorScheme,
+} from "@mantine/core";
 
 import classes from "./header.module.css";
+import { IconMoon, IconSun } from "@tabler/icons-react";
 
 const links = [
   { link: "/learn", label: "Learn" },
@@ -20,6 +30,10 @@ type Props = Readonly<{
 }>;
 
 export function Header({ opened, toggle, breakpoint }: Props) {
+  const { setColorScheme } = useMantineColorScheme();
+  const computedColorScheme = useComputedColorScheme("light", {
+    getInitialValueInEffect: true,
+  });
   const [active, setActive] = useState(links[0].link);
 
   const items = links.map((link) => (
@@ -40,16 +54,30 @@ export function Header({ opened, toggle, breakpoint }: Props) {
   return (
     <Container size="md" className={classes.inner}>
       <MantineLogo size={28} />
-      <Group gap={5} visibleFrom="xs">
+
+      <Group gap={5} visibleFrom={breakpoint}>
         {items}
       </Group>
 
-      <Burger
-        size={breakpoint}
-        opened={opened}
-        onClick={toggle}
-        hiddenFrom={breakpoint}
-      />
+      <Group>
+        <ActionIcon
+          onClick={() =>
+            setColorScheme(computedColorScheme === "light" ? "dark" : "light")
+          }
+          variant="default"
+          size="xl"
+          aria-label="Toggle color scheme"
+        >
+          <IconSun className={cx(classes.icon, classes.light)} stroke={1.5} />
+          <IconMoon className={cx(classes.icon, classes.dark)} stroke={1.5} />
+        </ActionIcon>
+        <Burger
+          size={breakpoint}
+          opened={opened}
+          onClick={toggle}
+          hiddenFrom={breakpoint}
+        />
+      </Group>
     </Container>
   );
 }
