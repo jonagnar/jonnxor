@@ -9,14 +9,18 @@ import {
   AppShellNavbar,
 } from "@mantine/core";
 import { useDisclosure, useHeadroom } from "@mantine/hooks";
+
 import { Header } from "@components/header";
 import { Navbar } from "@components/navbar";
+import { Footer } from "@components/footer";
+
+import classes from "./layout.module.css";
 
 type Props = Readonly<{
   children: React.ReactNode;
 }>;
 
-export function App({ children }: Props) {
+export function Layout({ children }: Props) {
   const pinned = useHeadroom({ fixedAt: 120 });
   const [opened, { toggle }] = useDisclosure();
   const breakpoint: MantineSize = "sm";
@@ -43,6 +47,7 @@ export function App({ children }: Props) {
       </AppShellNavbar>
       <AppShellMain pt={`calc(${rem(60)} + var(--mantine-spacing-md))`}>
         {children}
+        <Footer />
       </AppShellMain>
     </AppShell>
   );
