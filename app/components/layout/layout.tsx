@@ -36,6 +36,7 @@ export function Layout({ children }: Props) {
         collapsed: { desktop: true, mobile: !opened },
         breakpoint,
       }}
+      padding="md"
     >
       <AppShellHeader className={classes.header}>
         <Header toggle={toggle} breakpoint={breakpoint} />

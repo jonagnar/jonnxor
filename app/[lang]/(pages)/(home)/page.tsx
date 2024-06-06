@@ -7,7 +7,7 @@ export default function Home() {
         <h1>AVATAR</h1>
         <p>Some avatar</p>
       </GridCol>
-      <GridCol span={{ base: 12, sm: 4 }}>
+      <GridCol span={4}>
         <h1>Profile</h1>
         <p>Some info</p>
       </GridCol>

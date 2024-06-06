@@ -17,9 +17,9 @@ export default function HomeLayout({
     <Container>
       {children}
       <Grid>
-        <GridCol span={{ base: 12, sm: 4 }}>{education}</GridCol>
-        <GridCol span={{ base: 12, sm: 4 }}>{experience}</GridCol>
-        <GridCol span={{ base: 12, sm: 4 }}>{contribution}</GridCol>
+        <GridCol span={4}>{education}</GridCol>
+        <GridCol span={4}>{experience}</GridCol>
+        <GridCol span={4}>{contribution}</GridCol>
       </Grid>
     </Container>
   );
