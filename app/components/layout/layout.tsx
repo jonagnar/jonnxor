@@ -12,7 +12,6 @@ import { useDisclosure, useHeadroom } from "@mantine/hooks";
 
 import { Header } from "@components/header";
 import { Navbar } from "@components/navbar";
-import { Footer } from "@components/footer";
 
 import classes from "./layout.module.css";
 
@@ -21,14 +20,14 @@ type Props = Readonly<{
 }>;
 
 export function Layout({ children }: Props) {
-  const pinned = useHeadroom({ fixedAt: 120 });
+  const pinned = useHeadroom({ fixedAt: 160 });
   const [opened, { toggle }] = useDisclosure();
   const breakpoint: MantineSize = "sm";
 
   return (
     <AppShell
       header={{
-        height: 60,
+        height: 80,
         offset: true,
         collapsed: !pinned,
       }}
@@ -37,17 +36,15 @@ export function Layout({ children }: Props) {
         collapsed: { desktop: true, mobile: !opened },
         breakpoint,
       }}
-      padding="md"
     >
-      <AppShellHeader className="hidden-print">
-        <Header opened={opened} toggle={toggle} breakpoint={breakpoint} />
+      <AppShellHeader className={classes.header}>
+        <Header toggle={toggle} breakpoint={breakpoint} />
       </AppShellHeader>
-      <AppShellNavbar className="hidden-print">
+      <AppShellNavbar className={classes.navbar}>
         <Navbar />
       </AppShellNavbar>
-      <AppShellMain pt={`calc(${rem(60)} + var(--mantine-spacing-md))`}>
+      <AppShellMain pt={`calc(${rem(80)} + var(--mantine-spacing-md))`}>
         {children}
-        <Footer />
       </AppShellMain>
     </AppShell>
   );

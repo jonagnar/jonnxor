@@ -29,7 +29,7 @@ import "@mantine/code-highlight/styles.css";
 import "./global.css";
 
 const inter = Inter({ subsets: ["latin"] });
-const defaultColorScheme: MantineColorScheme = "light";
+const defaultColorScheme: MantineColorScheme = "dark";
 
 export const metadata: Metadata = {
   title: "Jón Agnar Stefánsson",
@@ -53,6 +53,10 @@ export default async function RootLayout({
     <html lang={params.lang} data-mantine-color-scheme={defaultColorScheme}>
       <head>
         <ColorSchemeScript defaultColorScheme={defaultColorScheme} />
+        <meta
+          name="viewport"
+          content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
+        />
       </head>
       <body className={inter.className}>
         <MantineProvider theme={theme} defaultColorScheme={defaultColorScheme}>

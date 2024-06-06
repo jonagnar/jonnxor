@@ -1,5 +1,7 @@
+"use client";
+
 import Link from "next/link";
-import { Container, ActionIcon, Group } from "@mantine/core";
+import { ActionIcon, Container, Group } from "@mantine/core";
 import {
   IconUserCircle,
   IconBrandGithub,
@@ -16,44 +18,42 @@ export function Footer() {
   const height = width;
 
   return (
-    <footer className={classes.footer}>
-      <Container>
-        <Group wrap="nowrap" justify="space-around">
-          <ActionIcon
-            size={size}
-            href="https://github.com"
-            color="yellow"
-            radius={radius}
-            variant="filled"
-            component={Link}
-            aria-label="Github"
-          >
-            <IconBrandGithub style={{ width, height }} stroke={1.5} />
-          </ActionIcon>
-          <ActionIcon
-            size={size}
-            href="https://linkedin.com"
-            color="yellow"
-            radius={radius}
-            variant="filled"
-            component={Link}
-            aria-label="LinkedIn"
-          >
-            <IconBrandLinkedin style={{ width, height }} stroke={1.5} />
-          </ActionIcon>
-          <ActionIcon
-            size={size}
-            href="https://alferd.com"
-            color="yellow"
-            radius={radius}
-            variant="filled"
-            component={Link}
-            aria-label="Alferð"
-          >
-            <IconUserCircle style={{ width, height }} stroke={1.5} />
-          </ActionIcon>
-        </Group>
-      </Container>
-    </footer>
+    <Container className={classes.footer}>
+      <Group wrap="nowrap" justify="space-around">
+        <ActionIcon
+          size={size}
+          href="https://github.com"
+          color="yellow"
+          radius={radius}
+          variant="filled"
+          component={Link}
+          aria-label="Github"
+        >
+          <IconBrandGithub style={{ width, height }} stroke={1.5} />
+        </ActionIcon>
+        <ActionIcon
+          size={size}
+          href="https://linkedin.com"
+          color="yellow"
+          radius={radius}
+          variant="filled"
+          component={Link}
+          aria-label="LinkedIn"
+        >
+          <IconBrandLinkedin style={{ width, height }} stroke={1.5} />
+        </ActionIcon>
+        <ActionIcon
+          size={size}
+          href="https://alferd.com"
+          color="yellow"
+          radius={radius}
+          variant="filled"
+          component={Link}
+          aria-label="Alferð"
+        >
+          <IconUserCircle style={{ width, height }} stroke={1.5} />
+        </ActionIcon>
+      </Group>
+    </Container>
   );
 }
