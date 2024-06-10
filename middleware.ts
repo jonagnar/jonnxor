@@ -1,30 +1,14 @@
-import { NextRequest, NextResponse } from "next/server";
-import { LOCALES, getLocale } from "@lib/constants";
+import createMiddleware from "next-intl/middleware";
+import { locales, localePrefix } from "@app/lib/navigation";
 
-export function middleware(request: NextRequest) {
-  // Check if there is any supported locale in the pathname
-  const pathname = request.nextUrl.pathname;
-  const pathnameIsMissingLocale = LOCALES.every(
-    (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
-  );
-
-  // Redirect if there is no locale
-  if (pathnameIsMissingLocale) {
-    const locale = getLocale(request);
-
-    // e.g. incoming request is /products
-    // The new URL is now /is/products
-    return NextResponse.redirect(
-      new URL(`/${locale}/${pathname}`, request.url)
-    );
-  }
-}
+export default createMiddleware({
+  // Used when no locale matches
+  defaultLocale: "is",
+  localePrefix,
+  locales,
+});
 
 export const config = {
-  matcher: [
-    // Skip all internal paths (_next, assets, api)
-    "/((?!api|assets|.*\\..*|_next).*)",
-    // Optional: only run on root (/) URL
-    // '/'
-  ],
+  // Match only internationalized pathnames
+  matcher: ["/", "/(de|en)/:path*"],
 };
