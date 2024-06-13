@@ -2,10 +2,7 @@
   "Metadata": {
     "title": "JonnXor.is"
   },
-  "NotFound": {
-    "title": "404 - not found"
-  },
-  "Error": {
-    "title": "Error"
+  "Home": {
+    "title": "Home"
   }
 }
