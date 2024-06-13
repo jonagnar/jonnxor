@@ -1,8 +1,19 @@
 import '@mantine/core/styles.css';
+import '@mantine/dates/styles.css';
+import '@mantine/charts/styles.css';
+import '@mantine/tiptap/styles.css';
+import '@mantine/dropzone/styles.css';
+import '@mantine/carousel/styles.css';
+import '@mantine/spotlight/styles.css';
+import '@mantine/nprogress/styles.css';
+import '@mantine/notifications/styles.css';
+import '@mantine/code-highlight/styles.css';
+
 import React, { useEffect } from 'react';
 import { addons } from '@storybook/preview-api';
 import { DARK_MODE_EVENT_NAME } from 'storybook-dark-mode';
 import { MantineProvider, useMantineColorScheme } from '@mantine/core';
+
 import { theme } from '../theme';
 
 const channel = addons.getChannel();
