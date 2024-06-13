@@ -3,6 +3,7 @@ import { locales, defaultLocale, localePrefix } from '@/navigation';
 
 export default createMiddleware({
   // Used when no locale matches
+  localeDetection: false,
   defaultLocale,
   localePrefix,
   locales,
