@@ -9,7 +9,7 @@ export function IntlPolyfillScript() {
     'Intl.Locale',
     'Intl.DateTimeFormat',
     `Intl.DateTimeFormat.~locale.${locale}`,
-    `Intl.NumberFormat`,
+    'Intl.NumberFormat',
     `Intl.NumberFormat.~locale.${locale}`,
     'Intl.PluralRules',
     `Intl.PluralRules.~locale.${locale}`,
@@ -22,9 +22,7 @@ export function IntlPolyfillScript() {
   return (
     <Script
       strategy="beforeInteractive"
-      src={
-        'https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=' + polyfills.join(',')
-      }
+      src={`https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=${polyfills.join(',')}`}
     />
   );
 }
