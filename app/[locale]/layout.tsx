@@ -9,7 +9,7 @@ import '@mantine/nprogress/styles.css';
 import '@mantine/notifications/styles.css';
 import '@mantine/code-highlight/styles.css';
 
-import '@app/global.css';
+import '@/app/global.css';
 
 import React from 'react';
 import { Analytics } from '@vercel/analytics/react';
@@ -19,8 +19,7 @@ import { getMessages, getTranslations } from 'next-intl/server';
 import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
 import { MantineProvider, ColorSchemeScript } from '@mantine/core';
 
-import { IntlPolyfillScript } from '@components/intl-polyfill-script/intl-polyfill-script';
-import { locales } from '@/navigation';
+import { IntlPolyfillScript } from '@/components/intl-polyfill-script/intl-polyfill-script';
 import { theme } from '@/theme';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
@@ -29,10 +28,6 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   return {
     title: t('title'),
   };
-}
-
-export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
 }
 
 export default async function RootLayout({

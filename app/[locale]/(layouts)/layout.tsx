@@ -17,9 +17,10 @@ import {
   AppShellSection,
 } from '@mantine/core';
 
-import { ColorSchemeToggle } from '@components/color-scheme-toggle/color-scheme-toggle';
-import { Navbar } from '@components/navbar/navbar';
-import { Print } from '@components/print/print';
+import { ColorSchemeToggle } from '@/components/color-scheme-toggle/color-scheme-toggle';
+import { Navbar } from '@/components/navbar/navbar';
+import { Print } from '@/components/print/print';
+
 import { Link, usePathname } from '@/navigation';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
