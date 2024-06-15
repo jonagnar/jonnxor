@@ -3,6 +3,23 @@
   margin: 0; /* this affects the margin in the printer settings */
 }
 
+.logo {
+  text-decoration: none;
+
+  &:visited {
+    color: inherit;
+  }
+
+  &:focus,
+  &:hover {
+    color: var(--ai-hover, var(--mantine-primary-color-filled-hover));
+
+    .logo__icon {
+      background-color: var(--ai-hover, var(--mantine-primary-color-filled-hover));
+    }
+  }
+}
+
 @media print {
   .hidden-print {
     display: none !important;

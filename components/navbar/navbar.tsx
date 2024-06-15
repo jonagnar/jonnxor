@@ -1,11 +1,12 @@
 'use client';
 
 import { Button } from '@mantine/core';
+import { Link } from '@/navigation';
 
 export function Navbar() {
   return (
     <>
-      <Button size="sm" variant="default">
+      <Button component={Link} href="/about" size="sm" variant="default">
         About
       </Button>
     </>

@@ -20,6 +20,7 @@ import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
 import { MantineProvider, ColorSchemeScript } from '@mantine/core';
 
 import { IntlPolyfillScript } from '@components/intl-polyfill-script/intl-polyfill-script';
+import { locales } from '@/navigation';
 import { theme } from '@/theme';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
@@ -28,6 +29,10 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   return {
     title: t('title'),
   };
+}
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
 }
 
 export default async function RootLayout({
