@@ -16,7 +16,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
 import { MantineProvider, ColorSchemeScript } from '@mantine/core';
 
-import { IntlPolyfillScript } from '@app/intl-polyfill-script';
+import { IntlPolyfillScript } from '@components/intl-polyfill-script/intl-polyfill-script';
 import { theme } from '@/theme';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
