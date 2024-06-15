@@ -3,7 +3,6 @@
 import { MouseEventHandler } from 'react';
 import { useDisclosure, useHeadroom } from '@mantine/hooks';
 import {
-  rem,
   Title,
   Group,
   Burger,
@@ -25,7 +24,7 @@ import { Link, usePathname } from '@/navigation';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [opened, { toggle }] = useDisclosure();
-  const pinned = useHeadroom({ fixedAt: 120 });
+  const pinned = useHeadroom({ fixedAt: 120 + 60 }); //! <-- Magic number do not touch
   const pathname = usePathname();
 
   const handleBlur: MouseEventHandler<HTMLAnchorElement> = (e) => {
@@ -38,7 +37,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       navbar={{ width: 300, breakpoint: 'xs', collapsed: { desktop: true, mobile: !opened } }}
       padding="md"
     >
-      <AppShellHeader className="hidden-print">
+      <AppShellHeader className="header">
         <Container h="100%">
           <Group h="100%" wrap="nowrap">
             <Burger size="sm" opened={opened} onClick={toggle} hiddenFrom="xs" />
@@ -77,7 +76,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <AppShell.Section>Navbar footer – always at the bottom</AppShell.Section>
       </AppShellNavbar>
 
-      <AppShellMain pt={`calc(${rem(60)} + var(--mantine-spacing-md))`}>{children}</AppShellMain>
+      <AppShellMain className="main">{children}</AppShellMain>
     </AppShell>
   );
 }

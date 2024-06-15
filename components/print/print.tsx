@@ -6,12 +6,16 @@ import { IconPrinter } from '@tabler/icons-react';
 import classes from './print.module.css';
 
 export function Print() {
+  const handleClick = () => {
+    window.print();
+  };
+
   return (
     <Button
       leftSection={<IconPrinter className={classes.icon} stroke={1.5} />}
       size="sm"
       variant="default"
-      onClick={() => window.print()}
+      onClick={handleClick}
     >
       Print
     </Button>

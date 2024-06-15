@@ -20,8 +20,16 @@
   }
 }
 
+.main {
+  padding-top: calc(rem(60px) + var(--mantine-spacing-md) + var(--mantine-spacing-md));
+}
+
 @media print {
-  .hidden-print {
+  .header {
     display: none !important;
+  }
+
+  .main {
+    padding-top: var(--mantine-spacing-xl);
   }
 }

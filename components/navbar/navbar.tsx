@@ -1,14 +1,21 @@
 'use client';
 
 import { Button } from '@mantine/core';
-import { Link } from '@/navigation';
+import { useTranslations } from 'next-intl';
+import { Link, usePathname } from '@/navigation';
 
 export function Navbar() {
+  const t = useTranslations('About');
+  const pathname = usePathname();
+
   return (
-    <>
-      <Button component={Link} href="/about" size="sm" variant="default">
-        About
-      </Button>
-    </>
+    <Button
+      size="sm"
+      href="/about"
+      component={Link}
+      variant={pathname === '/about' ? 'filled' : 'default'}
+    >
+      {t('label')}
+    </Button>
   );
 }
