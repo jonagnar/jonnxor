@@ -12,8 +12,11 @@ import '@mantine/code-highlight/styles.css';
 import '@app/global.css';
 
 import React from 'react';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
+import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
 import { MantineProvider, ColorSchemeScript } from '@mantine/core';
 
 import { IntlPolyfillScript } from '@components/intl-polyfill-script/intl-polyfill-script';
@@ -38,6 +41,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
+      <GoogleTagManager gtmId="G-GL1Y82696E" />
       <head>
         <ColorSchemeScript />
         <IntlPolyfillScript />
@@ -52,7 +56,10 @@ export default async function RootLayout({
         <NextIntlClientProvider messages={messages}>
           <MantineProvider theme={theme}>{children}</MantineProvider>
         </NextIntlClientProvider>
+        <Analytics />
+        <SpeedInsights />
       </body>
+      <GoogleAnalytics gaId="G-GL1Y82696E" />
     </html>
   );
 }

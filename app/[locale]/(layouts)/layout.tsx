@@ -16,7 +16,9 @@ import {
 } from '@mantine/core';
 import { useDisclosure, useHeadroom } from '@mantine/hooks';
 
+import { Print } from '@components/print/print';
 import { Navbar } from '@components/navbar/navbar';
+import { ColorSchemeToggle } from '@components/color-scheme-toggle/color-scheme-toggle';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [opened, { toggle }] = useDisclosure();
@@ -41,8 +43,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   JonnXor.is
                 </Title>
               </Group>
-              <Group ml="xl" gap={0} visibleFrom="xs">
+              <Group ml="xl" gap="md" visibleFrom="xs">
+                <Print />
                 <Navbar />
+                <ColorSchemeToggle />
               </Group>
             </Group>
           </Group>

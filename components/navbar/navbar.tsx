@@ -1,13 +1,13 @@
 'use client';
 
-import { UnstyledButton } from '@mantine/core';
-import classes from './navbar.module.css';
+import { Button } from '@mantine/core';
 
 export function Navbar() {
   return (
     <>
-      <UnstyledButton className={classes.control}>Home</UnstyledButton>
-      <UnstyledButton className={classes.control}>About</UnstyledButton>
+      <Button size="sm" variant="default">
+        About
+      </Button>
     </>
   );
 }
