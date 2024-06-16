@@ -2,10 +2,13 @@
 
 import { Button } from '@mantine/core';
 import { IconPrinter } from '@tabler/icons-react';
+import { useTranslations } from 'next-intl';
 
 import classes from './print.module.css';
 
 export function Print() {
+  const t = useTranslations('Actions');
+
   const handleClick = () => {
     window.print();
   };
@@ -17,7 +20,7 @@ export function Print() {
       variant="default"
       onClick={handleClick}
     >
-      Print
+      {t('print')}
     </Button>
   );
 }

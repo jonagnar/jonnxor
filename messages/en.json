@@ -7,5 +7,8 @@
   },
   "Navbar": {
     "about": "About me"
+  },
+  "Actions": {
+    "print": "Print"
   }
 }
