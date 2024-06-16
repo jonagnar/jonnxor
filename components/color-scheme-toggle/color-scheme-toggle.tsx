@@ -10,11 +10,15 @@ export function ColorSchemeToggle() {
   const { setColorScheme } = useMantineColorScheme();
   const computedColorScheme = useComputedColorScheme('light', { getInitialValueInEffect: true });
 
+  const handleClick = () => {
+    setColorScheme(computedColorScheme === 'light' ? 'dark' : 'light');
+  };
+
   return (
     <ActionIcon
       size="input-sm"
       variant="default"
-      onClick={() => setColorScheme(computedColorScheme === 'light' ? 'dark' : 'light')}
+      onClick={handleClick}
       aria-label="Toggle color scheme"
     >
       <IconSun className={cx(classes.icon, classes.light)} stroke={1.5} />
