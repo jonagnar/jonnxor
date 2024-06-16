@@ -35,7 +35,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   };
 }
 
-// TODO: OpenGraphImage for social media sharing
+// TODO: OpenGraphImage
 //export default async function OpenGraphImage({ params: { locale } }) {
 //  const t = await getTranslations({ locale, namespace: 'OpenGraphImage' });
 //  return new ImageResponse(<div style={{ fontSize: 128 }}>{t('title')}</div>);
