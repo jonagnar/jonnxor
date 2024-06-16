@@ -2,7 +2,6 @@ import { MetadataRoute } from 'next';
 import { getTranslations } from 'next-intl/server';
 
 export default async function manifest(): Promise<MetadataRoute.Manifest> {
-  // Pick a locale that is representative of the app
   const locale = 'is';
 
   const t = await getTranslations({

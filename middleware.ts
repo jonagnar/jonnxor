@@ -1,9 +1,9 @@
 import createMiddleware from 'next-intl/middleware';
-import { locales, defaultLocale, localePrefix } from '@/navigation';
+import { locales, defaultLocale, localePrefix, localeDetection } from '@/navigation';
 
 export default createMiddleware({
   // Used when no locale matches
-  localeDetection: false,
+  localeDetection,
   defaultLocale,
   localePrefix,
   locales,

@@ -1,6 +1,6 @@
 import { unstable_setRequestLocale } from 'next-intl/server';
 
-import { App } from './app';
+import { App } from '@/app/app';
 
 export default function Layout({
   children,
