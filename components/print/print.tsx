@@ -9,7 +9,7 @@ import classes from './print.module.css';
 export function Print() {
   const t = useTranslations('Actions');
 
-  const handleClick = () => {
+  const print = () => {
     window.print();
   };
 
@@ -17,8 +17,8 @@ export function Print() {
     <Button
       leftSection={<IconPrinter className={classes.icon} stroke={1.5} />}
       size="sm"
+      onClick={print}
       variant="default"
-      onClick={handleClick}
     >
       {t('print')}
     </Button>

@@ -1,6 +1,6 @@
 'use client';
 
-import { MouseEventHandler } from 'react';
+import { MouseEvent } from 'react';
 import { useDisclosure, useHeadroom } from '@mantine/hooks';
 import {
   Title,
@@ -27,7 +27,7 @@ export function App({ children }: { children: React.ReactNode }) {
   const pinned = useHeadroom({ fixedAt: 120 + 60 }); //! <-- Magic number do not touch
   const pathname = usePathname();
 
-  const handleBlur: MouseEventHandler<HTMLAnchorElement> = (e) => {
+  const blur = (e: MouseEvent<HTMLAnchorElement>) => {
     e.currentTarget.blur();
   };
 
@@ -42,7 +42,7 @@ export function App({ children }: { children: React.ReactNode }) {
           <Group h="100%" wrap="nowrap">
             <Burger size="sm" opened={opened} onClick={toggle} hiddenFrom="xs" />
             <Group justify="space-between" style={{ flex: 1 }}>
-              <Link href="/" className="logo" onClick={handleBlur}>
+              <Link href="/" className="logo" onClick={blur}>
                 <Group wrap="nowrap">
                   <ActionIcon
                     size={30}
