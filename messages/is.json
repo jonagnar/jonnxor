@@ -2,7 +2,7 @@
   "Metadata": {
     "title": "JonnXor.is"
   },
-  "About": {
-    "label": "Um mig"
+  "Navbar": {
+    "about": "Um mig"
   }
 }

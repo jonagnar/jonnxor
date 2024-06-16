@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/navigation';
 
 export function Navbar() {
-  const t = useTranslations('About');
+  const t = useTranslations('Navbar');
   const pathname = usePathname();
 
   return (
@@ -15,7 +15,7 @@ export function Navbar() {
       component={Link}
       variant={pathname === '/about' ? 'filled' : 'default'}
     >
-      {t('label')}
+      {t('about')}
     </Button>
   );
 }

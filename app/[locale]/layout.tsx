@@ -15,12 +15,13 @@ import React from 'react';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, getTranslations } from 'next-intl/server';
+import { getMessages, getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
 import { MantineProvider, ColorSchemeScript } from '@mantine/core';
-import { IntlPolyfillScript } from '@/app/intl-polyfill-script';
 
 import { theme } from '@/theme';
+import { locales } from '@/navigation';
+import { IntlPolyfillScript } from '@/app/intl-polyfill-script';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
   const t = await getTranslations({ locale, namespace: 'Metadata' });
@@ -30,6 +31,10 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   };
 }
 
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
 export default async function RootLayout({
   children,
   params: { locale },
@@ -37,6 +42,7 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: { locale: string };
 }) {
+  unstable_setRequestLocale(locale);
   const messages = await getMessages();
 
   return (
