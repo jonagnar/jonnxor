@@ -17,7 +17,7 @@ export function LocaleToggle() {
   const router = useRouter();
   const pathname = usePathname();
 
-  function toggleLocale(e: MouseEvent<HTMLButtonElement>) {
+  function toggleLocale() {
     const nextLocale = locale === 'en' ? 'is' : 'en';
 
     // @ts-expect-error -- TypeScript will validate that only known params
