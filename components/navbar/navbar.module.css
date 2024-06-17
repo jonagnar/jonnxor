@@ -1,0 +1,9 @@
+.header {
+  height: rem(120);
+  border-bottom: 1px solid var(--app-shell-border-color);
+}
+
+.footer {
+  height: rem(60);
+  border-top: 1px solid var(--app-shell-border-color);
+}

@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
-import { locales, defaultLocale } from '@/navigation';
+
+import { locales, defaultLocale } from '@/config';
 
 // Adapt this as necessary
 const pathnames = ['/'];

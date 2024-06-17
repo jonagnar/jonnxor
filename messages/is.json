@@ -1,14 +1,41 @@
 {
-  "API": {
-    "text": "Halló heimur!"
-  },
   "Metadata": {
-    "title": "JonnXor.is"
+    "title": "JonnXor.is",
+    "description": "Jón Agnar Stefánsson - Vefforritari - CV"
   },
-  "Navbar": {
+  "OpenGraphImage": {
+    "title": "Jón Agnar Stefánsson - Vefforritari - CV"
+  },
+  "Manifest": {
+    "name": "JonnXor.is"
+  },
+  "Error": {
+    "title": "Eitthvað fór úrskeiðis!",
+    "description": "<p>Við höfum því miður fengið villu.</p><p>Þú getur reynt að <retry>endurhlaða síðuna</retry> sem þú varst að skoða.</p>"
+  },
+  "NotFoundPage": {
+    "title": "Síða fannst ekki",
+    "description": "Vinsamlegast athugaðu vafra vefslóðarstiku eða notið vafra til að fara á þekktar síður."
+  },
+  "Action": {
+    "print": "Prenta"
+  },
+  "Navigation": {
     "about": "Um mig"
   },
-  "Actions": {
-    "print": "Prenta"
+  "Home": {
+    "heading": "Heim"
+  },
+  "Education": {
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ullam, ex cum repellat alias ea nemo. Ducimus ex nesciunt hic ad saepe molestiae nobis necessitatibus laboriosam officia, reprehenderit, earum fugiat?"
+  },
+  "Experience": {
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ullam, ex cum repellat alias ea nemo. Ducimus ex nesciunt hic ad saepe molestiae nobis necessitatibus laboriosam officia, reprehenderit, earum fugiat?"
+  },
+  "Contribution": {
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ullam, ex cum repellat alias ea nemo. Ducimus ex nesciunt hic ad saepe molestiae nobis necessitatibus laboriosam officia, reprehenderit, earum fugiat?"
+  },
+  "Social": {
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ullam, ex cum repellat alias ea nemo. Ducimus ex nesciunt hic ad saepe molestiae nobis necessitatibus laboriosam officia, reprehenderit, earum fugiat?"
   }
 }

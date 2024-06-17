@@ -1,14 +1,42 @@
 {
-  "API": {
-    "text": "Hello world!"
-  },
   "Metadata": {
-    "title": "JonnXor.is"
+    "title": "JonnXor.is",
+    "description": "Jón Agnar Stefánsson - Front-end Web Developer - CV"
   },
-  "Navbar": {
+  "OpenGraphImage": {
+    "title": "Jón Agnar Stefánsson - Front-end Web Developer - CV"
+  },
+  "Manifest": {
+    "name": "JonnXor.is"
+  },
+  "Error": {
+    "title": "Something went wrong!",
+    "description": "<p>We've unfortunately encountered an error.</p><p>You can try to <retry>reload the page</retry> you were visiting.</p>"
+  },
+  "NotFoundPage": {
+    "title": "Page not found",
+    "description": "Please double-check the browser address bar or use the navigation to go to a known page."
+  },
+  "Navigation": {
     "about": "About me"
   },
-  "Actions": {
+  "Action": {
     "print": "Print"
+  },
+  "Home": {
+    "heading": "Home",
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ullam, ex cum repellat alias ea nemo. Ducimus ex nesciunt hic ad saepe molestiae nobis necessitatibus laboriosam officia, reprehenderit, earum fugiat?"
+  },
+  "Education": {
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ullam, ex cum repellat alias ea nemo. Ducimus ex nesciunt hic ad saepe molestiae nobis necessitatibus laboriosam officia, reprehenderit, earum fugiat?"
+  },
+  "Experience": {
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ullam, ex cum repellat alias ea nemo. Ducimus ex nesciunt hic ad saepe molestiae nobis necessitatibus laboriosam officia, reprehenderit, earum fugiat?"
+  },
+  "Contribution": {
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ullam, ex cum repellat alias ea nemo. Ducimus ex nesciunt hic ad saepe molestiae nobis necessitatibus laboriosam officia, reprehenderit, earum fugiat?"
+  },
+  "Social": {
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ullam, ex cum repellat alias ea nemo. Ducimus ex nesciunt hic ad saepe molestiae nobis necessitatibus laboriosam officia, reprehenderit, earum fugiat?"
   }
 }

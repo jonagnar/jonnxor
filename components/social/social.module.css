@@ -1,0 +1,17 @@
+.social {
+  justify-content: space-between;
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    justify-content: center;
+  }
+}
+
+.alfred {
+  height: 44px;
+}
+
+@media print {
+  .social {
+    display: none;
+  }
+}

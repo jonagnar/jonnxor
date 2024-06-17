@@ -2,34 +2,3 @@
   size: auto; /* auto is the initial value */
   margin: 0; /* this affects the margin in the printer settings */
 }
-
-.logo {
-  text-decoration: none;
-
-  &:visited {
-    color: inherit;
-  }
-
-  &:focus,
-  &:hover {
-    color: var(--ai-hover, var(--mantine-primary-color-filled-hover));
-
-    .logo__icon {
-      background-color: var(--ai-hover, var(--mantine-primary-color-filled-hover));
-    }
-  }
-}
-
-.main {
-  padding-top: calc(rem(60px) + var(--mantine-spacing-md) + var(--mantine-spacing-md));
-}
-
-@media print {
-  .header {
-    display: none !important;
-  }
-
-  .main {
-    padding-top: var(--mantine-spacing-xl);
-  }
-}

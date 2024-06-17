@@ -1,4 +1,5 @@
 import { Text } from '@mantine/core';
+import { useTranslations } from 'next-intl';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
@@ -9,13 +10,10 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   };
 }
 
-export default function HomePage({ params: { locale } }: { params: { locale: string } }) {
+export default function ExperiencePage({ params: { locale } }: { params: { locale: string } }) {
   unstable_setRequestLocale(locale);
-  return (
-    <Text>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ullam, ex cum repellat alias ea
-      nemo. Ducimus ex nesciunt hic ad saepe molestiae nobis necessitatibus laboriosam officia,
-      reprehenderit, earum fugiat?
-    </Text>
-  );
+
+  const t = useTranslations('Experience');
+
+  return <Text>{t('text')}</Text>;
 }
