@@ -2,7 +2,6 @@ import { useTranslations } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { Container, Grid, GridCol, Text } from '@mantine/core';
 
-import { Social } from '@/components/social';
 import { PageLayout } from '@/components/page-layout';
 
 export default function Layout({
@@ -24,8 +23,8 @@ export default function Layout({
 
   return (
     <PageLayout title={t('heading')}>
-      <Container component="section">
-        <Grid component="header" gutter="xl">
+      <Container>
+        <Grid gutter="xl">
           <GridCol span={{ base: 12, xs: 8 }} visibleFrom="xs">
             <Text>{t('text')}</Text>
           </GridCol>
@@ -38,10 +37,16 @@ export default function Layout({
           <GridCol span={{ base: 12, xs: 4 }}>{contribution}</GridCol>
         </Grid>
 
-        <Grid component="footer" gutter="xl" my={60}>
-          <GridCol span={12}>
-            <Social />
-          </GridCol>
+        <Grid gutter="xl" mb="md">
+          <GridCol span={{ base: 12, xs: 4 }}>{education}</GridCol>
+          <GridCol span={{ base: 12, xs: 4 }}>{experience}</GridCol>
+          <GridCol span={{ base: 12, xs: 4 }}>{contribution}</GridCol>
+        </Grid>
+
+        <Grid gutter="xl" mb="md">
+          <GridCol span={{ base: 12, xs: 4 }}>{education}</GridCol>
+          <GridCol span={{ base: 12, xs: 4 }}>{experience}</GridCol>
+          <GridCol span={{ base: 12, xs: 4 }}>{contribution}</GridCol>
         </Grid>
       </Container>
     </PageLayout>

@@ -17,14 +17,11 @@
     "title": "Page not found",
     "description": "Please double-check the browser address bar or use the navigation to go to a known page."
   },
-  "Navigation": {
-    "about": "About me"
-  },
   "Action": {
     "print": "Print"
   },
   "Home": {
-    "heading": "Home",
+    "heading": "CV",
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ullam, ex cum repellat alias ea nemo. Ducimus ex nesciunt hic ad saepe molestiae nobis necessitatibus laboriosam officia, reprehenderit, earum fugiat?"
   },
   "Education": {

@@ -18,7 +18,7 @@ import classes from './navbar.module.css';
 
 export function Navbar() {
   return (
-    <AppShellNavbar>
+    <AppShellNavbar className={classes.navbar}>
       <AppShellSection px="md" className={classes.header}>
         <Stack h="100%" justify="center">
           <Title order={3} textWrap="nowrap">
@@ -35,7 +35,7 @@ export function Navbar() {
       <AppShellSection px="md" className={classes.footer}>
         <Group h="100%" justify="space-between" wrap="nowrap">
           <ColorToggle />
-          <Group mx="xl" grow style={{ flex: 1 }}>
+          <Group mx="xl" justify="center" style={{ flex: 1 }}>
             <Print />
           </Group>
           <LocaleToggle />

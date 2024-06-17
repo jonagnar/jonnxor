@@ -8,17 +8,18 @@ import { Navbar } from '@/components/navbar';
 import { Main } from '@/components/main';
 import { Footer } from '@/components/footer';
 
-export function PageLayout({ title, children }: { title?: string; children?: React.ReactNode }) {
+const height = 60;
+const breakpoint = 'xs';
+
+export function PageLayout({ title, children }: { title: string; children?: React.ReactNode }) {
   const [opened, { toggle }] = useDisclosure();
-  const pinned = useHeadroom({ fixedAt: 120 }); //! <-- Magic number do not touch
-  const breakpoint = 'xs';
+  const pinned = useHeadroom({ fixedAt: height * 2 }); //! <-- Magic number do not touch
 
   return (
     <AppShell
-      header={{ height: 60, collapsed: !pinned, offset: true }}
+      header={{ height, collapsed: !pinned, offset: true }}
       navbar={{ width: 300, breakpoint, collapsed: { desktop: true, mobile: !opened } }}
       footer={{ height: 60 }}
-      padding="md"
     >
       <Header opened={opened} toggle={toggle} breakpoint={breakpoint} />
       <Navbar />
