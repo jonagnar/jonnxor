@@ -11,7 +11,7 @@ import classes from './social.module.css';
 
 export function Social() {
   return (
-    <Group gap="xl" my={60} className={classes.social}>
+    <Group gap="xl" className={classes.social}>
       <ActionIcon component={Link} href="/" variant="filled" size="xl" radius="xl">
         <IconBrandFacebook stroke={1.5} />
       </ActionIcon>

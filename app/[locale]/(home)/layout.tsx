@@ -25,20 +25,24 @@ export default function Layout({
   return (
     <PageLayout title={t('heading')}>
       <Container component="section">
-        <Grid gutter="xl">
+        <Grid component="header" gutter="xl">
           <GridCol span={{ base: 12, xs: 8 }} visibleFrom="xs">
             <Text>{t('text')}</Text>
           </GridCol>
           <GridCol span={{ base: 12, xs: 4 }}>{children}</GridCol>
         </Grid>
 
-        <Grid gutter="xl">
+        <Grid gutter="xl" mb="md">
           <GridCol span={{ base: 12, xs: 4 }}>{education}</GridCol>
           <GridCol span={{ base: 12, xs: 4 }}>{experience}</GridCol>
           <GridCol span={{ base: 12, xs: 4 }}>{contribution}</GridCol>
         </Grid>
 
-        <Social />
+        <Grid component="footer" gutter="xl" my={60}>
+          <GridCol span={12}>
+            <Social />
+          </GridCol>
+        </Grid>
       </Container>
     </PageLayout>
   );
