@@ -24,7 +24,7 @@ export default function Layout({
 
   return (
     <PageLayout title={t('heading')}>
-      <Container>
+      <Container component="section">
         <Grid gutter="xl">
           <GridCol span={{ base: 12, xs: 8 }} visibleFrom="xs">
             <Text>{t('text')}</Text>
