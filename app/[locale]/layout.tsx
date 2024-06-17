@@ -66,7 +66,9 @@ export default async function RootLayout({
       </head>
       <body>
         <NextIntlClientProvider messages={messages}>
-          <MantineProvider theme={theme}>{children}</MantineProvider>
+          <MantineProvider theme={theme} defaultColorScheme="dark">
+            {children}
+          </MantineProvider>
         </NextIntlClientProvider>
         <Analytics />
         <SpeedInsights />
