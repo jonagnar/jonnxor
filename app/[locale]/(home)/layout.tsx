@@ -17,7 +17,6 @@ export default function Layout({
   education: React.ReactNode;
   experience: React.ReactNode;
   contribution: React.ReactNode;
-  social: React.ReactNode;
 }) {
   unstable_setRequestLocale(locale);
 
