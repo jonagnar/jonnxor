@@ -2,7 +2,6 @@
 
 import { useLocale } from 'next-intl';
 import { useParams } from 'next/navigation';
-import { MouseEvent } from 'react';
 import { ActionIcon } from '@mantine/core';
 import { IconLanguage } from '@tabler/icons-react';
 
