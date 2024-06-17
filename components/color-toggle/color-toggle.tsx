@@ -8,10 +8,10 @@ import classes from './color-toggle.module.css';
 
 export function ColorToggle() {
   const { setColorScheme } = useMantineColorScheme();
-  const computedColorScheme = useComputedColorScheme('light', { getInitialValueInEffect: true });
+  const computedColorScheme = useComputedColorScheme('dark', { getInitialValueInEffect: true });
 
   function toggleColor() {
-    setColorScheme(computedColorScheme === 'light' ? 'dark' : 'light');
+    setColorScheme(computedColorScheme === 'dark' ? 'light' : 'dark');
   }
 
   return (
