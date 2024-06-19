@@ -1,24 +1,26 @@
-.icon {
-  width: 22px;
-  height: 22px;
-}
-
-.dark {
-  @mixin dark {
-    display: none;
+.toggle {
+  .icon {
+    width: 22px;
+    height: 22px;
   }
 
-  @mixin light {
-    display: block;
-  }
-}
+  .dark {
+    @mixin dark {
+      display: none;
+    }
 
-.light {
-  @mixin light {
-    display: none;
+    @mixin light {
+      display: block;
+    }
   }
 
-  @mixin dark {
-    display: block;
+  .light {
+    @mixin light {
+      display: none;
+    }
+
+    @mixin dark {
+      display: block;
+    }
   }
 }

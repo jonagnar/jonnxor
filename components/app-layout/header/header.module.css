@@ -1,0 +1,75 @@
+.container {
+  height: 100%;
+
+  .header {
+    height: 100%;
+    flex-wrap: nowrap;
+
+    .wrapper {
+      flex: 1;
+      justify-content: space-between;
+    }
+  }
+
+  .burger {
+    display: block;
+    width: rem(30);
+    height: rem(30);
+
+    @media (min-width: $mantine-breakpoint-xs) {
+      display: none;
+    }
+  }
+
+  .link {
+    color: var(--mantine-color-text);
+    text-decoration: none;
+
+    &:visited {
+      color: inherit;
+    }
+
+    @mixin light {
+      &:focus,
+      &:hover {
+        color: var(--mantine-color-blue-filled-hover);
+
+        .avatar span {
+          --avatar-bg: var(--mantine-color-blue-filled-hover);
+        }
+      }
+    }
+
+    @mixin dark {
+      &:focus,
+      &:hover {
+        color: var(--mantine-color-yellow-filled-hover);
+
+        .avatar span {
+          --avatar-bg: var(--mantine-color-yellow-filled-hover);
+        }
+      }
+    }
+  }
+
+  .logo {
+    flex-wrap: nowrap;
+  }
+
+  .avatar {
+    --avatar-size: rem(30);
+  }
+
+  .title {
+    font-size: rem(30);
+    line-height: 1;
+  }
+
+  .toolbar {
+    display: none;
+
+    @media (min-width: $mantine-breakpoint-xs) {
+      display: flex;
+    }
+  }
+}

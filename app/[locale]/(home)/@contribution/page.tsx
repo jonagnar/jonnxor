@@ -2,18 +2,20 @@ import { Text } from '@mantine/core';
 import { useTranslations } from 'next-intl';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 
-export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
-  const t = await getTranslations({ locale, namespace: 'Metadata' });
+export type Props = { params: { locale: string } };
+
+export async function generateMetadata({ params: { locale } }: Props) {
+  const t = await getTranslations({ locale, namespace: 'metadata' });
 
   return {
     title: t('title'),
   };
 }
 
-export default function ContributionPage({ params: { locale } }: { params: { locale: string } }) {
+export default function ContributionPage({ params: { locale } }: Props) {
   unstable_setRequestLocale(locale);
 
-  const t = useTranslations('Contribution');
+  const t = useTranslations('contribution');
 
   return <Text>{t('text')}</Text>;
 }

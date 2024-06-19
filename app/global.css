@@ -2,3 +2,13 @@
   size: auto; /* auto is the initial value */
   margin: 0; /* this affects the margin in the printer settings */
 }
+
+::selection {
+  @mixin light {
+    background: var(--mantine-color-blue-filled);
+  }
+
+  @mixin dark {
+    background: var(--mantine-color-yellow-filled);
+  }
+}

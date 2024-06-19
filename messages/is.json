@@ -1,39 +1,47 @@
 {
-  "Metadata": {
+  "metadata": {
     "title": "JonnXor.is",
-    "description": "Jón Agnar Stefánsson - Vefforritari - CV"
+    "description": "CV - Jón Agnar Stefánsson"
   },
-  "OpenGraphImage": {
-    "title": "Jón Agnar Stefánsson - Vefforritari - CV"
+  "open-graph-image": {
+    "title": "CV - Jón Agnar Stefánsson"
   },
-  "Manifest": {
+  "manifest": {
     "name": "JonnXor.is"
   },
-  "Error": {
+  "error": {
     "title": "Eitthvað fór úrskeiðis!",
     "description": "<p>Við höfum því miður fengið villu.</p><p>Þú getur reynt að <retry>endurhlaða síðuna</retry> sem þú varst að skoða.</p>"
   },
-  "NotFoundPage": {
+  "not-found-page": {
     "title": "Síða fannst ekki",
-    "description": "Vinsamlegast athugaðu vafra vefslóðarstiku eða notið vafra til að fara á þekktar síður."
+    "description": "Vinsamlegast athugaðu vefslóð eða notið leiðarkerfi til að fara á þekktar síður."
   },
-  "Action": {
-    "print": "Prenta"
+  "navigation": {
+    "title": "Jón Agnar Stefánsson"
   },
-  "Home": {
-    "heading": "CV",
-    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ullam, ex cum repellat alias ea nemo. Ducimus ex nesciunt hic ad saepe molestiae nobis necessitatibus laboriosam officia, reprehenderit, earum fugiat?"
+  "toolbar": {
+    "print": "Prenta",
+    "download-pdf": "Sækja PDF",
+    "toggle-color": "Breyta lita þemu",
+    "toggle-language": "Breyta tungumáli í ensku"
   },
-  "Education": {
-    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ullam, ex cum repellat alias ea nemo. Ducimus ex nesciunt hic ad saepe molestiae nobis necessitatibus laboriosam officia, reprehenderit, earum fugiat?"
+  "home": {
+    "title": "<h2>Jón Agnar Stefánsson</h2><h3>CV</h3>",
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
   },
-  "Experience": {
-    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ullam, ex cum repellat alias ea nemo. Ducimus ex nesciunt hic ad saepe molestiae nobis necessitatibus laboriosam officia, reprehenderit, earum fugiat?"
+  "education": {
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
   },
-  "Contribution": {
-    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ullam, ex cum repellat alias ea nemo. Ducimus ex nesciunt hic ad saepe molestiae nobis necessitatibus laboriosam officia, reprehenderit, earum fugiat?"
+  "experience": {
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
   },
-  "Social": {
-    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ullam, ex cum repellat alias ea nemo. Ducimus ex nesciunt hic ad saepe molestiae nobis necessitatibus laboriosam officia, reprehenderit, earum fugiat?"
+  "contribution": {
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+  },
+  "social": {
+    "Github": "Github",
+    "Alfred": "Alfreð",
+    "LinkedIn": "LinkedIn"
   }
 }

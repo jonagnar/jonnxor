@@ -1,16 +1,16 @@
 import { useTranslations } from 'next-intl';
 import { Container, Text } from '@mantine/core';
 
-import { PageLayout } from '@/components/page-layout';
+import { AppLayout } from '@/components/app-layout';
 
 export default function NotFoundPage() {
-  const t = useTranslations('NotFoundPage');
+  const t = useTranslations('not-found-page');
 
   return (
-    <PageLayout title={t('title')}>
+    <AppLayout>
       <Container>
         <Text>{t('description')}</Text>
       </Container>
-    </PageLayout>
+    </AppLayout>
   );
 }

@@ -1,9 +1,9 @@
 'use client';
 
-import { Button, Container, Text } from '@mantine/core';
 import { useTranslations } from 'next-intl';
+import { Button, Container, Text } from '@mantine/core';
 
-import { PageLayout } from '@/components/page-layout';
+import { AppLayout } from '@/components/app-layout';
 
 export type Props = {
   error: Error;
@@ -11,15 +11,15 @@ export type Props = {
 };
 
 export default function Error({ reset }: Props) {
-  const t = useTranslations('Error');
+  const t = useTranslations('error');
   return (
-    <PageLayout title={t('title')}>
+    <AppLayout>
       <Container>
         {t.rich('description', {
           p: (chunks) => <Text>{chunks}</Text>,
           retry: (chunks) => <Button onClick={reset}>{chunks}</Button>,
         })}
       </Container>
-    </PageLayout>
+    </AppLayout>
   );
 }

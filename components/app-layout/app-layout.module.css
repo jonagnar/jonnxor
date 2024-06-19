@@ -1,0 +1,26 @@
+.app {
+  .header {
+    @media print {
+      display: none;
+    }
+  }
+
+  .navbar {
+    overflow: hidden;
+  }
+
+  .main {
+    padding-top: calc(rem(60) + var(--mantine-spacing-xl));
+
+    @media print {
+      padding-top: var(--mantine-spacing-xl);
+      padding-bottom: var(--mantine-spacing-xl);
+    }
+  }
+
+  .footer {
+    @media print {
+      display: none;
+    }
+  }
+}

@@ -1,39 +1,47 @@
 {
-  "Metadata": {
+  "metadata": {
     "title": "JonnXor.is",
-    "description": "Jón Agnar Stefánsson - Front-end Web Developer - CV"
+    "description": "CV - Jón Agnar Stefánsson"
   },
-  "OpenGraphImage": {
-    "title": "Jón Agnar Stefánsson - Front-end Web Developer - CV"
+  "open-graph-image": {
+    "title": "CV - Jón Agnar Stefánsson"
   },
-  "Manifest": {
+  "manifest": {
     "name": "JonnXor.is"
   },
-  "Error": {
+  "error": {
     "title": "Something went wrong!",
     "description": "<p>We've unfortunately encountered an error.</p><p>You can try to <retry>reload the page</retry> you were visiting.</p>"
   },
-  "NotFoundPage": {
+  "not-found-page": {
     "title": "Page not found",
     "description": "Please double-check the browser address bar or use the navigation to go to a known page."
   },
-  "Action": {
-    "print": "Print"
+  "navigation": {
+    "title": "Jón Agnar Stefánsson"
   },
-  "Home": {
-    "heading": "CV",
-    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ullam, ex cum repellat alias ea nemo. Ducimus ex nesciunt hic ad saepe molestiae nobis necessitatibus laboriosam officia, reprehenderit, earum fugiat?"
+  "toolbar": {
+    "print": "Print",
+    "download-pdf": "Download PDF",
+    "toggle-color": "Toggle color scheme",
+    "toggle-language": "Toggle language icelandic"
   },
-  "Education": {
-    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ullam, ex cum repellat alias ea nemo. Ducimus ex nesciunt hic ad saepe molestiae nobis necessitatibus laboriosam officia, reprehenderit, earum fugiat?"
+  "home": {
+    "title": "<h2>Jón Agnar Stefánsson</h2><h3>CV</h3>",
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
   },
-  "Experience": {
-    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ullam, ex cum repellat alias ea nemo. Ducimus ex nesciunt hic ad saepe molestiae nobis necessitatibus laboriosam officia, reprehenderit, earum fugiat?"
+  "education": {
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
   },
-  "Contribution": {
-    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ullam, ex cum repellat alias ea nemo. Ducimus ex nesciunt hic ad saepe molestiae nobis necessitatibus laboriosam officia, reprehenderit, earum fugiat?"
+  "experience": {
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
   },
-  "Social": {
-    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ullam, ex cum repellat alias ea nemo. Ducimus ex nesciunt hic ad saepe molestiae nobis necessitatibus laboriosam officia, reprehenderit, earum fugiat?"
+  "contribution": {
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+  },
+  "social": {
+    "Github": "Github",
+    "Alfred": "Alfreð",
+    "LinkedIn": "LinkedIn"
   }
 }
