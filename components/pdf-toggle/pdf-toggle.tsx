@@ -14,7 +14,7 @@ export function PDFToggle() {
   }
 
   return (
-    <Tooltip label={t('pdf')}>
+    <Tooltip label={t('pdf')} className={classes.tooltip}>
       <ActionIcon variant="filled" onClick={pdf} className={classes.pdf}>
         <IconPdf className={classes.icon} stroke={1.5} />
       </ActionIcon>

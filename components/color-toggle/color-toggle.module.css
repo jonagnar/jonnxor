@@ -2,6 +2,11 @@
   width: rem(40);
   height: rem(40);
 
+  .icon {
+    width: 70%;
+    height: 70%;
+  }
+
   @mixin dark {
     background: var(--mantine-color-yellow-filled);
 
@@ -44,5 +49,11 @@
     @mixin dark {
       display: block;
     }
+  }
+}
+
+@media print {
+  .tooltip {
+    display: none;
   }
 }

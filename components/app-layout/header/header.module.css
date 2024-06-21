@@ -17,8 +17,8 @@
 
   .burger {
     display: block;
-    width: rem(30);
-    height: rem(30);
+    width: rem(40);
+    height: rem(40);
 
     @media (min-width: $mantine-breakpoint-xs) {
       display: none;
@@ -75,7 +75,7 @@
   }
 
   .avatar {
-    --avatar-size: rem(30);
+    --avatar-size: rem(40);
 
     span {
       @mixin dark {

@@ -14,7 +14,7 @@ export function PrintToggle() {
   }
 
   return (
-    <Tooltip label={t('print')}>
+    <Tooltip label={t('print')} className={classes.tooltip}>
       <ActionIcon variant="filled" onClick={print} className={classes.print}>
         <IconPrinter className={classes.icon} stroke={1.5} />
       </ActionIcon>

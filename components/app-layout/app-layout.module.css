@@ -1,5 +1,7 @@
 .app {
   .header {
+    border-bottom: rem(1) solid var(--mantine-color-black);
+
     @media print {
       display: none;
     }
@@ -14,15 +16,16 @@
   }
 
   .main {
-    padding-top: calc(rem(60) + var(--mantine-spacing-xl));
+    padding-top: rem(80);
 
     @media print {
-      padding-top: var(--mantine-spacing-xl);
-      padding-bottom: var(--mantine-spacing-xl);
+      padding: var(--mantine-spacing-xl) var(--mantine-spacing-md);
     }
   }
 
   .footer {
+    border-top: rem(1) solid var(--mantine-color-black);
+
     @media print {
       display: none;
     }

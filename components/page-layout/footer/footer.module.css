@@ -1,0 +1,54 @@
+.footer {
+  height: 100%;
+  padding: rem(60) 0;
+  border-top: rem(3) solid var(--mantine-color-black);
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .wrapper {
+    flex: 1;
+    justify-content: space-around;
+  }
+
+  .item {
+    width: rem(80);
+    height: rem(80);
+  }
+
+  .button {
+    width: auto;
+    padding: var(--mantine-spacing-md) var(--mantine-spacing-xl);
+  }
+
+  .action {
+    padding: var(--mantine-spacing-md);
+    color: var(--mantine-color-yellow-filled);
+    border: rem(4) solid var(--mantine-color-yellow-filled);
+    border-radius: 50%;
+    background-color: var(--mantine-color-dark-filled);
+
+    &:focus {
+      border-color: var(--mantine-color-yellow-filled-hover);
+      background-color: var(--mantine-color-dark-filled-hover);
+    }
+
+    @mixin hover {
+      border-color: var(--mantine-color-yellow-filled-hover);
+      background-color: var(--mantine-color-dark-filled-hover);
+    }
+  }
+
+  .icon {
+    width: 100%;
+    height: 100%;
+  }
+
+  .alfred {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+  }
+}

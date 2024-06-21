@@ -23,14 +23,14 @@ export type Props = {
 
 export function AppLayout({ children }: Props) {
   const [opened] = useNavbarContext();
-  const pinned = useHeadroom({ fixedAt: 120 });
+  const pinned = useHeadroom({ fixedAt: 160 });
 
   return (
     <AppShell
       header={{ height: 60, collapsed: !pinned, offset: true }}
       navbar={{ width: 300, breakpoint: 'xs', collapsed: { desktop: true, mobile: !opened } }}
       footer={{ height: 60 }}
-      padding="md"
+      padding={0}
       className={classes.app}
     >
       <AppShellHeader className={classes.header}>

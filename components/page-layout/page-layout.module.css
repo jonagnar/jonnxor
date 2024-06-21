@@ -1,0 +1,28 @@
+.section {
+  .content {
+    margin: rem(30) auto;
+  }
+
+  .grid {
+    --grid-gutter: rem(30);
+  }
+
+  .avatar {
+    display: none;
+
+    @media (min-width: $mantine-breakpoint-xs) {
+      display: block;
+      padding-bottom: rem(30);
+    }
+  }
+
+  @media print {
+    .content {
+      margin: 0;
+    }
+
+    .footer {
+      display: none;
+    }
+  }
+}

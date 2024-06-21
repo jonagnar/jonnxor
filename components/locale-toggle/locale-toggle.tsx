@@ -20,7 +20,7 @@ export function LocaleToggle() {
   }
 
   return (
-    <Tooltip label={t('locale')}>
+    <Tooltip label={t('locale')} className={classes.tooltip}>
       <ActionIcon variant="filled" onClick={click} disabled={isPending} className={classes.locale}>
         <IconLanguage className={classes.icon} stroke={1.5} />
       </ActionIcon>

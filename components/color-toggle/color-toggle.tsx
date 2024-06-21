@@ -16,7 +16,7 @@ export function ColorToggle() {
   }
 
   return (
-    <Tooltip label={t('theme')}>
+    <Tooltip label={t('theme')} className={classes.tooltip}>
       <ActionIcon variant="filled" onClick={toggleColor} className={classes.color}>
         <IconSun className={cx(classes.icon, classes.light)} stroke={1.5} />
         <IconMoon className={cx(classes.icon, classes.dark)} stroke={1.5} />

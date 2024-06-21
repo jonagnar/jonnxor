@@ -1,7 +1,7 @@
 'use client';
 
 import cx from 'clsx';
-import { Container, Center, Avatar, TooltipFloating } from '@mantine/core';
+import { Box, Center, Avatar, TooltipFloating } from '@mantine/core';
 
 import { Link } from '@/navigation';
 
@@ -13,9 +13,9 @@ export type Props = {
 
 export function ProfilePhoto({ className }: Props) {
   return (
-    <Container className={classes.container}>
+    <Box className={classes.container}>
       <Center className={classes.wrapper}>
-        <TooltipFloating label="Click me!">
+        <TooltipFloating label="Click me!" className={classes.tooltip}>
           <Link href="/" className={classes.link}>
             <Avatar
               src="profile.jpg"
@@ -28,6 +28,6 @@ export function ProfilePhoto({ className }: Props) {
           </Link>
         </TooltipFloating>
       </Center>
-    </Container>
+    </Box>
   );
 }
