@@ -27,8 +27,27 @@
     "locale": "Breyta tungumáli í ensku"
   },
   "home": {
-    "title": "<h2>Jón Agnar Stefánsson</h2><h3>CV</h3>",
-    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+    "title": "Ferilskrá",
+    "contact-information": {
+      "title": "Jón Agnar Stefánsson",
+      "text": "Hér verða persónulegar upplýsingar..."
+    },
+    "skills": {
+      "title": "Hæfileikar",
+      "text": "Hér verða upplýsingar um hæfni og færni..."
+    },
+    "education": {
+      "title": "Menntun",
+      "text": "Hér verður upplistun á menntun..."
+    },
+    "experience": {
+      "title": "Reynsla",
+      "text": "Hér verður upplistun á atvinnu reynslu..."
+    },
+    "summary": {
+      "title": "Um mig",
+      "text": "Hér kemur eitthvað um mig..."
+    }
   },
   "education": {
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
@@ -40,8 +59,9 @@
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
   },
   "social": {
-    "Github": "Github",
-    "Alfred": "Alfreð",
-    "LinkedIn": "LinkedIn"
+    "share": "Deila",
+    "github": "Github",
+    "alfred": "Alfreð",
+    "linked-in": "LinkedIn"
   }
 }

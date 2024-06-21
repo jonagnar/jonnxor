@@ -16,7 +16,7 @@
   }
 
   .main {
-    padding-top: rem(80);
+    padding-top: rem(60);
 
     @media print {
       padding: var(--mantine-spacing-xl) var(--mantine-spacing-md);

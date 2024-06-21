@@ -27,8 +27,27 @@
     "locale": "Toggle language icelandic"
   },
   "home": {
-    "title": "<h2>Jón Agnar Stefánsson</h2><h3>CV</h3>",
-    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+    "title": "Resume",
+    "contact-information": {
+      "title": "Jón Agnar Stefánsson",
+      "text": "Contact information coming soon..."
+    },
+    "skills": {
+      "title": "Skills",
+      "text": "Skills coming soon..."
+    },
+    "education": {
+      "title": "Education",
+      "text": "Education coming soon..."
+    },
+    "experience": {
+      "title": "Experience",
+      "text": "Experience coming soon..."
+    },
+    "summary": {
+      "title": "Summary",
+      "text": "Summary coming soon..."
+    }
   },
   "education": {
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
@@ -40,8 +59,9 @@
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
   },
   "social": {
-    "Github": "Github",
-    "Alfred": "Alfreð",
-    "LinkedIn": "LinkedIn"
+    "share": "Share",
+    "github": "Github",
+    "alfred": "Alfreð",
+    "linked-in": "LinkedIn"
   }
 }

@@ -2,6 +2,7 @@
 
 import cx from 'clsx';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 import { Group, Button, ActionIcon, Stack, Text } from '@mantine/core';
 import { IconShare, IconBrandGithub, IconBrandLinkedin } from '@tabler/icons-react';
 
@@ -12,6 +13,8 @@ import alfred from '@/public/alfred.png';
 import classes from './footer.module.css';
 
 export function Footer() {
+  const t = useTranslations('social');
+
   return (
     <Group justify="space-between" gap="xl" className={classes.footer}>
       <Button
@@ -54,7 +57,7 @@ export function Footer() {
           >
             <IconShare className={classes.icon} stroke={1.5} />
           </ActionIcon>
-          <Text>Share</Text>
+          <Text>{t('share')}</Text>
         </Stack>
       </Group>
     </Group>

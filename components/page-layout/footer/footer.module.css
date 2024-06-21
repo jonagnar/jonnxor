@@ -31,11 +31,13 @@
     background-color: var(--mantine-color-dark-filled);
 
     &:focus {
+      color: var(--mantine-color-yellow-filled-hover);
       border-color: var(--mantine-color-yellow-filled-hover);
       background-color: var(--mantine-color-dark-filled-hover);
     }
 
     @mixin hover {
+      color: var(--mantine-color-yellow-filled-hover);
       border-color: var(--mantine-color-yellow-filled-hover);
       background-color: var(--mantine-color-dark-filled-hover);
     }
