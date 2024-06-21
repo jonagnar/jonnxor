@@ -7,4 +7,4 @@ export const pathnames = {
   '/': '/',
 } satisfies Pathnames<typeof locales>;
 
-export const localePrefix: LocalePrefix<typeof locales> = 'as-needed';
+export const localePrefix: LocalePrefix<typeof locales> = 'never';
