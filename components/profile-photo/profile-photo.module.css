@@ -6,31 +6,41 @@
   }
 
   .link {
-    display: inline-block;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+
     border-radius: 50%;
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      z-index: 2;
+
+      width: 100%;
+      height: 100%;
+
+      opacity: 0;
+      transition: opacity 0.2s ease-in-out;
+      background-color: #000;
+    }
+
+    &:focus::before {
+      opacity: 0.2;
+    }
+
+    @mixin hover {
+      &::before {
+        opacity: 0.2;
+      }
+    }
   }
 
   .avatar {
-    position: relative;
-
     width: 100%;
     height: auto;
-    border: 4px solid var(--mantine-color-dark-filled);
-
-    @mixin dark {
-      border-color: var(--mantine-color-yellow-filled);
-
-      @mixin hover {
-        border-color: var(--mantine-color-yellow-filled-hover);
-      }
-    }
-
-    @mixin light {
-      border-color: var(--mantine-color-blue-filled);
-
-      @mixin hover {
-        border-color: var(--mantine-color-blue-filled-hover);
-      }
-    }
   }
 }

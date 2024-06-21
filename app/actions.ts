@@ -2,10 +2,13 @@
 
 import { cookies } from 'next/headers';
 
-export async function toggleLocale() {
-  // Get cookie
-  const value = cookies().get('NEXT_LOCALE')?.value;
+import { defaultLocale } from '@/config';
 
-  // Set cookie
+export async function getLocale(fallback?: string) {
+  return cookies().get('NEXT_LOCALE')?.value || fallback || defaultLocale;
+}
+
+export async function toggleLocale() {
+  const value = await getLocale();
   cookies().set('NEXT_LOCALE', value === 'is' ? 'en' : 'is');
 }

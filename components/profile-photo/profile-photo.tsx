@@ -1,7 +1,7 @@
 'use client';
 
 import cx from 'clsx';
-import { Container, Center, Avatar } from '@mantine/core';
+import { Container, Center, Avatar, TooltipFloating } from '@mantine/core';
 
 import { Link } from '@/navigation';
 
@@ -15,15 +15,18 @@ export function ProfilePhoto({ className }: Props) {
   return (
     <Container className={classes.container}>
       <Center className={classes.wrapper}>
-        <Link href="/" className={classes.link}>
-          <Avatar
-            src="profile.jpg"
-            alt="Jón Agnar Stefánsson"
-            className={cx(classes.avatar, className)}
-          >
-            JA
-          </Avatar>
-        </Link>
+        <TooltipFloating label="Click me!">
+          <Link href="/" className={classes.link}>
+            <Avatar
+              src="profile.jpg"
+              alt="Jón Agnar Stefánsson"
+              className={cx(classes.avatar, className)}
+            >
+              JA
+            </Avatar>
+            {/* It's possible to put icon here on hover */}
+          </Link>
+        </TooltipFloating>
       </Center>
     </Container>
   );

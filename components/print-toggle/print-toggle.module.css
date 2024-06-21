@@ -5,6 +5,10 @@
   @mixin dark {
     background: var(--mantine-color-yellow-filled);
 
+    &:focus {
+      background: var(--mantine-color-yellow-filled-hover);
+    }
+
     @mixin hover {
       background: var(--mantine-color-yellow-filled-hover);
     }
@@ -12,6 +16,10 @@
 
   @mixin light {
     background: var(--mantine-color-blue-filled);
+
+    &:focus {
+      background: var(--mantine-color-blue-filled-hover);
+    }
 
     @mixin hover {
       background: var(--mantine-color-blue-filled-hover);

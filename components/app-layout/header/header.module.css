@@ -34,6 +34,14 @@
     }
 
     @mixin light {
+      &:focus {
+        color: var(--mantine-color-blue-filled-hover);
+
+        .avatar span {
+          --avatar-bg: var(--mantine-color-blue-filled-hover);
+        }
+      }
+
       @mixin hover {
         color: var(--mantine-color-blue-filled-hover);
 
@@ -44,6 +52,14 @@
     }
 
     @mixin dark {
+      &:focus {
+        color: var(--mantine-color-yellow-filled-hover);
+
+        .avatar span {
+          --avatar-bg: var(--mantine-color-yellow-filled-hover);
+        }
+      }
+
       @mixin hover {
         color: var(--mantine-color-yellow-filled-hover);
 
@@ -64,18 +80,10 @@
     span {
       @mixin dark {
         --avatar-bg: var(--mantine-color-yellow-filled);
-
-        @mixin hover {
-          --avatar-bg: var(--mantine-color-yellow-filled-hover);
-        }
       }
 
       @mixin light {
         --avatar-bg: var(--mantine-color-blue-filled);
-
-        @mixin hover {
-          --avatar-bg: var(--mantine-color-blue-filled-hover);
-        }
       }
     }
   }

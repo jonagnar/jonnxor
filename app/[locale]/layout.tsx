@@ -18,8 +18,8 @@ import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
 import { ColorSchemeScript, MantineProvider } from '@mantine/core';
 import { getMessages, getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 
-import { theme } from '@/theme';
 // import { delay } from '@/utils/delay';
+import { theme } from '@/theme';
 import { locales } from '@/config';
 import { NavbarProvider } from '@/context/navbar';
 import { TransitionProvider } from '@/context/transition';
@@ -53,7 +53,7 @@ export default async function RootLayout({ params: { locale }, children }: Props
     <html lang={locale}>
       <head>
         <ColorSchemeScript />
-        <IntlPolyfillScript />
+        <IntlPolyfillScript locale={locale} />
         <link rel="shortcut icon" href="/favicon.svg" />
         <meta
           name="viewport"

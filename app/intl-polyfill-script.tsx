@@ -1,8 +1,11 @@
 import Script from 'next/script';
-import { useLocale } from 'next-intl';
 
-export function IntlPolyfillScript() {
-  const locale = useLocale();
+import { getLocale } from '@/app/actions';
+
+export type Props = { locale: string };
+
+export async function IntlPolyfillScript(props: Props) {
+  const locale = await getLocale(props.locale);
 
   const polyfills = [
     'Intl',

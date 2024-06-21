@@ -34,12 +34,20 @@
     }
 
     @mixin light {
+      &:focus {
+        color: var(--mantine-color-blue-filled-hover);
+      }
+
       @mixin hover {
         color: var(--mantine-color-blue-filled-hover);
       }
     }
 
     @mixin dark {
+      &:focus {
+        color: var(--mantine-color-yellow-filled-hover);
+      }
+
       @mixin hover {
         color: var(--mantine-color-yellow-filled-hover);
       }
