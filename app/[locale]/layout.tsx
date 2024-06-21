@@ -12,17 +12,17 @@ import '@mantine/code-highlight/styles.css';
 import '@/app/global.css';
 
 import { Analytics } from '@vercel/analytics/react';
-import { ImageResponse } from 'next/og';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { NextIntlClientProvider } from 'next-intl';
 import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
-import { MantineProvider, ColorSchemeScript } from '@mantine/core';
+import { ColorSchemeScript, MantineProvider } from '@mantine/core';
 import { getMessages, getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 
 import { theme } from '@/theme';
+// import { delay } from '@/utils/delay';
 import { locales } from '@/config';
-import { AppLayout } from '@/components/app-layout';
-import { StoreProvider } from '@/app/store-provider';
+import { NavbarProvider } from '@/context/navbar';
+import { TransitionProvider } from '@/context/transition';
 import { IntlPolyfillScript } from '@/app/intl-polyfill-script';
 
 export type Params = { params: { locale: string } };
@@ -43,21 +43,17 @@ export async function generateMetadata({ params: { locale } }: Params) {
   };
 }
 
-export async function OpenGraphImage({ params: { locale } }: Params) {
-  const t = await getTranslations({ locale, namespace: 'open-graph-image' });
-  return new ImageResponse(<div style={{ fontSize: 128 }}>{t('title')}</div>);
-}
-
 export default async function RootLayout({ params: { locale }, children }: Props) {
   unstable_setRequestLocale(locale);
   const messages = await getMessages();
+
+  // await delay(3000); // Simulate loading
 
   return (
     <html lang={locale}>
       <head>
         <ColorSchemeScript />
         <IntlPolyfillScript />
-
         <link rel="shortcut icon" href="/favicon.svg" />
         <meta
           name="viewport"
@@ -66,14 +62,13 @@ export default async function RootLayout({ params: { locale }, children }: Props
       </head>
       <GoogleTagManager gtmId="G-GL1Y82696E" />
       <body>
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <MantineProvider theme={theme} defaultColorScheme="dark">
-            <StoreProvider>
-              <AppLayout>{children}</AppLayout>
-            </StoreProvider>
+        <NextIntlClientProvider messages={messages}>
+          <MantineProvider theme={theme}>
+            <TransitionProvider>
+              <NavbarProvider>{children}</NavbarProvider>
+            </TransitionProvider>
           </MantineProvider>
         </NextIntlClientProvider>
-
         <Analytics />
         <SpeedInsights />
       </body>

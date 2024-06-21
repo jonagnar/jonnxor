@@ -1,5 +1,6 @@
 'use client';
 
+import { useHeadroom } from '@mantine/hooks';
 import {
   AppShell,
   AppShellFooter,
@@ -7,14 +8,12 @@ import {
   AppShellMain,
   AppShellNavbar,
 } from '@mantine/core';
-import { useHeadroom } from '@mantine/hooks';
 
-import { selectOpened } from '@/lib/features/navbar/navbarSlice';
-import { useAppSelector } from '@/lib/hooks';
+import { useNavbarContext } from '@/context/navbar';
 
-import { Header } from './header';
-import { Navbar } from './navbar';
-import { Footer } from './footer';
+import { Header } from './header/header';
+import { Navbar } from './navbar/navbar';
+import { Footer } from './footer/footer';
 
 import classes from './app-layout.module.css';
 
@@ -23,7 +22,7 @@ export type Props = {
 };
 
 export function AppLayout({ children }: Props) {
-  const opened = useAppSelector(selectOpened);
+  const [opened] = useNavbarContext();
   const pinned = useHeadroom({ fixedAt: 120 });
 
   return (

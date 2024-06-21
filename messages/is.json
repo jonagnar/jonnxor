@@ -21,10 +21,10 @@
     "title": "Jón Agnar Stefánsson"
   },
   "toolbar": {
+    "pdf": "PDF",
     "print": "Prenta",
-    "download-pdf": "Sækja PDF",
-    "toggle-color": "Breyta lita þemu",
-    "toggle-language": "Breyta tungumáli í ensku"
+    "theme": "Breyta lita þemu",
+    "locale": "Breyta tungumáli í ensku"
   },
   "home": {
     "title": "<h2>Jón Agnar Stefánsson</h2><h3>CV</h3>",

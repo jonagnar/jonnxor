@@ -4,10 +4,14 @@
   .header {
     height: 100%;
     flex-wrap: nowrap;
+    justify-content: space-between;
 
     .wrapper {
-      flex: 1;
       justify-content: space-between;
+
+      @media (min-width: $mantine-breakpoint-xs) {
+        flex: 1;
+      }
     }
   }
 
@@ -30,8 +34,7 @@
     }
 
     @mixin light {
-      &:focus,
-      &:hover {
+      @mixin hover {
         color: var(--mantine-color-blue-filled-hover);
 
         .avatar span {
@@ -41,8 +44,7 @@
     }
 
     @mixin dark {
-      &:focus,
-      &:hover {
+      @mixin hover {
         color: var(--mantine-color-yellow-filled-hover);
 
         .avatar span {
@@ -58,6 +60,24 @@
 
   .avatar {
     --avatar-size: rem(30);
+
+    span {
+      @mixin dark {
+        --avatar-bg: var(--mantine-color-yellow-filled);
+
+        @mixin hover {
+          --avatar-bg: var(--mantine-color-yellow-filled-hover);
+        }
+      }
+
+      @mixin light {
+        --avatar-bg: var(--mantine-color-blue-filled);
+
+        @mixin hover {
+          --avatar-bg: var(--mantine-color-blue-filled-hover);
+        }
+      }
+    }
   }
 
   .title {

@@ -1,8 +1,6 @@
-.locale {
+.pdf {
   width: rem(40);
   height: rem(40);
-
-  text-transform: capitalize;
 
   @mixin dark {
     background: var(--mantine-color-yellow-filled);

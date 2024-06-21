@@ -3,7 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { Button, Container, Text } from '@mantine/core';
 
-import { AppLayout } from '@/components/app-layout';
+import { AppLayout } from '@/components/app-layout/app-layout';
 
 export type Props = {
   error: Error;

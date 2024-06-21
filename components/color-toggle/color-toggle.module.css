@@ -1,7 +1,21 @@
-.toggle {
-  .icon {
-    width: 22px;
-    height: 22px;
+.color {
+  width: rem(40);
+  height: rem(40);
+
+  @mixin dark {
+    background: var(--mantine-color-yellow-filled);
+
+    @mixin hover {
+      background: var(--mantine-color-yellow-filled-hover);
+    }
+  }
+
+  @mixin light {
+    background: var(--mantine-color-blue-filled);
+
+    @mixin hover {
+      background: var(--mantine-color-blue-filled-hover);
+    }
   }
 
   .dark {

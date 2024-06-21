@@ -1,19 +1,15 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { Title, Group, AppShellSection, Avatar } from '@mantine/core';
+import { Title, Group, AppShellSection } from '@mantine/core';
 
-import { Link, usePathname } from '@/navigation';
-
-import { Print } from '@/components/print';
-import { ColorToggle } from '@/components/color-toggle';
-import { LocaleToggle } from '@/components/locale-toggle';
+import { Toolbar } from '@/components/toolbar/toolbar';
+import { ProfilePhoto } from '@/components/profile-photo/profile-photo';
 
 import classes from './navbar.module.css';
 
 export function Navbar() {
   const t = useTranslations('navigation');
-  const pathname = usePathname();
 
   return (
     <>
@@ -25,22 +21,10 @@ export function Navbar() {
         </Group>
       </AppShellSection>
       <AppShellSection grow className={classes.content}>
-        <Avatar
-          src="profile.jpg"
-          alt="Jón Agnar Stefánsson"
-          className={classes.avatar}
-          component={Link}
-          href="/"
-        >
-          JA
-        </Avatar>
+        <ProfilePhoto className={classes.avatar} />
       </AppShellSection>
       <AppShellSection className={classes.footer}>
-        <Group className={classes.toolbar}>
-          <ColorToggle />
-          {pathname === '/' ? <Print /> : null}
-          <LocaleToggle />
-        </Group>
+        <Toolbar className={classes.toolbar} />
       </AppShellSection>
     </>
   );

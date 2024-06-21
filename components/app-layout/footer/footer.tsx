@@ -3,17 +3,12 @@
 import { MouseEvent } from 'react';
 import { Container, Group, Text } from '@mantine/core';
 
-import { Link, usePathname } from '@/navigation';
-
-import { Print } from '@/components/print';
-import { ColorToggle } from '@/components/color-toggle';
-import { LocaleToggle } from '@/components/locale-toggle';
+import { Link } from '@/navigation';
+import { Toolbar } from '@/components/toolbar/toolbar';
 
 import classes from './footer.module.css';
 
 export function Footer() {
-  const pathname = usePathname();
-
   function blur(e: MouseEvent<HTMLAnchorElement>) {
     e.currentTarget.blur();
   }
@@ -21,11 +16,7 @@ export function Footer() {
   return (
     <Container className={classes.container}>
       <Group className={classes.wrapper}>
-        <Group className={classes.toolbar}>
-          <ColorToggle />
-          {pathname === '/' ? <Print /> : null}
-          <LocaleToggle />
-        </Group>
+        <Toolbar className={classes.toolbar} />
         <Group className={classes.breadcrumbs}>
           <Text className={classes.link} component={Link} href="/" onClick={blur}>
             JonnXor.is

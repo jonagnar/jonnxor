@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { Container, Text } from '@mantine/core';
 
-import { AppLayout } from '@/components/app-layout';
+import { AppLayout } from '@/components/app-layout/app-layout';
 
 export default function NotFoundPage() {
   const t = useTranslations('not-found-page');

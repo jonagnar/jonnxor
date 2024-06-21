@@ -1,6 +1,8 @@
-import { Text } from '@mantine/core';
-import { useTranslations } from 'next-intl';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
+
+// import { delay } from '@/utils/delay';
+import { PageLayout } from '@/components/page-layout/page-layout';
+import { ProfilePhoto } from '@/components/profile-photo/profile-photo';
 
 export type Props = { params: { locale: string } };
 
@@ -12,10 +14,14 @@ export async function generateMetadata({ params: { locale } }: Props) {
   };
 }
 
-export default function HomePage({ params: { locale } }: Props) {
+export default async function HomePage({ params: { locale } }: Props) {
   unstable_setRequestLocale(locale);
 
-  const t = useTranslations('home');
+  // await delay(3000); // Simulate loading
 
-  return <Text>{t('text')}</Text>;
+  return (
+    <PageLayout>
+      <ProfilePhoto />
+    </PageLayout>
+  );
 }

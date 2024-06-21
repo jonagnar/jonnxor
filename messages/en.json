@@ -21,10 +21,10 @@
     "title": "Jón Agnar Stefánsson"
   },
   "toolbar": {
-    "print": "Print",
-    "download-pdf": "Download PDF",
-    "toggle-color": "Toggle color scheme",
-    "toggle-language": "Toggle language icelandic"
+    "pdf": "Download PDF",
+    "print": "Print Document",
+    "theme": "Toggle theme",
+    "locale": "Toggle language icelandic"
   },
   "home": {
     "title": "<h2>Jón Agnar Stefánsson</h2><h3>CV</h3>",

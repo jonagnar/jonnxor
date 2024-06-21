@@ -12,6 +12,7 @@
 
     @media (min-width: $mantine-breakpoint-xs) {
       display: flex;
+      flex-direction: row-reverse;
     }
   }
 
@@ -33,15 +34,13 @@
     }
 
     @mixin light {
-      &:focus,
-      &:hover {
+      @mixin hover {
         color: var(--mantine-color-blue-filled-hover);
       }
     }
 
     @mixin dark {
-      &:focus,
-      &:hover {
+      @mixin hover {
         color: var(--mantine-color-yellow-filled-hover);
       }
     }
