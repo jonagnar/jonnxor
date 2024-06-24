@@ -11,7 +11,6 @@ import { IntlPolyfillsScript } from '@/app/intl-polyfills-script';
 
 type Params = { params: { locale: string } };
 type Props = {
-  modal: React.ReactNode;
   params: Params['params'];
   children: React.ReactNode;
 };
@@ -29,7 +28,7 @@ export async function generateMetadata({ params: { locale } }: Params) {
   };
 }
 
-export default async function RootLayout({ modal, params: { locale }, children }: Props) {
+export default async function RootLayout({ params: { locale }, children }: Props) {
   unstable_setRequestLocale(locale);
 
   const messages = await getMessages();
@@ -48,10 +47,7 @@ export default async function RootLayout({ modal, params: { locale }, children }
       <GoogleTagManager gtmId="G-GL1Y82696E" />
       <body>
         <NextIntlClientProvider messages={messages}>
-          <MantineProvider theme={theme}>
-            {children}
-            {modal}
-          </MantineProvider>
+          <MantineProvider theme={theme}>{children}</MantineProvider>
         </NextIntlClientProvider>
         <SpeedInsights />
         <Analytics />

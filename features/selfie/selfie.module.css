@@ -1,3 +1,8 @@
+.link {
+  display: inline-block;
+  border-radius: 50%;
+}
+
 .selfie {
   width: 100%;
   height: auto;
