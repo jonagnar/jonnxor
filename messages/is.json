@@ -1,67 +1,55 @@
 {
   "metadata": {
     "title": "JonnXor.is",
-    "description": "CV - Jón Agnar Stefánsson"
-  },
-  "open-graph-image": {
-    "title": "CV - Jón Agnar Stefánsson"
+    "description": "Persónuleg heimasíða fyrir Jón Agnar (Xor) Stefánsson"
   },
   "manifest": {
     "name": "JonnXor.is"
   },
   "error": {
-    "title": "Eitthvað fór úrskeiðis!",
-    "description": "<p>Við höfum því miður fengið villu.</p><p>Þú getur reynt að <retry>endurhlaða síðuna</retry> sem þú varst að skoða.</p>"
+    "h2": "Eitthvað fór úrskeiðis!",
+    "p": "<p>Við höfum því miður fengið villu.</p><p>Þú getur reynt að <retry>endurhlaða síðuna</retry> sem þú varst að skoða.</p>"
   },
   "not-found-page": {
-    "title": "Síða fannst ekki",
-    "description": "Vinsamlegast athugaðu vefslóð eða notið leiðarkerfi til að fara á þekktar síður."
-  },
-  "navigation": {
-    "title": "Jón Agnar Stefánsson"
+    "h2": "Síða fannst ekki",
+    "p": "Vinsamlegast athugaðu vefslóð eða notið leiðarkerfi til að fara á þekktar síður."
   },
   "toolbar": {
-    "pdf": "PDF",
-    "print": "Prenta",
-    "theme": "Breyta lita þemu",
-    "locale": "Breyta tungumáli í ensku"
+    "pdf": "Sækja CV",
+    "print": "Prenta CV",
+    "theme": "Breyta litaþemu",
+    "locale": "Breyta tungumáli"
   },
-  "home": {
-    "title": "Ferilskrá",
-    "contact-information": {
-      "title": "Jón Agnar Stefánsson",
-      "text": "Hér verða persónulegar upplýsingar..."
-    },
-    "skills": {
-      "title": "Hæfileikar",
-      "text": "Hér verða upplýsingar um hæfni og færni..."
-    },
-    "education": {
-      "title": "Menntun",
-      "text": "Hér verður upplistun á menntun..."
-    },
-    "experience": {
-      "title": "Reynsla",
-      "text": "Hér verður upplistun á atvinnu reynslu..."
-    },
-    "summary": {
-      "title": "Um mig",
-      "text": "Hér kemur eitthvað um mig..."
-    }
-  },
-  "education": {
-    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
-  },
-  "experience": {
-    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
-  },
-  "contribution": {
-    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+  "navigation": {
+    "h2": "Jón Agnar (Xor) Stefánsson"
   },
   "social": {
     "share": "Deila",
     "github": "Github",
     "alfred": "Alfreð",
     "linked-in": "LinkedIn"
+  },
+  "home": {
+    "h2": "Ferilskrá",
+    "contact": {
+      "h3": "Jón Agnar (Xor) Stefánsson",
+      "p": "Halló heimur!"
+    },
+    "skills": {
+      "h3": "Hæfileikar",
+      "p": "Halló heimur!"
+    },
+    "education": {
+      "h3": "Menntun",
+      "p": "Halló heimur!"
+    },
+    "experience": {
+      "h3": "Reynsla",
+      "p": "Halló heimur!"
+    },
+    "summary": {
+      "h3": "Um mig",
+      "p": "Halló heimur!"
+    }
   }
 }

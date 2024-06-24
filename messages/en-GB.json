@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "title": "JonnXor.is",
+    "description": "Personal Website for Jón Agnar (Xor) Stefánsson"
+  },
+  "manifest": {
+    "name": "JonnXor.is"
+  },
+  "error": {
+    "title": "Something went wrong!",
+    "description": "<p>We've unfortunately encountered an error.</p><p>You can try to <retry>reload the page</retry> you were visiting.</p>"
+  },
+  "not-found-page": {
+    "title": "Page not found",
+    "description": "Please double-check the browser address bar or use the navigation to go to a known page."
+  },
+  "toolbar": {
+    "pdf": "Download CV",
+    "print": "Print CV",
+    "theme": "Toggle color scheme",
+    "locale": "Toggle locale"
+  },
+  "navigation": {
+    "title": "Jón Agnar (Xor) Stefánsson"
+  },
+  "social": {
+    "share": "Share",
+    "github": "Github",
+    "alfred": "Alfreð",
+    "linked-in": "LinkedIn"
+  },
+  "home": {
+    "h2": "CV",
+    "contact": {
+      "h3": "Jón Agnar (Xor) Stefánsson",
+      "p": "Hello world!"
+    },
+    "skills": {
+      "h3": "Skills",
+      "p": "Hello world!"
+    },
+    "education": {
+      "h3": "Education",
+      "p": "Hello world!"
+    },
+    "experience": {
+      "h3": "Experience",
+      "p": "Hello world!"
+    },
+    "summary": {
+      "h3": "Summary",
+      "p": "Hello world!"
+    }
+  }
+}
