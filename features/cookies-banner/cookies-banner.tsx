@@ -6,6 +6,8 @@ import { Button, Paper, Text, Group, Dialog, Title } from '@mantine/core';
 
 import { getCookiePolicyAccept, setCookiePolicyAccept, deleteCookiePolicy } from '@/app/actions';
 
+import classes from './cookies-banner.module.css';
+
 export function CookiesBanner() {
   const [opened, { open, close }] = useDisclosure(false);
 
@@ -29,7 +31,7 @@ export function CookiesBanner() {
   };
 
   return (
-    <Dialog opened={opened} withCloseButton={false}>
+    <Dialog opened={opened} withCloseButton={false} className={classes.banner}>
       <Paper p="lg" radius="md">
         <Title component="div" order={2} size="xs" mb="xs">
           Cookies
