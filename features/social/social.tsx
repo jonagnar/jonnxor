@@ -15,7 +15,7 @@ export function Social({ className, ...props }: SocialProps) {
     <Group
       my="xl"
       wrap="nowrap"
-      justify="space-between"
+      justify="space-around"
       {...props}
       className={clsx(classes.social, className)}
     >
