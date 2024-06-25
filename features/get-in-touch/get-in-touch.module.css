@@ -1,0 +1,5 @@
+.wrapper {
+  .contact {
+    margin-top: var(--mantine-spacing-xs);
+  }
+}
