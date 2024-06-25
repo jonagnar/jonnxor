@@ -1,5 +1,5 @@
 import { unstable_setRequestLocale, getTranslations } from 'next-intl/server';
-import { Container, Grid, GridCol, Group, Title, Text, Box, Divider } from '@mantine/core';
+import { Container, Grid, GridCol, Group, Title, Box, Divider } from '@mantine/core';
 
 import { Social } from '@/features/social/social';
 import { Selfie } from '@/features/selfie/selfie';
