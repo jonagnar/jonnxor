@@ -20,7 +20,13 @@ export function Experience() {
           </List>
         </ListItem>
         <ListItem>
-          Outcome (2012 - 2014)
+          Skeljungur (2015)
+          <List withPadding listStyleType="none">
+            <ListItem>Starfsmaður á plani</ListItem>
+          </List>
+        </ListItem>
+        <ListItem>
+          Outcome Hugbúnaðarhús (2012 - 2014)
           <List withPadding listStyleType="none">
             <ListItem>Technician</ListItem>
           </List>
