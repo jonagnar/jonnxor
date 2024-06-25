@@ -1,5 +1,6 @@
 'use client';
 
+import { Fragment } from 'react';
 import { Text, Box, Stack, rem } from '@mantine/core';
 import { IconSun, IconPhone, IconMapPin, IconAt } from '@tabler/icons-react';
 
@@ -32,6 +33,10 @@ const MOCKDATA = [
 ];
 
 export function ContactIconsList() {
-  const items = MOCKDATA.map((item, index) => <ContactIcon key={index} {...item} />);
+  const items = MOCKDATA.map((item, index) => (
+    <Fragment key={index}>
+      <ContactIcon {...item} />
+    </Fragment>
+  ));
   return <Stack>{items}</Stack>;
 }

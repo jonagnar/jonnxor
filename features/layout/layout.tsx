@@ -1,26 +1,21 @@
 'use client';
 
-import { MouseEvent } from 'react';
 import { useDisclosure, useHeadroom } from '@mantine/hooks';
 import {
   rem,
   AppShell,
   AppShellHeader,
   AppShellNavbar,
+  AppShellSection,
   AppShellMain,
   AppShellFooter,
-  Container,
-  Group,
-  Burger,
-  Avatar,
-  Title,
-  Center,
-  Breadcrumbs,
 } from '@mantine/core';
 
-import Link from '@/components/link/link';
-import { Selfie } from '@/features/selfie/selfie';
-import { Toolbar } from '@/features/toolbar/toolbar';
+import { AppHeader } from '@/features/app-header/app-header';
+import { AppFooter } from '@/features/app-footer/app-footer';
+import { Navigation } from '@/features/navigation/navigation';
+import { NavigationHeader } from '@/features/navigation-header/navigation-header';
+import { NavigationFooter } from '@/features/navigation-footer/navigation-footer';
 
 import classes from './layout.module.css';
 
@@ -31,10 +26,6 @@ type Props = {
 export function Layout({ children }: Props) {
   const [opened, { toggle }] = useDisclosure();
   const pinned = useHeadroom({ fixedAt: 120 });
-
-  const blur = (e: MouseEvent<HTMLAnchorElement>) => {
-    e.currentTarget.blur();
-  };
 
   return (
     <AppShell
@@ -48,56 +39,22 @@ export function Layout({ children }: Props) {
       padding="md"
     >
       <AppShellHeader className={classes.header}>
-        <Container h="100%">
-          <Group h="100%" wrap="nowrap">
-            <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
-            <Group justify="space-between" style={{ flex: 1 }}>
-              <Link href="/" onClick={blur} style={{ display: 'inline-block' }}>
-                <Group wrap="nowrap">
-                  <Avatar variant="filled">JA</Avatar>
-                  <Title order={1}>JonnXor.is</Title>
-                </Group>
-              </Link>
-              <Toolbar ml="xl" visibleFrom="xs" />
-            </Group>
-          </Group>
-        </Container>
+        <AppHeader opened={opened} toggle={toggle} />
       </AppShellHeader>
       <AppShellNavbar p="md" className={classes.navbar}>
-        <AppShell.Section h={60}>
-          <Container h="100%">
-            <Center h="100%">
-              <Title order={2} textWrap="nowrap">
-                Jón Agnar (Xor) Stefánsson
-              </Title>
-            </Center>
-          </Container>
-        </AppShell.Section>
-        <AppShell.Section h={`calc(100% - ${rem(120)})`} my="md">
-          <Container h="100%">
-            <Center h="100%">
-              <Selfie />
-            </Center>
-          </Container>
-        </AppShell.Section>
-        <AppShell.Section h={60}>
-          <Container h="100%">
-            <Toolbar h="100%" justify="space-evenly" />
-          </Container>
-        </AppShell.Section>
+        <AppShellSection h={60}>
+          <NavigationHeader />
+        </AppShellSection>
+        <AppShellSection h={`calc(100% - ${rem(120)})`} my="md">
+          <Navigation />
+        </AppShellSection>
+        <AppShellSection h={60}>
+          <NavigationFooter />
+        </AppShellSection>
       </AppShellNavbar>
       <AppShellMain className={classes.main}>{children}</AppShellMain>
       <AppShellFooter className={classes.footer}>
-        <Container h="100%">
-          <Group h="100%" justify="space-between" style={{ flex: 1 }}>
-            <Toolbar visibleFrom="xs" style={{ flexDirection: 'row-reverse' }} />
-            <Breadcrumbs ml="xl">
-              <Link href="/" onClick={blur}>
-                JonnXor.is
-              </Link>
-            </Breadcrumbs>
-          </Group>
-        </Container>
+        <AppFooter />
       </AppShellFooter>
     </AppShell>
   );
