@@ -2,11 +2,9 @@
 
 import { List, ListItem, Title, Text } from '@mantine/core';
 
-import classes from './education.module.css';
-
 export function Education() {
   return (
-    <div className={classes.wrapper}>
+    <div>
       <Title order={3}>Education</Title>
       <List listStyleType="none" mt="xs">
         <ListItem>

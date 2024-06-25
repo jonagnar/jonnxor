@@ -8,7 +8,7 @@ import classes from './get-in-touch.module.css';
 
 export function GetInTouch() {
   return (
-    <div className={classes.wrapper}>
+    <div>
       <Title order={3}>Jón Agnar Stefánsson</Title>
       <Text>Web Developer</Text>
       <div className={classes.contact}>

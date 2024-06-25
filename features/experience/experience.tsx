@@ -2,11 +2,9 @@
 
 import { List, ListItem, Title } from '@mantine/core';
 
-import classes from './experience.module.css';
-
 export function Experience() {
   return (
-    <div className={classes.wrapper}>
+    <div>
       <Title order={3}>Experience</Title>
       <List listStyleType="none" mt="xs">
         <ListItem>
