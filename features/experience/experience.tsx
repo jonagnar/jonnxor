@@ -22,7 +22,7 @@ export function Experience() {
         <ListItem>
           Skeljungur (2015)
           <List withPadding listStyleType="none">
-            <ListItem>Starfsmaður á plani</ListItem>
+            <ListItem>Gas station attendant</ListItem>
           </List>
         </ListItem>
         <ListItem>
