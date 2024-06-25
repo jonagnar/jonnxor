@@ -7,7 +7,7 @@ export function Download() {
   const download = () => null;
 
   return (
-    <ActionIcon size="xl" onClick={download} aria-label="Download PDF">
+    <ActionIcon size="xl" onClick={download}>
       <IconPdf />
     </ActionIcon>
   );

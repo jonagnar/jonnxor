@@ -1,7 +1,6 @@
 'use client';
 
-import { forwardRef } from 'react';
-import { createPolymorphicComponent, type GroupProps, Group } from '@mantine/core';
+import { type GroupProps, Group } from '@mantine/core';
 
 import { Print } from '@/features/print/print';
 import { Download } from '@/features/download/download';
@@ -9,14 +8,14 @@ import { ColorSchemeToggle } from '@/features/color-scheme-toggle/color-scheme-t
 
 export type ToolbarProps = GroupProps & {};
 
-export const Toolbar = createPolymorphicComponent<'div', ToolbarProps>(
-  forwardRef<HTMLDivElement, ToolbarProps>(({ ...props }, ref) => (
-    <Group component="div" {...props} ref={ref}>
-      <ColorSchemeToggle />
+export function Toolbar({ ...props }: ToolbarProps) {
+  return (
+    <Group {...props}>
       <Download />
       <Print />
+      <ColorSchemeToggle />
     </Group>
-  ))
-);
+  );
+}
 
 export default Toolbar;

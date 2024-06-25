@@ -17,8 +17,8 @@
   "toolbar": {
     "pdf": "Sækja CV",
     "print": "Prenta CV",
-    "theme": "Breyta litaþemu",
-    "locale": "Breyta tungumáli"
+    "locale": "Breyta tungumáli",
+    "color-scheme": "Breyta litaþemu"
   },
   "navigation": {
     "h2": "Jón Agnar (Xor) Stefánsson"

@@ -17,8 +17,8 @@
   "toolbar": {
     "pdf": "Download CV",
     "print": "Print CV",
-    "theme": "Toggle color scheme",
-    "locale": "Toggle locale"
+    "locale": "Toggle locale",
+    "color-scheme": "Toggle color scheme"
   },
   "navigation": {
     "title": "Jón Agnar (Xor) Stefánsson"

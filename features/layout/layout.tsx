@@ -86,9 +86,7 @@ export function Layout({ children }: Props) {
           </Container>
         </AppShell.Section>
       </AppShellNavbar>
-      <AppShellMain py={`calc(${rem(60)} + var(--mantine-spacing-xl))`} className={classes.main}>
-        {children}
-      </AppShellMain>
+      <AppShellMain className={classes.main}>{children}</AppShellMain>
       <AppShellFooter className={classes.footer}>
         <Container h="100%">
           <Group h="100%" justify="space-between" style={{ flex: 1 }}>

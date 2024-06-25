@@ -1,9 +1,5 @@
-.link {
-  display: inline-block;
-  border-radius: 50%;
-}
-
 .selfie {
   width: 100%;
   height: auto;
+  border: 2px solid var(--app-shell-border-color);
 }

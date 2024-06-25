@@ -1,7 +1,7 @@
 'use client';
 
-import { IconPrinter } from '@tabler/icons-react';
 import { ActionIcon } from '@mantine/core';
+import { IconPrinter } from '@tabler/icons-react';
 
 export function Print() {
   const print = () => {
@@ -9,7 +9,7 @@ export function Print() {
   };
 
   return (
-    <ActionIcon size="xl" onClick={print} aria-label="Print">
+    <ActionIcon size="xl" onClick={print}>
       <IconPrinter />
     </ActionIcon>
   );

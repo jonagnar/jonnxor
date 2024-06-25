@@ -1,19 +1,5 @@
-import { useTranslations } from 'next-intl';
-import { Container, Center, Title, Text } from '@mantine/core';
-
-import { Layout } from '@/features/layout/layout';
+import { NothingFound } from '@/features/nothing-found/nothing-found';
 
 export default function NotFoundPage() {
-  const t = useTranslations('not-found-page');
-
-  return (
-    <Layout>
-      <Container h="100%">
-        <Center h="100%">
-          <Title order={2}>{t('h2')}</Title>
-          <Text>{t('p')}</Text>
-        </Center>
-      </Container>
-    </Layout>
-  );
+  return <NothingFound />;
 }

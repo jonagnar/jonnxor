@@ -7,7 +7,10 @@ import { getMessages, getTranslations, unstable_setRequestLocale } from 'next-in
 
 import { theme } from '@/theme';
 import { locales } from '@/config';
+import { ScrollToTop } from '@/features/scroll-to-top/scroll-to-top';
+import { CookiesBanner } from '@/features/cookies-banner/cookies-banner';
 import { IntlPolyfillsScript } from '@/app/intl-polyfills-script';
+import { getCookiePolicyAccept } from '@/app/actions';
 
 type Params = { params: { locale: string } };
 type Props = {
@@ -32,6 +35,7 @@ export default async function RootLayout({ params: { locale }, children }: Props
   unstable_setRequestLocale(locale);
 
   const messages = await getMessages();
+  const accepted = await getCookiePolicyAccept();
 
   return (
     <html lang={locale}>
@@ -44,15 +48,19 @@ export default async function RootLayout({ params: { locale }, children }: Props
           content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
         />
       </head>
-      <GoogleTagManager gtmId="G-GL1Y82696E" />
+      {accepted && <GoogleTagManager gtmId="G-GL1Y82696E" />}
       <body>
         <NextIntlClientProvider messages={messages}>
-          <MantineProvider theme={theme}>{children}</MantineProvider>
+          <MantineProvider theme={theme}>
+            {children}
+            <ScrollToTop />
+            <CookiesBanner />
+          </MantineProvider>
         </NextIntlClientProvider>
-        <SpeedInsights />
-        <Analytics />
+        {accepted && <SpeedInsights />}
+        {accepted && <Analytics />}
       </body>
-      <GoogleAnalytics gaId="G-GL1Y82696E" />
+      {accepted && <GoogleAnalytics gaId="G-GL1Y82696E" />}
     </html>
   );
 }

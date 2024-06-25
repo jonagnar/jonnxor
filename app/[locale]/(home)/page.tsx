@@ -1,8 +1,15 @@
-import { Container, Grid, GridCol, Group, Title, Text } from '@mantine/core';
 import { unstable_setRequestLocale, getTranslations } from 'next-intl/server';
+import { Container, Grid, GridCol, Group, Title, Text, Box } from '@mantine/core';
 
-import { Selfie } from '@/features/selfie/selfie';
 import { Social } from '@/features/social/social';
+import { Selfie } from '@/features/selfie/selfie';
+import { Skills } from '@/features/skills/skills';
+import { Education } from '@/features/education/education';
+import { Experience } from '@/features/experience/experience';
+import { GetInTouch } from '@/features/get-in-touch/get-in-touch';
+
+import { Languages } from '@/features/languages/languages';
+import { Summary } from '@/features/summary/summary';
 
 export type Props = { params: { locale: string } };
 
@@ -13,32 +20,24 @@ export default async function HomePage({ params: { locale } }: Props) {
 
   return (
     <Container h="100%">
-      <Grid>
-        <GridCol span={{ base: 12, xs: 7 }} visibleFrom="xs">
-          <Selfie />
+      <Grid gutter="xl">
+        <GridCol span={{ base: 12, xs: 7 }}>
+          <Box visibleFrom="xs">
+            <Selfie />
+          </Box>
+          <Education />
+          <Experience />
         </GridCol>
         <GridCol span={{ base: 12, xs: 5 }}>
           <Group justify="flex-end">
             <Title order={2}>{t('h2')}</Title>
           </Group>
-          <Title order={3}>{t('contact.h3')}</Title>
-          <Text>{t('contact.p')}</Text>
+          <GetInTouch />
+          <Skills />
+          <Languages />
+          <Summary />
         </GridCol>
       </Grid>
-
-      <Grid>
-        <GridCol span={{ base: 12, xs: 7 }}>
-          <Title order={3}>{t('education.h3')}</Title>
-          <Text>{t('education.p')}</Text>
-          <Title order={3}>{t('experience.h3')}</Title>
-          <Text>{t('experience.p')}</Text>
-        </GridCol>
-        <GridCol span={{ base: 12, xs: 5 }}>
-          <Title order={3}>{t('summary.h3')}</Title>
-          <Text>{t('summary.p')}</Text>
-        </GridCol>
-      </Grid>
-
       <Social />
     </Container>
   );
