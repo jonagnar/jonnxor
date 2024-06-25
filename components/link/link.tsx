@@ -14,7 +14,7 @@ import { Link as NavigationLink } from '@/navigation';
 export type LinkProps = MantineAnchorProps;
 
 function render({ ...props }: LinkProps, ref: ForwardedRef<HTMLAnchorElement>) {
-  return <MantineAnchor component={NavigationLink} {...props} ref={ref} />;
+  return <MantineAnchor component={NavigationLink} href="/" {...props} ref={ref} />;
 }
 
 export const Link = createPolymorphicComponent<typeof NextLink, LinkProps>(
