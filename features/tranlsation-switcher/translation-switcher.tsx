@@ -1,3 +1,5 @@
+'use client';
+
 import { ActionIcon } from '@mantine/core';
 import { IconLanguage } from '@tabler/icons-react';
 import { useTransition } from 'react';

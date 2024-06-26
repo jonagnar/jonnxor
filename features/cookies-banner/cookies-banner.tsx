@@ -1,37 +1,28 @@
 'use client';
 
-import { useEffect } from 'react';
-import { useDisclosure } from '@mantine/hooks';
+import { useLocalStorage } from '@mantine/hooks';
 import { Button, Paper, Text, Group, Dialog, Title } from '@mantine/core';
-
-import { getCookiePolicyAccept, setCookiePolicyAccept, deleteCookiePolicy } from '@/app/actions';
 
 import classes from './cookies-banner.module.css';
 
 export function CookiesBanner() {
-  const [opened, { open, close }] = useDisclosure(false);
+  const [cookiePolicy, setCookiePolicy] = useLocalStorage<'accepted' | 'denied'>({
+    key: 'cookie-policy',
+    defaultValue: 'denied',
+  });
 
-  useEffect(() => {
-    const toggle = async () => {
-      const show = await getCookiePolicyAccept();
-      if (!show) open();
-    };
-
-    toggle();
-  }, []);
+  const isOpened = cookiePolicy === 'denied';
 
   const accept = () => {
-    close();
-    setCookiePolicyAccept();
+    setCookiePolicy('accepted');
   };
 
   const reject = () => {
-    close();
-    deleteCookiePolicy();
+    setCookiePolicy('denied');
   };
 
   return (
-    <Dialog opened={opened} withCloseButton={false} className={classes.banner}>
+    <Dialog opened={isOpened} withCloseButton={false} className={classes.banner}>
       <Paper p="lg" radius="md">
         <Title component="div" order={2} size="xs" mb="xs">
           Cookies
