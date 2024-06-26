@@ -29,7 +29,7 @@ function ContactIcon({ icon: Icon, title, description, ...props }: ContactIconPr
 const MOCKDATA = [
   { title: 'Email', description: 'jonnxor@gmail.com', icon: IconAt },
   { title: 'Phone', description: '(+354) 866-1321', icon: IconPhone },
-  { title: 'Address', description: 'Birkiholt 9, 225 Garðabær, Iceland', icon: IconMapPin },
+  { title: 'Address', description: 'Captital Area, Iceland', icon: IconMapPin },
 ];
 
 export function ContactIconsList() {
