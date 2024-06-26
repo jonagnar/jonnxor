@@ -2,7 +2,7 @@
 
 import { Fragment } from 'react';
 import { Text, Box, Stack, rem } from '@mantine/core';
-import { IconSun, IconPhone, IconMapPin, IconAt } from '@tabler/icons-react';
+import { IconSun, IconPhone, IconMapPin, IconAt, IconMasksTheater } from '@tabler/icons-react';
 
 import classes from './contact-icons.module.css';
 
@@ -30,6 +30,7 @@ const MOCKDATA = [
   { title: 'Email', description: 'jonnxor@gmail.com', icon: IconAt },
   { title: 'Phone', description: '(+354) 866-1321', icon: IconPhone },
   { title: 'Address', description: 'Captital Area, Iceland', icon: IconMapPin },
+  { title: 'Personality', description: 'INFJ', icon: IconMasksTheater },
 ];
 
 export function ContactIconsList() {

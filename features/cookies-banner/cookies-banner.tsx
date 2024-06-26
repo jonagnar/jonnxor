@@ -24,7 +24,7 @@ export function CookiesBanner() {
   return (
     <Dialog opened={isOpened} withCloseButton={false} className={classes.banner}>
       <Paper p="lg" radius="md">
-        <Title component="div" order={2} size="xs" mb="xs">
+        <Title order={2} size="xs" mb="xs">
           Cookies
         </Title>
         <Text size="xs">

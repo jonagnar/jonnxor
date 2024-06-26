@@ -17,7 +17,7 @@
   "toolbar": {
     "pdf": "Download CV",
     "print": "Print CV",
-    "locale": "Toggle locale",
+    "locale": "IS",
     "color-scheme": "Toggle color scheme"
   },
   "navigation": {

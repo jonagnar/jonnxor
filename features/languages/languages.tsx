@@ -3,7 +3,7 @@
 import { Fragment } from 'react';
 import { Title, Breadcrumbs, Text } from '@mantine/core';
 
-const languages = ['Icelandic', 'English'];
+const languages = ['Icelandic', 'English', 'Japanese'];
 
 export function Languages() {
   return (

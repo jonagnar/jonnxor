@@ -4,6 +4,7 @@ import { Container, Group, Burger } from '@mantine/core';
 
 import { Toolbar } from '@/features/toolbar/toolbar';
 import { PageHeader } from '@/features/page-header/page-header';
+import { LocaleToggle } from '@/features/locale-toggle/locale-toggle';
 
 type Props = {
   opened: boolean;
@@ -17,7 +18,9 @@ export function AppHeader({ opened, toggle }: Props) {
         <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
         <Group justify="space-between" style={{ flex: 1 }}>
           <PageHeader />
-          <Toolbar ml="xl" visibleFrom="xs" />
+          <Group ml="xl" visibleFrom="xs">
+            <LocaleToggle />
+          </Group>
         </Group>
       </Group>
     </Container>
