@@ -1,5 +1,5 @@
 import { unstable_setRequestLocale, getTranslations } from 'next-intl/server';
-import { Container, Grid, GridCol, Group, Title, Box, Divider } from '@mantine/core';
+import { Container, Grid, GridCol, Group, Title, Box, Divider, Space } from '@mantine/core';
 
 import { Social } from '@/features/social/social';
 import { Selfie } from '@/features/selfie/selfie';
@@ -25,6 +25,7 @@ export default async function HomePage({ params: { locale } }: Props) {
           <Box visibleFrom="xs">
             <Selfie />
           </Box>
+          <Space h="md" />
           <Education />
           <Divider my="md" />
           <Experience />
