@@ -16,7 +16,6 @@ export async function acceptCookies() {
 
   const options: Options = {
     path: '/',
-    domain: 'jonnxor.is',
     secure: true,
     maxAge: Date.now() - 24 * 60 * 60 * 1000,
     httpOnly: true,
