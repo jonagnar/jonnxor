@@ -3,7 +3,7 @@
 import { Title, Breadcrumbs, Text } from '@mantine/core';
 import { Fragment } from 'react';
 
-const skills = ['React', 'NextJS', 'TypeScript'];
+const skills = ['Next.js', 'React.js', 'TypeScript'];
 
 export function Skills() {
   return (
