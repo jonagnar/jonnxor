@@ -2,7 +2,7 @@
 
 import { cookies } from 'next/headers';
 
-export const COOKIE_POLICY = 'cookie-policy';
+const COOKIE_POLICY = 'cookie-policy';
 
 export async function hasCookies() {
   return cookies().has(COOKIE_POLICY);
