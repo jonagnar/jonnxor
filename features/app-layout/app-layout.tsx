@@ -17,13 +17,13 @@ import { Navigation } from '@/features/navigation/navigation';
 import { NavigationHeader } from '@/features/navigation-header/navigation-header';
 import { NavigationFooter } from '@/features/navigation-footer/navigation-footer';
 
-import classes from './layout.module.css';
+import classes from './app-layout.module.css';
 
 type Props = {
   children: React.ReactNode;
 };
 
-export function Layout({ children }: Props) {
+export function AppLayout({ children }: Props) {
   const [opened, { toggle }] = useDisclosure();
   const pinned = useHeadroom({ fixedAt: 120 });
 
@@ -60,4 +60,4 @@ export function Layout({ children }: Props) {
   );
 }
 
-export default Layout;
+export default AppLayout;

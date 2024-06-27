@@ -1,6 +1,6 @@
 import { unstable_setRequestLocale } from 'next-intl/server';
 
-import { Layout } from '@/features/layout/layout';
+import { AppLayout } from '@/features/app-layout/app-layout';
 
 type Props = {
   params: { locale: string };
@@ -9,5 +9,5 @@ type Props = {
 
 export default function HomeLayout({ children, params: { locale } }: Props) {
   unstable_setRequestLocale(locale);
-  return <Layout>{children}</Layout>;
+  return <AppLayout>{children}</AppLayout>;
 }
