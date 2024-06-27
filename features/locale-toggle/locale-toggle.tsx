@@ -2,14 +2,13 @@
 
 import { Button } from '@mantine/core';
 import { useParams } from 'next/navigation';
-import { IconGlobe, IconPlaneTilt, IconPlanet } from '@tabler/icons-react';
 import { useTransition } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 
 import { usePathname, useRouter } from '@/navigation';
 
 export function LocaleToggle() {
-  const t = useTranslations('toolbar');
+  const t = useTranslations();
   const locale = useLocale();
   const router = useRouter();
   const params = useParams();
@@ -30,7 +29,7 @@ export function LocaleToggle() {
 
   return (
     <Button size="md" onClick={handleLocale} disabled={isPending}>
-      {t('locale')}
+      {t('toolbar.locale')}
     </Button>
   );
 }

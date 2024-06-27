@@ -7,10 +7,10 @@ import { getMessages, getTranslations, unstable_setRequestLocale } from 'next-in
 
 import { theme } from '@/theme';
 import { locales } from '@/config';
+import { hasCookies } from '@/app/actions';
 import { ScrollToTop } from '@/features/scroll-to-top/scroll-to-top';
 import { CookiesBanner } from '@/features/cookies-banner/cookies-banner';
 import { IntlPolyfillsScript } from '@/app/intl-polyfills-script';
-import { getCookiePolicyAccept } from '@/app/actions';
 
 type Params = { params: { locale: string } };
 type Props = {
@@ -23,11 +23,11 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params: { locale } }: Params) {
-  const t = await getTranslations({ locale, namespace: 'metadata' });
+  const t = await getTranslations({ locale });
 
   return {
-    title: t('title'),
-    description: t('description'),
+    title: t('metadata.title'),
+    description: t('metadata.description'),
   };
 }
 
@@ -35,7 +35,7 @@ export default async function RootLayout({ params: { locale }, children }: Props
   unstable_setRequestLocale(locale);
 
   const messages = await getMessages();
-  const accepted = await getCookiePolicyAccept();
+  const analytics = await hasCookies();
 
   return (
     <html lang={locale}>
@@ -48,7 +48,7 @@ export default async function RootLayout({ params: { locale }, children }: Props
           content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
         />
       </head>
-      {accepted && <GoogleTagManager gtmId="G-GL1Y82696E" />}
+      {analytics && <GoogleTagManager gtmId="G-GL1Y82696E" />}
       <body>
         <NextIntlClientProvider messages={messages}>
           <MantineProvider theme={theme}>
@@ -57,10 +57,10 @@ export default async function RootLayout({ params: { locale }, children }: Props
             <CookiesBanner />
           </MantineProvider>
         </NextIntlClientProvider>
-        {accepted && <SpeedInsights />}
-        {accepted && <Analytics />}
+        {analytics && <SpeedInsights />}
+        {analytics && <Analytics />}
       </body>
-      {accepted && <GoogleAnalytics gaId="G-GL1Y82696E" />}
+      {analytics && <GoogleAnalytics gaId="G-GL1Y82696E" />}
     </html>
   );
 }

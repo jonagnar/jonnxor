@@ -1,7 +1,10 @@
 'use client';
 
+import { useEffect } from 'react';
 import { useLocalStorage } from '@mantine/hooks';
 import { Button, Paper, Text, Group, Dialog, Title } from '@mantine/core';
+
+import { acceptCookies, declineCookies } from '@/app/actions';
 
 import classes from './cookies-banner.module.css';
 
@@ -10,6 +13,10 @@ export function CookiesBanner() {
     key: 'cookie-policy',
     defaultValue: 'denied',
   });
+
+  useEffect(() => {
+    cookiePolicy === 'accepted' ? acceptCookies() : declineCookies();
+  }, [cookiePolicy]);
 
   const isOpened = cookiePolicy === 'denied';
 

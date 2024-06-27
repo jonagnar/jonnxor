@@ -16,7 +16,7 @@ export type Props = { params: { locale: string } };
 export default async function HomePage({ params: { locale } }: Props) {
   unstable_setRequestLocale(locale);
 
-  const t = await getTranslations('home');
+  const t = await getTranslations();
 
   return (
     <Container h="100%">
@@ -32,7 +32,7 @@ export default async function HomePage({ params: { locale } }: Props) {
         </GridCol>
         <GridCol span={{ base: 12, xs: 5 }}>
           <Group justify="flex-end">
-            <Title order={2}>{t('h2')}</Title>
+            <Title order={2}>{t('home.h2')}</Title>
           </Group>
           <GetInTouch />
           <Divider my="md" />

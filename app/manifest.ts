@@ -4,13 +4,10 @@ import { getTranslations } from 'next-intl/server';
 export default async function manifest(): Promise<MetadataRoute.Manifest> {
   const locale = 'is';
 
-  const t = await getTranslations({
-    namespace: 'manifest',
-    locale,
-  });
+  const t = await getTranslations({ locale });
 
   return {
-    name: t('name'),
+    name: t('manifest.name'),
     start_url: '/',
     theme_color: '#101E33',
   };
