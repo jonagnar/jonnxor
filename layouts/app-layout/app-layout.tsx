@@ -11,11 +11,11 @@ import {
   AppShellFooter,
 } from '@mantine/core';
 
-import { AppHeader } from '@/features/app-header/app-header';
-import { AppFooter } from '@/features/app-footer/app-footer';
-import { Navigation } from '@/features/navigation/navigation';
-import { NavigationHeader } from '@/features/navigation-header/navigation-header';
-import { NavigationFooter } from '@/features/navigation-footer/navigation-footer';
+import { AppHeader } from '@/layouts/app-header/app-header';
+import { AppFooter } from '@/layouts/app-footer/app-footer';
+import { Navigation } from '@/layouts/navigation/navigation';
+import { NavigationHeader } from '@/layouts/navigation-header/navigation-header';
+import { NavigationFooter } from '@/layouts/navigation-footer/navigation-footer';
 
 import classes from './app-layout.module.css';
 

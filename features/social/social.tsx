@@ -1,10 +1,7 @@
 'use client';
 
-import clsx from 'clsx';
 import { type GroupProps, Group, ActionIcon } from '@mantine/core';
 import { IconBrandLinkedin, IconBrandGithub, IconShare } from '@tabler/icons-react';
-
-import classes from './social.module.css';
 
 export type SocialProps = GroupProps & {};
 
@@ -12,13 +9,7 @@ export function Social({ className, ...props }: SocialProps) {
   const share = () => null;
 
   return (
-    <Group
-      my="xl"
-      wrap="nowrap"
-      justify="space-around"
-      {...props}
-      className={clsx(classes.social, className)}
-    >
+    <Group my="xl" wrap="nowrap" justify="space-around" {...props}>
       <ActionIcon
         component="a"
         href="https://www.linkedin.com/in/jonagnar/"

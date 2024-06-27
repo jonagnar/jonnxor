@@ -28,7 +28,7 @@ export function LocaleToggle() {
   };
 
   return (
-    <Button size="md" onClick={handleLocale} disabled={isPending}>
+    <Button size="md" radius="md" onClick={handleLocale} disabled={isPending}>
       {t('toolbar.locale')}
     </Button>
   );

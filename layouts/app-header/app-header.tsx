@@ -2,7 +2,6 @@
 
 import { Container, Group, Burger } from '@mantine/core';
 
-import { Toolbar } from '@/features/toolbar/toolbar';
 import { PageHeader } from '@/features/page-header/page-header';
 import { LocaleToggle } from '@/features/locale-toggle/locale-toggle';
 

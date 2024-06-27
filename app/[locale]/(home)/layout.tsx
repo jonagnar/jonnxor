@@ -1,6 +1,6 @@
 import { unstable_setRequestLocale } from 'next-intl/server';
 
-import { AppLayout } from '@/features/app-layout/app-layout';
+import { AppLayout } from '@/layouts/app-layout/app-layout';
 
 type Props = {
   params: { locale: string };
