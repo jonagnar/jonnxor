@@ -21,7 +21,7 @@ export async function acceptCookies() {
     maxAge: Date.now() - 24 * 60 * 60 * 1000,
     expires: Date.now() - 24 * 60 * 60 * 1000,
     httpOnly: true,
-    sameSite: true,
+    sameSite: 'lax',
   };
 
   cookies().set(key, value, options);
