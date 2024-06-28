@@ -1,35 +1,30 @@
 'use client';
 
 import { type GroupProps, Group, ActionIcon } from '@mantine/core';
-import { IconBrandLinkedin, IconBrandGithub, IconShare } from '@tabler/icons-react';
+import { IconBrandLinkedin, IconBrandGithub } from '@tabler/icons-react';
 
 export type SocialProps = GroupProps & {};
 
 export function Social({ className, ...props }: SocialProps) {
-  const share = () => null;
-
   return (
-    <Group my="xl" wrap="nowrap" justify="space-around" {...props}>
+    <Group my="xl" gap="xl" wrap="nowrap" justify="space-around" {...props}>
       <ActionIcon
+        size={64}
+        radius={64}
         component="a"
         href="https://www.linkedin.com/in/jonagnar/"
         target="_blank"
-        size="xl"
-        radius="xl"
       >
-        <IconBrandLinkedin />
+        <IconBrandLinkedin style={{ width: '70%', height: '70%' }} />
       </ActionIcon>
       <ActionIcon
+        size={64}
+        radius={64}
         component="a"
         href="https://github.com/jonagnar"
         target="_blank"
-        size="xl"
-        radius="xl"
       >
-        <IconBrandGithub />
-      </ActionIcon>
-      <ActionIcon size="xl" radius="xl" onClick={share}>
-        <IconShare />
+        <IconBrandGithub style={{ width: '70%', height: '70%' }} />
       </ActionIcon>
     </Group>
   );

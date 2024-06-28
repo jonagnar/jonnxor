@@ -1,5 +1,9 @@
 .selfie {
-  width: 100%;
+  width: calc(330px - var(--mantine-spacing-md) * 2);
   height: auto;
   border: 2px solid var(--app-shell-border-color);
+
+  @media (min-width: $mantine-breakpoint-sm) {
+    width: 100%;
+  }
 }

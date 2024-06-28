@@ -12,3 +12,24 @@
     background: var(--mantine-color-yellow-filled);
   }
 }
+
+.link {
+  color: var(--mantine-color-blue-filled);
+  transition: color 300ms ease;
+
+  @mixin hover {
+    color: var(--mantine-color-blue-filled-hover);
+  }
+
+  @mixin dark {
+    color: var(--mantine-color-yellow-filled);
+
+    @mixin hover {
+      color: var(--mantine-color-yellow-filled-hover);
+    }
+  }
+
+  @media print {
+    color: var(--mantine-color-text);
+  }
+}

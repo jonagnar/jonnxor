@@ -1,5 +1,9 @@
+.dialog {
+  width: 100%;
+}
+
 @media print {
-  .banner {
+  .dialog {
     display: none;
   }
 }

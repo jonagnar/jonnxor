@@ -1,37 +1,66 @@
 'use client';
 
-import { List, ListItem, Title } from '@mantine/core';
+import { useTranslations } from 'next-intl';
+import { Box, Anchor, List, ListItem, Title, Text } from '@mantine/core';
 
 export function Experience() {
+  const t = useTranslations();
+
   return (
-    <div>
-      <Title order={3}>Experience</Title>
-      <List listStyleType="none" mt="xs">
+    <Box>
+      <Title order={3} mb="sm">
+        {t('experience.title')}
+      </Title>
+      <List spacing="sm" listStyleType="none" withPadding>
         <ListItem>
-          Advania (2016 - 2024)
-          <List withPadding listStyleType="none">
-            <ListItem>Web Developer</ListItem>
+          <Anchor fw="bold" href="https://advania.is" target="_blank">
+            {t('experience.company-advania-name')}
+          </Anchor>
+          {' • '}
+          <Text fs="italic" size="sm" span>
+            {t('experience.company-advania-date')}
+          </Text>
+          <List spacing={0} listStyleType="none" withPadding>
+            <ListItem>{t('experience.company-advania-role')}</ListItem>
           </List>
         </ListItem>
         <ListItem>
-          Reykjavik University (2016)
-          <List withPadding listStyleType="none">
-            <ListItem>Teaching Assistant</ListItem>
+          <Anchor fw="bold" href="https://www.ru.is" target="_blank">
+            {t('experience.company-university-name')}
+          </Anchor>
+          {' • '}
+          <Text fs="italic" size="sm" span>
+            {t('experience.company-university-date')}
+          </Text>
+          <List spacing={0} listStyleType="none" withPadding>
+            <ListItem>{t('experience.company-university-role')}</ListItem>
           </List>
         </ListItem>
         <ListItem>
-          Skeljungur (2015)
-          <List withPadding listStyleType="none">
-            <ListItem>Gas station attendant</ListItem>
+          <Anchor fw="bold" href="https://www.skeljungur.is" target="_blank">
+            {t('experience.company-shell-name')}
+          </Anchor>
+          {' • '}
+          <Text fs="italic" size="sm" span>
+            {t('experience.company-shell-date')}
+          </Text>
+          <List spacing={0} listStyleType="none" withPadding>
+            <ListItem>{t('experience.company-shell-role')}</ListItem>
           </List>
         </ListItem>
         <ListItem>
-          Outcome Hugbúnaðarhús (2012 - 2014)
-          <List withPadding listStyleType="none">
-            <ListItem>Technician</ListItem>
+          <Text fw="bold" span>
+            {t('experience.company-outcome-name')}
+          </Text>
+          {' • '}
+          <Text fs="italic" size="sm" span>
+            {t('experience.company-outcome-date')}
+          </Text>
+          <List spacing={0} listStyleType="none" withPadding>
+            <ListItem>{t('experience.company-outcome-role')}</ListItem>
           </List>
         </ListItem>
       </List>
-    </div>
+    </Box>
   );
 }

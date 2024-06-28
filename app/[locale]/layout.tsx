@@ -1,5 +1,6 @@
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Orbitron, Montserrat } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
 import { ColorSchemeScript, MantineProvider } from '@mantine/core';
@@ -17,6 +18,20 @@ type Props = {
   params: Params['params'];
   children: React.ReactNode;
 };
+
+const montserrat = Montserrat({
+  weight: ['400'],
+  subsets: ['latin'],
+  variable: '--font-montserrat',
+  display: 'swap',
+});
+
+const orbitron = Orbitron({
+  weight: ['600'],
+  subsets: ['latin'],
+  variable: '--font-orbitron',
+  display: 'swap',
+});
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -38,7 +53,7 @@ export default async function RootLayout({ params: { locale }, children }: Props
   const analytics = await hasCookies();
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className={`${montserrat.variable} ${orbitron.variable}`}>
       <head>
         <ColorSchemeScript />
         <IntlPolyfillsScript />

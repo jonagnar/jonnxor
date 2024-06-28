@@ -1,0 +1,23 @@
+.toggle {
+  cursor: pointer;
+  border: 0;
+
+  span {
+    background: var(--mantine-color-blue-filled);
+    transition: background 300ms ease;
+
+    @mixin dark {
+      background: var(--mantine-color-yellow-filled);
+    }
+  }
+
+  @mixin hover {
+    span {
+      background: var(--mantine-color-blue-filled-hover);
+
+      @mixin dark {
+        background: var(--mantine-color-yellow-filled-hover);
+      }
+    }
+  }
+}

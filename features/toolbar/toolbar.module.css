@@ -1,0 +1,9 @@
+.reverse {
+  flex-direction: row-reverse;
+}
+
+@media print {
+  .tooltip {
+    display: none;
+  }
+}

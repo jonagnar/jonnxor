@@ -1,25 +1,44 @@
 'use client';
 
-import { List, ListItem, Title, Text } from '@mantine/core';
+import { useTranslations } from 'next-intl';
+import { Box, Title, Text, List, ListItem, Anchor } from '@mantine/core';
 
 export function Education() {
+  const t = useTranslations();
+
   return (
-    <div>
-      <Title order={3}>Education</Title>
-      <List listStyleType="none" mt="xs">
+    <Box>
+      <Title order={3} mb="sm">
+        {t('education.title')}
+      </Title>
+      <List spacing="sm" listStyleType="none" withPadding>
         <ListItem>
-          <Text>Reykjavik University (2013 - 2016)</Text>
-          <List withPadding listStyleType="none">
-            <ListItem>Bachelor of Science • Computer Science</ListItem>
+          <Anchor fw="bold" href="https://www.ru.is" target="_blank">
+            {t('education.university')}
+          </Anchor>
+          {' • '}
+          <Text fs="italic" size="sm" span>
+            {t('education.university-date')}
+          </Text>
+          <List spacing={0} listStyleType="none" withPadding>
+            <ListItem>{t('education.university-degree')}</ListItem>
           </List>
         </ListItem>
         <ListItem>
-          Technical College of Iceland (2009 - 2013)
-          <List withPadding listStyleType="none">
-            <ListItem>Associate&apos;s degree • Computer Science</ListItem>
+          <Anchor fw="bold" href="https://tskoli.is" target="_blank">
+            {t('education.college')}
+          </Anchor>
+          {' • '}
+          <Text fs="italic" size="sm" span>
+            {t('education.college-date')}
+          </Text>
+          <List spacing={0} listStyleType="none" withPadding>
+            <ListItem>{t('education.college-degree')}</ListItem>
           </List>
         </ListItem>
       </List>
-    </div>
+    </Box>
   );
 }
+
+export default Education;

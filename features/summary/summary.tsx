@@ -1,17 +1,15 @@
 'use client';
 
-import { Title, Text } from '@mantine/core';
-
-import classes from './summary.module.css';
+import { useTranslations } from 'next-intl';
+import { Box, Title, Text } from '@mantine/core';
 
 export function Summary() {
+  const t = useTranslations();
+
   return (
-    <div className={classes.wrapper}>
-      <Title order={3}>Summary</Title>
-      <Text>
-        Experienced computer scientist specialized in frontend web development. Technology Stack:
-        TypeScript, React, Next.js, and more with over eight years of industry experience
-      </Text>
-    </div>
+    <Box>
+      <Title order={3}>{t('summary.h3')}</Title>
+      <Text>{t('summary.p')}</Text>
+    </Box>
   );
 }

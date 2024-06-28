@@ -6,6 +6,5 @@ export type Props = { params: { locale: string } };
 
 export default async function HomePage({ params: { locale } }: Props) {
   unstable_setRequestLocale(locale);
-
   return <HomeLayout />;
 }

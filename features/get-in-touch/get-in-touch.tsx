@@ -1,19 +1,55 @@
 'use client';
 
-import { Title, Text } from '@mantine/core';
+import { useTranslations } from 'next-intl';
+import { type BoxProps, Box, Stack, Title, Text, Anchor } from '@mantine/core';
+import { IconMasksTheater, IconCake, IconAt, IconPhone, IconMapPin } from '@tabler/icons-react';
 
-import { ContactIconsList } from '@/features/contact-icons/contact-icons';
+import { ContactIcon } from '@/features/contact-icons/contact-icons';
 
-import classes from './get-in-touch.module.css';
+export type GetInTouchProps = BoxProps & {};
 
-export function GetInTouch() {
+export function GetInTouch({ ...props }: GetInTouchProps) {
+  const t = useTranslations();
+
   return (
-    <div>
-      <Title order={3}>Jón Agnar Stefánsson</Title>
-      <Text>Web Developer</Text>
-      <div className={classes.contact}>
-        <ContactIconsList />
-      </div>
-    </div>
+    <Box {...props}>
+      <Title order={3}>{t('contact.title')}</Title>
+      <Text size="xl" mb="sm">
+        {t('contact.subtitle')}
+      </Text>
+      <Stack gap="sm">
+        <ContactIcon
+          icon={IconAt}
+          label={t('contact.email-label')}
+          input={<Anchor href="mailto:jonnxor@gmail.com">{t('contact.email-value')}</Anchor>}
+        />
+        <ContactIcon
+          icon={IconPhone}
+          label={t('contact.phone-label')}
+          input={<Anchor href="tel:+3548661321">{t('contact.phone-value')}</Anchor>}
+        />
+        <ContactIcon
+          icon={IconMapPin}
+          label={t('contact.address-label')}
+          input={t('contact.address-value')}
+        />
+        <ContactIcon
+          icon={IconMasksTheater}
+          label={t('contact.personality-label')}
+          input={
+            <Anchor href="https://www.16personalities.com/infj-personality" target="_blank">
+              {t('contact.personality-value')}
+            </Anchor>
+          }
+        />
+        <ContactIcon
+          icon={IconCake}
+          label={t('contact.birthday-label')}
+          input={t('contact.birthday-value')}
+        />
+      </Stack>
+    </Box>
   );
 }
+
+export default GetInTouch;

@@ -1,26 +1,26 @@
 'use client';
 
-import { Container, Title, Text, Button, Group } from '@mantine/core';
+import { useTranslations } from 'next-intl';
+import { Container, Box, Title, Text } from '@mantine/core';
+
 import { Illustration } from './illustration';
 
 import classes from './nothing-found.module.css';
 
 export function NothingFound() {
+  const t = useTranslations();
+
   return (
-    <Container className={classes.root}>
-      <div className={classes.inner}>
+    <Container px={20} className={classes.root}>
+      <Box className={classes.inner}>
         <Illustration className={classes.image} />
-        <div className={classes.content}>
-          <Title className={classes.title}>Nothing to see here</Title>
+        <Box className={classes.content}>
+          <Title className={classes.title}>{t('not-found-page.title')}</Title>
           <Text c="dimmed" size="lg" ta="center" className={classes.description}>
-            Page you are trying to open does not exist. You may have mistyped the address, or the
-            page has been moved to another URL. If you think this is an error contact support.
+            {t('not-found-page.description')}
           </Text>
-          <Group justify="center">
-            <Button size="md">Take me back to home page</Button>
-          </Group>
-        </div>
-      </div>
+        </Box>
+      </Box>
     </Container>
   );
 }

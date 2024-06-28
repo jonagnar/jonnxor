@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { Title, Text, Button, Container, Group } from '@mantine/core';
 
 import classes from './server-error.module.css';
@@ -9,21 +10,20 @@ type Props = {
 };
 
 export function ServerError({ reset }: Props) {
+  const t = useTranslations();
+
   return (
-    <div className={classes.root}>
-      <Container>
-        <div className={classes.label}>500</div>
-        <Title className={classes.title}>Something bad just happened...</Title>
-        <Text size="lg" ta="center" className={classes.description}>
-          Our servers could not handle your request. Don&apos;t worry, our development team was
-          already notified. Try refreshing the page.
-        </Text>
-        <Group justify="center">
-          <Button variant="white" size="md" onClick={reset}>
-            Refresh the page
-          </Button>
-        </Group>
-      </Container>
-    </div>
+    <Container px={20} className={classes.root}>
+      <div className={classes.label}>500</div>
+      <Title className={classes.title}>{t('error.title')}</Title>
+      <Text size="lg" ta="center" className={classes.description}>
+        {t('error.description')}
+      </Text>
+      <Group justify="center">
+        <Button variant="white" size="md" onClick={reset}>
+          Refresh the page
+        </Button>
+      </Group>
+    </Container>
   );
 }

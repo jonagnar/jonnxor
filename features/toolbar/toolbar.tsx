@@ -1,20 +1,36 @@
 'use client';
 
-import { type GroupProps, Group } from '@mantine/core';
+import clsx from 'clsx';
+import { useTranslations } from 'next-intl';
+import { type GroupProps, Group, TooltipGroup, Tooltip } from '@mantine/core';
 
+import { PDF } from '@/features/pdf/pdf';
 import { Print } from '@/features/print/print';
-import { Download } from '@/features/download/download';
 import { ColorSchemeToggle } from '@/features/color-scheme-toggle/color-scheme-toggle';
 
-export type ToolbarProps = GroupProps & {};
+import classes from './toolbar.module.css';
 
-export function Toolbar({ ...props }: ToolbarProps) {
+export type ToolbarProps = GroupProps & {
+  reverse?: boolean;
+};
+
+export function Toolbar({ reverse, className, ...props }: ToolbarProps) {
+  const t = useTranslations();
+
   return (
-    <Group {...props}>
-      <Download />
-      <Print />
-      <ColorSchemeToggle />
-    </Group>
+    <TooltipGroup>
+      <Group {...props} className={clsx(className, reverse && classes.reverse)}>
+        <Tooltip label={t('toolbar.pdf')} className={classes.tooltip}>
+          <PDF size={40} />
+        </Tooltip>
+        <Tooltip label={t('toolbar.print')} className={classes.tooltip}>
+          <Print size={40} />
+        </Tooltip>
+        <Tooltip label={t('toolbar.color-scheme')} className={classes.tooltip}>
+          <ColorSchemeToggle size={40} />
+        </Tooltip>
+      </Group>
+    </TooltipGroup>
   );
 }
 

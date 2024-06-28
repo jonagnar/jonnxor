@@ -1,25 +1,34 @@
 'use client';
 
 import { IconArrowUp } from '@tabler/icons-react';
+import { useTranslations } from 'next-intl';
 import { useWindowScroll } from '@mantine/hooks';
-import { Affix, Button, Transition, rem } from '@mantine/core';
+import { rem, Affix, Button, Transition } from '@mantine/core';
 
 export function ScrollToTop() {
+  const t = useTranslations();
   const [scroll, scrollTo] = useWindowScroll();
 
   return (
-    <Affix position={{ bottom: 20, right: 20 }}>
+    <Affix
+      position={{
+        right: 'var(--mantine-spacing-lg)',
+        bottom: `calc(${rem(80)} + var(--mantine-spacing-lg))`,
+      }}
+    >
       <Transition transition="slide-up" mounted={scroll.y > 0}>
         {(transitionStyles) => (
           <Button
-            leftSection={<IconArrowUp style={{ width: rem(16), height: rem(16) }} />}
             style={transitionStyles}
             onClick={() => scrollTo({ y: 0 })}
+            leftSection={<IconArrowUp />}
           >
-            Scroll to top
+            {t('navigation.back-to-top')}
           </Button>
         )}
       </Transition>
     </Affix>
   );
 }
+
+export default ScrollToTop;

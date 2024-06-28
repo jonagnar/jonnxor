@@ -1,4 +1,30 @@
+.header {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+
+  @media (min-width: $mantine-breakpoint-sm) {
+    flex-direction: row;
+  }
+}
+
+.left {
+  order: 1;
+
+  @media (min-width: $mantine-breakpoint-sm) {
+    order: 2;
+  }
+}
+
+.right {
+  order: 2;
+
+  @media (min-width: $mantine-breakpoint-sm) {
+    order: 1;
+  }
+}
+
 @media print {
+  .tooltip,
   .social {
     display: none;
   }

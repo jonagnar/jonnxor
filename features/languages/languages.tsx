@@ -1,21 +1,24 @@
 'use client';
 
-import { Fragment } from 'react';
-import { Title, Breadcrumbs, Text } from '@mantine/core';
-
-const languages = ['Icelandic', 'English', 'Japanese'];
+import React from 'react';
+import { useTranslations } from 'next-intl';
+import { Box, Breadcrumbs, Title, Text } from '@mantine/core';
 
 export function Languages() {
+  const t = useTranslations();
+
   return (
-    <div>
-      <Title order={3}>Languages</Title>
-      <Breadcrumbs separator="•" separatorMargin="md" mt="xs" style={{ flexWrap: 'wrap' }}>
-        {languages.map((language, index) => (
-          <Fragment key={index}>
-            <Text>{language}</Text>
-          </Fragment>
-        ))}
+    <Box>
+      <Title order={3} mb="sm">
+        {t('languages.title')}
+      </Title>
+      <Breadcrumbs separator="•" separatorMargin="sm" style={{ flexWrap: 'wrap' }}>
+        <Text>{t('languages.icelandic')}</Text>
+        <Text>{t('languages.english')}</Text>
+        <Text>{t('languages.japanese')}</Text>
       </Breadcrumbs>
-    </div>
+    </Box>
   );
 }
+
+export default Languages;

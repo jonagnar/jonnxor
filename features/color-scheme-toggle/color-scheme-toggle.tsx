@@ -1,23 +1,28 @@
 'use client';
 
+import { forwardRef } from 'react';
 import { IconSun, IconMoon } from '@tabler/icons-react';
-import { ActionIcon, useMantineColorScheme } from '@mantine/core';
+import { useMantineColorScheme, type ActionIconProps, ActionIcon } from '@mantine/core';
 
 import classes from './color-scheme-toggle.module.css';
 
-export function ColorSchemeToggle() {
-  const { toggleColorScheme } = useMantineColorScheme();
+export type ColorSchemeToggleProps = ActionIconProps & {};
 
-  const toggleColor = () => {
-    toggleColorScheme();
-  };
+export const ColorSchemeToggle = forwardRef<HTMLButtonElement, ColorSchemeToggleProps>(
+  (props, ref) => {
+    const { toggleColorScheme } = useMantineColorScheme();
 
-  return (
-    <ActionIcon size="xl" onClick={toggleColor}>
-      <IconSun className={classes.light} />
-      <IconMoon className={classes.dark} />
-    </ActionIcon>
-  );
-}
+    const handleToggle = () => {
+      toggleColorScheme();
+    };
+
+    return (
+      <ActionIcon ref={ref} {...props} onClick={handleToggle}>
+        <IconSun className={classes.light} style={{ width: '70%', height: '70%' }} />
+        <IconMoon className={classes.dark} style={{ width: '70%', height: '70%' }} />
+      </ActionIcon>
+    );
+  }
+);
 
 export default ColorSchemeToggle;

@@ -1,14 +1,22 @@
 'use client';
 
-import { Avatar } from '@mantine/core';
+import clsx from 'clsx';
+import { type AvatarProps, Avatar } from '@mantine/core';
 
 import pro from '@/public/pro.jpg';
 
 import classes from './selfie.module.css';
 
-export function Selfie() {
+export type SelfieProps = AvatarProps & {};
+
+export function Selfie({ className, ...props }: SelfieProps) {
   return (
-    <Avatar src={pro.src} alt="Jón Agnar (Xor) Stefánsson" className={classes.selfie}>
+    <Avatar
+      src={pro.src}
+      alt="Jón Agnar (Xor) Stefánsson"
+      {...props}
+      className={clsx(classes.selfie, className)}
+    >
       JA
     </Avatar>
   );

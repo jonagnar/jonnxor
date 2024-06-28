@@ -1,21 +1,24 @@
 'use client';
 
-import { Title, Breadcrumbs, Text } from '@mantine/core';
-import { Fragment } from 'react';
-
-const skills = ['Next.js', 'React.js', 'TypeScript'];
+import React from 'react';
+import { useTranslations } from 'next-intl';
+import { Box, Breadcrumbs, Title, Text } from '@mantine/core';
 
 export function Skills() {
+  const t = useTranslations();
+
   return (
-    <div>
-      <Title order={3}>Top Skills</Title>
-      <Breadcrumbs separator="•" separatorMargin="md" mt="xs" style={{ flexWrap: 'wrap' }}>
-        {skills.map((skill, index) => (
-          <Fragment key={index}>
-            <Text>{skill}</Text>
-          </Fragment>
-        ))}
+    <Box>
+      <Title order={3} mb="sm">
+        {t('skills.title')}
+      </Title>
+      <Breadcrumbs separator="•" separatorMargin="sm" style={{ flexWrap: 'wrap' }}>
+        <Text>{t('skills.react')}</Text>
+        <Text>{t('skills.next')}</Text>
+        <Text>{t('skills.typescript')}</Text>
       </Breadcrumbs>
-    </div>
+    </Box>
   );
 }
+
+export default Skills;
