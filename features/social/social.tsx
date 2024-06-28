@@ -11,6 +11,7 @@ export function Social({ className, ...props }: SocialProps) {
       <ActionIcon
         size={64}
         radius={64}
+        variant="filled"
         component="a"
         href="https://www.linkedin.com/in/jonagnar/"
         target="_blank"
@@ -20,6 +21,7 @@ export function Social({ className, ...props }: SocialProps) {
       <ActionIcon
         size={64}
         radius={64}
+        variant="filled"
         component="a"
         href="https://github.com/jonagnar"
         target="_blank"
