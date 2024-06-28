@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "JonnXor.is",
-    "description": "Personal Website for Jón Agnar"
+    "description": "Personal Website for Jón Agnar Stefánsson"
   },
   "manifest": {
     "name": "JonnXor.is"
@@ -27,7 +27,7 @@
     "logo": "JA"
   },
   "navigation": {
-    "title": "Jón Agnar",
+    "title": "Jón Agnar Stefánsson",
     "back-to-top": "Back to top"
   },
   "toolbar": {

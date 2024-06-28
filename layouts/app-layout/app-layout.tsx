@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { useDisclosure, useHeadroom } from '@mantine/hooks';
 import {
   AppShell,
@@ -27,6 +28,7 @@ type Props = {
 };
 
 export function AppLayout({ children }: Props) {
+  const t = useTranslations();
   const [opened, { toggle }] = useDisclosure();
   const pinned = useHeadroom({ fixedAt: 160 });
 
@@ -54,7 +56,7 @@ export function AppLayout({ children }: Props) {
         <AppShellSection>
           <Group h="100%" justify="center">
             <Title order={2} size={24}>
-              Jón Agnar
+              {t('navigation.title')}
             </Title>
           </Group>
         </AppShellSection>

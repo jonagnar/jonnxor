@@ -51,7 +51,7 @@ export function HomeLayout() {
           <Box visibleFrom="sm">
             <Selfie />
           </Box>
-          <Space h="lg" />
+          <Space h="lg" visibleFrom="sm" />
           <Education />
           <Divider my="md" />
           <Experience />
