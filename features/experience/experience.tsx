@@ -64,3 +64,5 @@ export function Experience() {
     </Box>
   );
 }
+
+export default Experience;

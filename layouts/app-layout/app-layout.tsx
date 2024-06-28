@@ -54,7 +54,7 @@ export function AppLayout({ children }: Props) {
         <AppShellSection>
           <Group h="100%" justify="center">
             <Title order={2} size={24}>
-              Jón Agnar (Xor) Stefánsson
+              Jón Agnar
             </Title>
           </Group>
         </AppShellSection>

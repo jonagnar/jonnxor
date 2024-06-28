@@ -1,14 +1,15 @@
 {
   "metadata": {
     "title": "JonnXor.is",
-    "description": "Personal Website for Jón Agnar (Xor) Stefánsson"
+    "description": "Personal Website for Jón Agnar"
   },
   "manifest": {
     "name": "JonnXor.is"
   },
   "error": {
     "title": "Something went wrong!",
-    "description": "<p>We've unfortunately encountered an error.</p><p>You can try to <retry>reload the page</retry> you were visiting.</p>"
+    "description": "<p>We've unfortunately encountered an error.</p><p>You can try to <retry>reload the page</retry> you were visiting.</p>",
+    "refresh": "Refresh the page"
   },
   "not-found-page": {
     "title": "Page not found",
@@ -17,16 +18,16 @@
   },
   "cookies": {
     "title": "Cookies",
-    "text": "This website uses third party libraries to spy on you! If you don't want me to spy on you, select \"Stealth mode\".",
-    "reject": "Stealth mode",
-    "accept": "Notice me Google-senpai"
+    "text": "This website uses cookies.",
+    "reject": "Reject All",
+    "accept": "Accept All"
   },
   "header": {
     "title": "JonnXor.is",
     "logo": "JA"
   },
   "navigation": {
-    "title": "Jón Agnar (Xor) Stefánsson",
+    "title": "Jón Agnar",
     "back-to-top": "Back to top"
   },
   "toolbar": {
@@ -46,7 +47,7 @@
     "h2": "CV"
   },
   "contact": {
-    "title": "Jón Agnar (Xor) Stefánsson",
+    "title": "Jón Agnar Stefánsson",
     "subtitle": "Web Developer",
     "email-label": "Email",
     "email-value": "jonnxor@gmail.com",
@@ -96,7 +97,7 @@
     "company-outcome-role": "Technician"
   },
   "summary": {
-    "h3": "Summary",
-    "p": "Hello world!"
+    "title": "Summary",
+    "text": "Hello world!"
   }
 }

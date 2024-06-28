@@ -1,6 +1,6 @@
 'use client';
 
-import { Anchor, createTheme, rem } from '@mantine/core';
+import { ActionIcon, Anchor, Button, createTheme, rem } from '@mantine/core';
 
 export const theme = createTheme({
   /* Put your mantine theme override here */
@@ -51,6 +51,20 @@ export const theme = createTheme({
     Anchor: Anchor.extend({
       defaultProps: {
         classNames: { root: 'link' },
+      },
+    }),
+    Button: Button.extend({
+      defaultProps: {
+        classNames: {
+          root: 'button',
+        },
+      },
+    }),
+    ActionIcon: ActionIcon.extend({
+      defaultProps: {
+        classNames: {
+          root: 'action-icon',
+        },
       },
     }),
   },

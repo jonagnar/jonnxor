@@ -31,7 +31,11 @@ export function GetInTouch({ ...props }: GetInTouchProps) {
         <ContactIcon
           icon={IconMapPin}
           label={t('contact.address-label')}
-          input={t('contact.address-value')}
+          input={
+            <Anchor href="https://maps.app.goo.gl/dJrgoEEvLkn4oVnL9" target="_blank">
+              {t('contact.address-value')}
+            </Anchor>
+          }
         />
         <ContactIcon
           icon={IconMasksTheater}

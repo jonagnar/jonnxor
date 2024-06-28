@@ -11,12 +11,7 @@ export type SelfieProps = AvatarProps & {};
 
 export function Selfie({ className, ...props }: SelfieProps) {
   return (
-    <Avatar
-      src={pro.src}
-      alt="Jón Agnar (Xor) Stefánsson"
-      {...props}
-      className={clsx(classes.selfie, className)}
-    >
+    <Avatar src={pro.src} alt="Jón Agnar" {...props} className={clsx(classes.selfie, className)}>
       JA
     </Avatar>
   );

@@ -1,6 +1,7 @@
 'use client';
 
 import { ServerError } from '@/features/server-error/server-error';
+import AppLayout from '@/layouts/app-layout/app-layout';
 
 type Props = {
   error: Error;
@@ -8,5 +9,9 @@ type Props = {
 };
 
 export default function Error({ reset }: Props) {
-  return <ServerError reset={reset} />;
+  return (
+    <AppLayout>
+      <ServerError reset={reset} />
+    </AppLayout>
+  );
 }

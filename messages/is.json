@@ -1,14 +1,15 @@
 {
   "metadata": {
     "title": "JonnXor.is",
-    "description": "Persónuleg heimasíða fyrir Jón Agnar (Xor) Stefánsson"
+    "description": "Persónuleg heimasíða fyrir Jón Agnar"
   },
   "manifest": {
     "name": "JonnXor.is"
   },
   "error": {
     "title": "Eitthvað fór úrskeiðis!",
-    "description": "<p>Við höfum því miður fengið villu.</p><p>Þú getur reynt að <retry>endurhlaða síðuna</retry> sem þú varst að skoða.</p>"
+    "description": "<p>Við höfum því miður fengið villu.</p><p>Þú getur reynt að <retry>endurhlaða síðuna</retry> sem þú varst að skoða.</p>",
+    "refresh": "Endurhlaða síðu"
   },
   "not-found-page": {
     "title": "Síða fannst ekki",
@@ -17,16 +18,16 @@
   },
   "cookies": {
     "title": "Vafrakökur",
-    "text": "Þessi vefsíða notar vafrakökur! ef þú vilt ekki leyfa mér að njósna veldu þá \"Laumuhamur\".",
-    "reject": "Laumuhamur",
-    "accept": "Njósnarar eru hot"
+    "text": "Þessi síða notar vafrakökur.",
+    "reject": "Hafna",
+    "accept": "Leyfa"
   },
   "header": {
     "title": "JonnXor.is",
     "logo": "JA"
   },
   "navigation": {
-    "h2": "Jón Agnar (Xor) Stefánsson",
+    "h2": "Jón Agnar",
     "back-to-top": "Upp á topp"
   },
   "toolbar": {
@@ -46,7 +47,7 @@
     "h2": "Ferilskrá"
   },
   "contact": {
-    "title": "Jón Agnar (Xor) Stefánsson",
+    "title": "Jón Agnar Stefánsson",
     "subtitle": "Tölvunarfræðingur",
     "email-label": "Netfang",
     "email-value": "jonnxor@gmail.com",
@@ -96,7 +97,7 @@
     "company-outcome-role": "Tæknimaður"
   },
   "summary": {
-    "h3": "Um mig",
-    "p": "Halló heimur!"
+    "title": "Um mig",
+    "text": "Halló heimur!"
   }
 }

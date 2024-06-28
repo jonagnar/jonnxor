@@ -21,9 +21,11 @@ export function ServerError({ reset }: Props) {
       </Text>
       <Group justify="center">
         <Button variant="white" size="md" onClick={reset}>
-          Refresh the page
+          {t('error.refresh')}
         </Button>
       </Group>
     </Container>
   );
 }
+
+export default ServerError;

@@ -20,6 +20,7 @@ export function ScrollToTop() {
         {(transitionStyles) => (
           <Button
             style={transitionStyles}
+            variant="filled"
             onClick={() => scrollTo({ y: 0 })}
             leftSection={<IconArrowUp />}
           >

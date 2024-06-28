@@ -24,3 +24,5 @@ export function NothingFound() {
     </Container>
   );
 }
+
+export default NothingFound;

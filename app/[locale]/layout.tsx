@@ -66,7 +66,7 @@ export default async function RootLayout({ params: { locale }, children }: Props
       {analytics && <GoogleTagManager gtmId="G-GL1Y82696E" />}
       <body>
         <NextIntlClientProvider messages={messages}>
-          <MantineProvider theme={theme}>
+          <MantineProvider theme={theme} defaultColorScheme="dark">
             {children}
             <ScrollToTop />
             <CookiesBanner />

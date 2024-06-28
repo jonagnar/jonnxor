@@ -10,3 +10,5 @@ export function Illustration(props: React.ComponentPropsWithoutRef<'svg'>) {
     </svg>
   );
 }
+
+export default Illustration;

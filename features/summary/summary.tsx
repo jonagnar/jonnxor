@@ -8,8 +8,10 @@ export function Summary() {
 
   return (
     <Box>
-      <Title order={3}>{t('summary.h3')}</Title>
-      <Text>{t('summary.p')}</Text>
+      <Title order={3}>{t('summary.title')}</Title>
+      <Text>{t('summary.text')}</Text>
     </Box>
   );
 }
+
+export default Summary;
