@@ -36,18 +36,20 @@
 
 .button,
 .action-icon {
-  background: var(--mantine-color-blue-filled);
-  transition: background 300ms ease;
-
-  @mixin hover {
-    background: var(--mantine-color-blue-filled-hover);
-  }
-
-  @mixin dark {
-    background: var(--mantine-color-yellow-filled);
+  &[data-variant='filled'] {
+    background: var(--mantine-color-blue-filled);
+    transition: background 300ms ease;
 
     @mixin hover {
-      background: var(--mantine-color-yellow-filled-hover);
+      background: var(--mantine-color-blue-filled-hover);
+    }
+
+    @mixin dark {
+      background: var(--mantine-color-yellow-filled);
+
+      @mixin hover {
+        background: var(--mantine-color-yellow-filled-hover);
+      }
     }
   }
 }

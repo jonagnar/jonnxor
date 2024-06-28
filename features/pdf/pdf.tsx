@@ -10,7 +10,7 @@ export const PDF = forwardRef<HTMLButtonElement, PDFProps>((props, ref) => {
   const handlePDF = () => {};
 
   return (
-    <ActionIcon ref={ref} {...props} onClick={handlePDF}>
+    <ActionIcon ref={ref} variant="filled" {...props} onClick={handlePDF}>
       <IconPdf style={{ width: '70%', height: '70%' }} />
     </ActionIcon>
   );

@@ -50,7 +50,7 @@ export function CookiesBanner() {
         <Button variant="default" onClick={reject}>
           {t('cookies.reject')}
         </Button>
-        <Button variant="outline" onClick={accept}>
+        <Button variant="outline" onClick={accept} className={classes.button}>
           {t('cookies.accept')}
         </Button>
       </Group>
