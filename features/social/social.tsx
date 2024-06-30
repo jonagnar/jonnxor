@@ -5,7 +5,7 @@ import { IconBrandLinkedin, IconBrandGithub } from '@tabler/icons-react';
 
 export type SocialProps = GroupProps & {};
 
-export function Social({ className, ...props }: SocialProps) {
+export function Social({ ...props }: SocialProps) {
   return (
     <Group my="xl" gap="xl" wrap="nowrap" justify="space-around" {...props}>
       <ActionIcon

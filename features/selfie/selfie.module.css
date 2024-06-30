@@ -1,9 +1,25 @@
-.selfie {
-  width: calc(330px - var(--mantine-spacing-md) * 2);
-  height: auto;
-  border: 2px solid var(--app-shell-border-color);
+.figure {
+  display: flex;
+  flex-direction: column;
 
-  @media (min-width: $mantine-breakpoint-sm) {
-    width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+
+  border: 2px solid var(--app-shell-border-color);
+  border-radius: 50%;
+
+  max-width: 290px;
+
+  @media (min-width: $mantine-breakpoint-xs) {
+    max-width: 450px;
+  }
+
+  @media (min-width: $mantine-breakpoint-xs) {
+    max-width: 100%;
   }
 }

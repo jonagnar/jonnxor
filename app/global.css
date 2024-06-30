@@ -24,6 +24,10 @@
   @mixin dark {
     color: var(--mantine-color-yellow-filled);
 
+    @media print {
+      color: var(--mantine-color-text);
+    }
+
     @mixin hover {
       color: var(--mantine-color-yellow-filled-hover);
     }
@@ -51,5 +55,11 @@
         background: var(--mantine-color-yellow-filled-hover);
       }
     }
+  }
+}
+
+@media print {
+  body {
+    --mantine-font-family-headings: var(--mantine-font-family);
   }
 }

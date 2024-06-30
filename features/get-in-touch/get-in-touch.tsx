@@ -6,30 +6,34 @@ import { IconMasksTheater, IconCake, IconAt, IconPhone, IconMapPin } from '@tabl
 
 import { ContactIcon } from '@/features/contact-icons/contact-icons';
 
+import classes from './get-in-touch.module.css';
+
 export type GetInTouchProps = BoxProps & {};
 
 export function GetInTouch({ ...props }: GetInTouchProps) {
   const t = useTranslations();
 
   return (
-    <Box {...props}>
-      <Title order={3}>{t('contact.title')}</Title>
+    <Box pb="xs" {...props}>
+      <Title order={3} textWrap="wrap">
+        {t('contact.title')}
+      </Title>
       <Text size="xl" mb="sm">
         {t('contact.subtitle')}
       </Text>
       <Stack gap="sm">
         <ContactIcon
-          icon={IconAt}
+          icon={<IconAt className={classes.icon} />}
           label={t('contact.email-label')}
           input={<Anchor href="mailto:jonnxor@gmail.com">{t('contact.email-value')}</Anchor>}
         />
         <ContactIcon
-          icon={IconPhone}
+          icon={<IconPhone className={classes.icon} />}
           label={t('contact.phone-label')}
           input={<Anchor href="tel:+3548661321">{t('contact.phone-value')}</Anchor>}
         />
         <ContactIcon
-          icon={IconMapPin}
+          icon={<IconMapPin className={classes.icon} />}
           label={t('contact.address-label')}
           input={
             <Anchor href="https://maps.app.goo.gl/dJrgoEEvLkn4oVnL9" target="_blank">
@@ -38,7 +42,7 @@ export function GetInTouch({ ...props }: GetInTouchProps) {
           }
         />
         <ContactIcon
-          icon={IconMasksTheater}
+          icon={<IconMasksTheater className={classes.icon} />}
           label={t('contact.personality-label')}
           input={
             <Anchor href="https://www.16personalities.com/infj-personality" target="_blank">
@@ -47,7 +51,7 @@ export function GetInTouch({ ...props }: GetInTouchProps) {
           }
         />
         <ContactIcon
-          icon={IconCake}
+          icon={<IconCake className={classes.icon} />}
           label={t('contact.birthday-label')}
           input={t('contact.birthday-value')}
         />

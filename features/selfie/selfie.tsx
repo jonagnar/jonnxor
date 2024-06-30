@@ -1,24 +1,20 @@
+/* eslint-disable @next/next/no-img-element */
+
 'use client';
 
 import clsx from 'clsx';
-import { type AvatarProps, Avatar } from '@mantine/core';
+import { type BoxProps, Box } from '@mantine/core';
 
 import pro from '@/public/pro.jpg';
-
 import classes from './selfie.module.css';
 
-export type SelfieProps = AvatarProps & {};
+export type SelfieProps = BoxProps & {};
 
 export function Selfie({ className, ...props }: SelfieProps) {
   return (
-    <Avatar
-      src={pro.src}
-      alt="Jón Agnar Stefánsson"
-      {...props}
-      className={clsx(classes.selfie, className)}
-    >
-      JA
-    </Avatar>
+    <Box {...props} className={clsx(classes.figure, className)}>
+      <img src={pro.src} alt="Jón Agnar Stefánsson" className={classes.img} />
+    </Box>
   );
 }
 

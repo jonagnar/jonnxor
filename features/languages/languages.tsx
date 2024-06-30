@@ -8,7 +8,7 @@ export function Languages() {
   const t = useTranslations();
 
   return (
-    <Box>
+    <Box pb="xs">
       <Title order={3} mb="sm">
         {t('languages.title')}
       </Title>

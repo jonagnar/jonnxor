@@ -13,18 +13,30 @@
   }
 }
 
+.title {
+  text-align: center;
+}
+
 .main {
   padding-top: calc(rem(80px) + var(--mantine-spacing-lg));
   padding-bottom: calc(rem(80px) + var(--mantine-spacing-lg));
 
   @media print {
-    padding-top: var(--mantine-spacing-md);
-    padding-bottom: var(--mantine-spacing-md);
+    padding-top: var(--mantine-spacing-lg);
+    padding-bottom: var(--mantine-spacing-lg);
   }
 }
 
 .footer {
   @media print {
     display: none;
+  }
+
+  .wrapper {
+    justify-content: center;
+
+    @media (min-width: $mantine-breakpoint-xs) {
+      justify-content: space-between;
+    }
   }
 }

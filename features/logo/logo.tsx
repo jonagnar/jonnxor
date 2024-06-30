@@ -12,8 +12,8 @@ export function Logo() {
 
   return (
     <Link href="/" className={classes.link}>
-      <Group>
-        <Avatar variant="filled" className={classes.avatar}>
+      <Group wrap="nowrap">
+        <Avatar variant="filled" className={classes.avatar} visibleFrom="xs">
           {t('header.logo')}
         </Avatar>
         <Title order={1} className={classes.title}>

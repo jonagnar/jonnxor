@@ -12,7 +12,7 @@
   margin-bottom: calc(var(--mantine-spacing-xl) * 1.5);
   color: var(--mantine-color-blue-3);
 
-  @media (max-width: $mantine-breakpoint-sm) {
+  @media (max-width: $mantine-breakpoint-xs) {
     font-size: rem(120px);
   }
 }
@@ -24,7 +24,7 @@
   font-size: rem(38px);
   color: var(--mantine-color-white);
 
-  @media (max-width: $mantine-breakpoint-sm) {
+  @media (max-width: $mantine-breakpoint-xs) {
     font-size: rem(32px);
   }
 }

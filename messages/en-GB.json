@@ -8,8 +8,8 @@
   },
   "error": {
     "title": "Something went wrong!",
-    "description": "<p>We've unfortunately encountered an error.</p><p>You can try to <retry>reload the page</retry> you were visiting.</p>",
-    "refresh": "Refresh the page"
+    "text": "We've unfortunately encountered an error.",
+    "reset": "Refresh the page"
   },
   "not-found-page": {
     "title": "Page not found",
@@ -98,6 +98,6 @@
   },
   "summary": {
     "title": "Summary",
-    "text": "Hello world!"
+    "text": "Senior frontend developer with 10 years of experience working in the Information Technology Industry."
   }
 }

@@ -13,15 +13,15 @@ export function ServerError({ reset }: Props) {
   const t = useTranslations();
 
   return (
-    <Container px={20} className={classes.root}>
+    <Container h="100vh" fluid px={20} className={classes.root}>
       <div className={classes.label}>500</div>
       <Title className={classes.title}>{t('error.title')}</Title>
       <Text size="lg" ta="center" className={classes.description}>
-        {t('error.description')}
+        {t('error.text')}
       </Text>
       <Group justify="center">
         <Button variant="white" size="md" onClick={reset}>
-          {t('error.refresh')}
+          {t('error.reset')}
         </Button>
       </Group>
     </Container>

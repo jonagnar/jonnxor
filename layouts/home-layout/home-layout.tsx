@@ -1,17 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import {
-  Container,
-  Grid,
-  GridCol,
-  Box,
-  Space,
-  Divider,
-  Group,
-  Title,
-  Tooltip,
-} from '@mantine/core';
+import { Container, Grid, GridCol, Space, Divider, Group, Title, Tooltip } from '@mantine/core';
 
 import { Selfie } from '@/features/selfie/selfie';
 import { Skills } from '@/features/skills/skills';
@@ -29,31 +19,34 @@ export function HomeLayout() {
   const t = useTranslations();
 
   return (
-    <Container px="md" component="section">
-      <Grid gutter="xl">
+    <Container component="section" className={classes.page}>
+      <Grid className={classes.grid}>
         <GridCol span={{ base: 12, xs: 6 }} className={classes.left}>
           <Group component="header" className={classes.header}>
-            <Title order={2}>{t('home.h2')}</Title>
+            <Title order={2} className={classes.title}>
+              {t('home.h2')}
+            </Title>
             <Tooltip label={t('toolbar.language')} className={classes.tooltip}>
               <LocaleToggle />
             </Tooltip>
           </Group>
-          <Space h="lg" />
+          <Space h="lg" className={classes.space} />
           <GetInTouch />
-          <Divider my="md" />
+          <Divider my="md" className={classes.divider} />
           <Skills />
-          <Divider my="md" />
+          <Divider my="md" className={classes.divider} />
           <Languages />
-          <Divider my="md" />
+          <Divider my="md" className={classes.divider} />
           <Summary />
         </GridCol>
         <GridCol span={{ base: 12, xs: 6 }} className={classes.right}>
-          <Box visibleFrom="sm">
-            <Selfie />
-          </Box>
-          <Space h="lg" visibleFrom="sm" />
+          <Selfie visibleFrom="xs" />
+
+          <Space h="lg" visibleFrom="xs" />
+          <Divider my="md" className={classes.divider} hiddenFrom="xs" />
+
           <Education />
-          <Divider my="md" />
+          <Divider my="md" className={classes.divider} />
           <Experience />
         </GridCol>
       </Grid>

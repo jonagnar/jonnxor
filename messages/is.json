@@ -8,8 +8,8 @@
   },
   "error": {
     "title": "Eitthvað fór úrskeiðis!",
-    "description": "<p>Við höfum því miður fengið villu.</p><p>Þú getur reynt að <retry>endurhlaða síðuna</retry> sem þú varst að skoða.</p>",
-    "refresh": "Endurhlaða síðu"
+    "text": "Við höfum því miður fengið villu.",
+    "reset": "Endurhlaða síðu"
   },
   "not-found-page": {
     "title": "Síða fannst ekki",
@@ -98,6 +98,6 @@
   },
   "summary": {
     "title": "Um mig",
-    "text": "Halló heimur!"
+    "text": "Frammendaforritari með 10 ára reynslu í upplýsingatækni."
   }
 }

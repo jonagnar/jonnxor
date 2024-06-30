@@ -1,21 +1,20 @@
 'use client';
 
 import React from 'react';
-import { type Icon } from '@tabler/icons-react';
-import { rem, type GroupProps, Box, Group, Text } from '@mantine/core';
+import { type GroupProps, Box, Group, Text } from '@mantine/core';
 
 export type ContactIconProps = GroupProps & {
-  icon: Icon;
+  icon: React.ReactNode;
   label: string;
   input: React.ReactNode;
 };
 
-export function ContactIcon({ icon: Icon, label, input, ...props }: ContactIconProps) {
+export function ContactIcon({ icon, label, input, ...props }: ContactIconProps) {
   return (
     <Group wrap="nowrap" {...props}>
-      <Icon style={{ width: rem(24), height: rem(24) }} />
+      {icon}
       <Box>
-        <Text size="sm" fs="italic">
+        <Text fw="bold" size="sm">
           {label}
         </Text>
         {input}

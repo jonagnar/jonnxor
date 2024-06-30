@@ -7,7 +7,7 @@ export function Education() {
   const t = useTranslations();
 
   return (
-    <Box>
+    <Box pb="xs">
       <Title order={3} mb="sm">
         {t('education.title')}
       </Title>

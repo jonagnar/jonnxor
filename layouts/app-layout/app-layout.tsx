@@ -9,7 +9,6 @@ import {
   AppShellSection,
   AppShellMain,
   AppShellFooter,
-  Center,
   Group,
   Title,
   Burger,
@@ -37,7 +36,7 @@ export function AppLayout({ children }: Props) {
       header={{ height: 80, collapsed: !pinned, offset: true }}
       navbar={{
         width: 320,
-        breakpoint: 'sm',
+        breakpoint: 'xs',
         collapsed: { desktop: true, mobile: !opened },
       }}
       footer={{ height: 80 }}
@@ -46,24 +45,22 @@ export function AppLayout({ children }: Props) {
       <AppShellHeader px="md" className={classes.header}>
         <Group h="100%" justify="space-between" wrap="nowrap">
           <Group h="100%" gap="md" justify="space-between" wrap="nowrap" style={{ flex: 1 }}>
-            <Burger size={24} opened={opened} onClick={toggle} hiddenFrom="sm" />
+            <Burger size={24} opened={opened} onClick={toggle} hiddenFrom="xs" />
             <Logo />
           </Group>
-          <Toolbar visibleFrom="sm" />
+          <Toolbar visibleFrom="xs" />
         </Group>
       </AppShellHeader>
       <AppShellNavbar p="md" className={classes.navbar}>
         <AppShellSection>
           <Group h="100%" justify="center">
-            <Title order={2} size={24}>
+            <Title order={2} size={24} textWrap="wrap" className={classes.title}>
               {t('navigation.title')}
             </Title>
           </Group>
         </AppShellSection>
-        <AppShellSection my="md" grow component={ScrollArea}>
-          <Center>
-            <Selfie />
-          </Center>
+        <AppShellSection my="lg" grow component={ScrollArea}>
+          <Selfie />
         </AppShellSection>
         <AppShellSection>
           <Toolbar reverse justify="space-evenly" />
@@ -71,8 +68,8 @@ export function AppLayout({ children }: Props) {
       </AppShellNavbar>
       <AppShellMain className={classes.main}>{children}</AppShellMain>
       <AppShellFooter px="md" className={classes.footer}>
-        <Group h="100%" justify="space-between" wrap="nowrap">
-          <Toolbar reverse visibleFrom="sm" />
+        <Group h="100%" wrap="nowrap" className={classes.wrapper}>
+          <Toolbar reverse withColorSchemeToggle={false} visibleFrom="xs" />
           <Breadcrumbs />
         </Group>
       </AppShellFooter>

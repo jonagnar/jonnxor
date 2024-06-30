@@ -12,9 +12,15 @@ import classes from './toolbar.module.css';
 
 export type ToolbarProps = GroupProps & {
   reverse?: boolean;
+  withColorSchemeToggle?: boolean;
 };
 
-export function Toolbar({ reverse, className, ...props }: ToolbarProps) {
+export function Toolbar({
+  reverse,
+  withColorSchemeToggle = true,
+  className,
+  ...props
+}: ToolbarProps) {
   const t = useTranslations();
 
   return (
@@ -26,9 +32,11 @@ export function Toolbar({ reverse, className, ...props }: ToolbarProps) {
         <Tooltip label={t('toolbar.print')} className={classes.tooltip}>
           <Print size={40} />
         </Tooltip>
-        <Tooltip label={t('toolbar.color-scheme')} className={classes.tooltip}>
-          <ColorSchemeToggle size={40} />
-        </Tooltip>
+        {withColorSchemeToggle && (
+          <Tooltip label={t('toolbar.color-scheme')} className={classes.tooltip}>
+            <ColorSchemeToggle size={40} />
+          </Tooltip>
+        )}
       </Group>
     </TooltipGroup>
   );

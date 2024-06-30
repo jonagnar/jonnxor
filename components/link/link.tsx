@@ -1,24 +1,27 @@
 'use client';
 
-// eslint-disable-next-line no-restricted-imports
-import NextLink from 'next/link';
 import { type ForwardedRef, forwardRef } from 'react';
 import {
-  type AnchorProps as MantineAnchorProps,
-  Anchor as MantineAnchor,
   createPolymorphicComponent,
+  type AnchorProps as MantineAnchorProps,
+  type ElementProps,
+  Anchor as MantineAnchor,
 } from '@mantine/core';
 
 import { Link as NavigationLink } from '@/navigation';
 
-export type LinkProps = MantineAnchorProps;
+type NextLinkProps = React.ComponentPropsWithRef<typeof NavigationLink>;
 
-function render({ ...props }: LinkProps, ref: ForwardedRef<HTMLAnchorElement>) {
-  return <MantineAnchor component={NavigationLink} href="/" {...props} ref={ref} />;
+type Props = MantineAnchorProps & ElementProps<'a', keyof MantineAnchorProps> & NextLinkProps;
+
+function render({ ...props }: Props, ref: ForwardedRef<HTMLAnchorElement>) {
+  return <MantineAnchor ref={ref} {...props} component={NavigationLink} />;
 }
 
-export const Link = createPolymorphicComponent<typeof NextLink, LinkProps>(
-  forwardRef<HTMLAnchorElement, LinkProps>(render)
+export const Link = createPolymorphicComponent<'a', Props>(
+  forwardRef<HTMLAnchorElement, Props>(render)
 );
+
+export type LinkProps = React.ComponentPropsWithRef<typeof Link>;
 
 export default Link;

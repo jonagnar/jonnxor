@@ -7,7 +7,7 @@ export function Experience() {
   const t = useTranslations();
 
   return (
-    <Box>
+    <Box pb="xs">
       <Title order={3} mb="sm">
         {t('experience.title')}
       </Title>
