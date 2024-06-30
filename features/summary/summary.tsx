@@ -12,11 +12,6 @@ export function Summary() {
         {t('summary.title')}
       </Title>
       <Text ml="md">{t('summary.text')}</Text>
-      <Text ml="md">{t('summary.text')}</Text>
-      <Text ml="md">{t('summary.text')}</Text>
-      <Text ml="md">{t('summary.text')}</Text>
-      <Text ml="md">{t('summary.text')}</Text>
-      <Text ml="md">{t('summary.text')}</Text>
     </Box>
   );
 }
