@@ -22,8 +22,8 @@
   padding-bottom: calc(rem(80px) + var(--mantine-spacing-lg));
 
   @media print {
-    padding-top: var(--mantine-spacing-lg);
-    padding-bottom: var(--mantine-spacing-lg);
+    padding-top: var(--mantine-spacing-md);
+    padding-bottom: var(--mantine-spacing-md);
   }
 }
 

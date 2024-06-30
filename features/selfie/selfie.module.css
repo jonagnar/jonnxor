@@ -1,9 +1,6 @@
 .figure {
   display: flex;
   flex-direction: column;
-
-  align-items: center;
-  justify-content: center;
 }
 
 .img {
@@ -19,7 +16,7 @@
     max-width: 450px;
   }
 
-  @media (min-width: $mantine-breakpoint-xs) {
+  @media (min-width: $mantine-breakpoint-sm) {
     max-width: 100%;
   }
 }

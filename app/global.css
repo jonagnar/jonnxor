@@ -61,5 +61,6 @@
 @media print {
   body {
     --mantine-font-family-headings: var(--mantine-font-family);
+    --mantine-heading-font-weight: 700;
   }
 }

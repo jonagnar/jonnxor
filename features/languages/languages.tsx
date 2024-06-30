@@ -2,21 +2,30 @@
 
 import React from 'react';
 import { useTranslations } from 'next-intl';
-import { Box, Breadcrumbs, Title, Text } from '@mantine/core';
+import { Box, List, ListItem, Title, Text } from '@mantine/core';
 
 export function Languages() {
   const t = useTranslations();
 
   return (
-    <Box pb="xs">
+    <Box>
       <Title order={3} mb="sm">
         {t('languages.title')}
       </Title>
-      <Breadcrumbs separator="•" separatorMargin="sm" style={{ flexWrap: 'wrap' }}>
-        <Text>{t('languages.icelandic')}</Text>
-        <Text>{t('languages.english')}</Text>
-        <Text>{t('languages.japanese')}</Text>
-      </Breadcrumbs>
+      <List spacing="xs" listStyleType="none" withPadding>
+        <ListItem>
+          <Text fw="bold">{t('languages.icelandic')}</Text>
+          <List spacing={0} listStyleType="none" withPadding>
+            <ListItem>{t('languages.native-proficiency')}</ListItem>
+          </List>
+        </ListItem>
+        <ListItem>
+          <Text fw="bold">{t('languages.english')}</Text>
+          <List spacing={0} listStyleType="none" withPadding>
+            <ListItem>{t('languages.professional-proficiency')}</ListItem>
+          </List>
+        </ListItem>
+      </List>
     </Box>
   );
 }

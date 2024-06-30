@@ -14,7 +14,7 @@ export function ContactIcon({ icon, label, input, ...props }: ContactIconProps) 
     <Group wrap="nowrap" {...props}>
       {icon}
       <Box>
-        <Text fw="bold" size="sm">
+        <Text fw="bold" size="xs">
           {label}
         </Text>
         {input}

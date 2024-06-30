@@ -20,7 +20,7 @@ type Props = {
 };
 
 const montserrat = Montserrat({
-  weight: ['400'],
+  weight: ['400', '700'],
   subsets: ['latin'],
   variable: '--font-montserrat',
   display: 'swap',

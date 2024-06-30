@@ -1,27 +1,25 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { type BoxProps, Box, Stack, Title, Text, Anchor } from '@mantine/core';
+import { Box, Stack, Title, Text, Anchor } from '@mantine/core';
 import { IconMasksTheater, IconCake, IconAt, IconPhone, IconMapPin } from '@tabler/icons-react';
 
 import { ContactIcon } from '@/features/contact-icons/contact-icons';
 
 import classes from './get-in-touch.module.css';
 
-export type GetInTouchProps = BoxProps & {};
-
-export function GetInTouch({ ...props }: GetInTouchProps) {
+export function GetInTouch() {
   const t = useTranslations();
 
   return (
-    <Box pb="xs" {...props}>
+    <Box className={classes.wrapper}>
       <Title order={3} textWrap="wrap">
         {t('contact.title')}
       </Title>
       <Text size="xl" mb="sm">
         {t('contact.subtitle')}
       </Text>
-      <Stack gap="sm">
+      <Stack gap="xs">
         <ContactIcon
           icon={<IconAt className={classes.icon} />}
           label={t('contact.email-label')}

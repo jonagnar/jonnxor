@@ -35,18 +35,10 @@ export function CookiesBanner() {
   };
 
   return (
-    <Dialog
-      component="section"
-      opened={opened}
-      withBorder
-      withCloseButton={false}
-      className={classes.dialog}
-    >
-      <Title component="header" order={2} mb="sm">
-        {t('cookies.title')}
-      </Title>
+    <Dialog opened={opened} withBorder withCloseButton={false} className={classes.dialog}>
+      <Title order={2}>{t('cookies.title')}</Title>
       <Text>{t('cookies.text')}</Text>
-      <Group component="footer" justify="flex-end" mt="md">
+      <Group justify="flex-end">
         <Button variant="default" onClick={reject}>
           {t('cookies.reject')}
         </Button>

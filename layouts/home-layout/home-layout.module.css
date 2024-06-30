@@ -21,38 +21,6 @@
       text-align: left;
     }
   }
-
-  .grid {
-    --grid-gutter: var(--mantine-spacing-md);
-
-    @media (min-width: $mantine-breakpoint-xs) {
-      --grid-gutter: var(--mantine-spacing-lg);
-    }
-
-    @media (min-width: $mantine-breakpoint-sm) {
-      --grid-gutter: var(--mantine-spacing-xl);
-    }
-  }
-
-  .left {
-    order: 1;
-
-    @media (min-width: $mantine-breakpoint-xs) {
-      order: 2;
-    }
-  }
-
-  .right {
-    order: 2;
-
-    @media (min-width: $mantine-breakpoint-xs) {
-      order: 1;
-    }
-  }
-
-  .divider {
-    border-width: 2px;
-  }
 }
 
 @media print {

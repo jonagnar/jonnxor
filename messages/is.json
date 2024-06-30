@@ -57,43 +57,59 @@
     "address-value": "225 Garðabær",
     "personality-label": "Persónuleiki",
     "personality-value": "INFJ",
-    "birthday-label": "Árgerð",
+    "birthday-label": "Fæðingarár",
     "birthday-value": "1993"
   },
   "skills": {
     "title": "Hæfni",
     "react": "React.js",
     "next": "Next.js",
-    "typescript": "Typescript"
+    "typescript": "Typescript",
+    "more": "og fleira"
+  },
+  "projects": {
+    "title": "Verkefni",
+    "separator": "og",
+    "caption": "Nokkur verkefni sem ég hef unnið að",
+    "advania": "Advania",
+    "cata": "Cata",
+    "smastund": "Smástund",
+    "or": "<p>Orkuveita<br></br>Reykjavíkur</p>",
+    "alheidur": "Innri vefur",
+    "arion": "Arion",
+    "arionbank": "arionbanki.is"
   },
   "languages": {
     "title": "Tungumál",
     "icelandic": "Íslenska",
     "english": "Enska",
-    "japanese": "Japanska"
+    "native-proficiency": "Mjög góð",
+    "professional-proficiency": "Mjög góð"
   },
   "education": {
     "title": "Menntun",
     "college": "Tækniskólinn",
-    "college-date": "2009 - 2013",
-    "college-degree": "Stúdentspróf í Tölvunarfræði",
+    "college-date": "2013",
+    "college-degree": "Stúdentspróf",
+    "college-programme": "Tölvubraut",
     "university": "Háskólinn í Reykjavík",
-    "university-date": "2013 - 2016",
-    "university-degree": "BSc í Tölvunarfræði"
+    "university-date": "2016",
+    "university-degree": "BSc",
+    "university-programme": "Tölvunarfræði"
   },
   "experience": {
     "title": "Reynsla",
-    "company-advania-name": "Advania Ísland",
-    "company-advania-date": "2016 - 2024",
+    "company-advania-name": "Advania",
+    "company-advania-date": "2016 til 2024",
     "company-advania-role": "Tölvunarfræðingur",
     "company-university-name": "Háskólinn í Reykjavík",
     "company-university-date": "2016",
     "company-university-role": "Dæmatímakennari",
     "company-shell-name": "Skeljungur",
     "company-shell-date": "2015",
-    "company-shell-role": "Starfsmaður á plani",
+    "company-shell-role": "Útimaður",
     "company-outcome-name": "Outcome",
-    "company-outcome-date": "2012 - 2014",
+    "company-outcome-date": "2012 til 2014",
     "company-outcome-role": "Tæknimaður"
   },
   "summary": {

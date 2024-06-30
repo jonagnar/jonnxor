@@ -8,11 +8,11 @@ export function Skills() {
   const t = useTranslations();
 
   return (
-    <Box pb="xs">
+    <Box>
       <Title order={3} mb="sm">
         {t('skills.title')}
       </Title>
-      <Breadcrumbs separator="•" separatorMargin="sm" style={{ flexWrap: 'wrap' }}>
+      <Breadcrumbs ml="md" separator="•" separatorMargin="xs">
         <Text>{t('skills.react')}</Text>
         <Text>{t('skills.next')}</Text>
         <Text>{t('skills.typescript')}</Text>

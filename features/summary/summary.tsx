@@ -7,9 +7,16 @@ export function Summary() {
   const t = useTranslations();
 
   return (
-    <Box pb="xs">
-      <Title order={3}>{t('summary.title')}</Title>
-      <Text>{t('summary.text')}</Text>
+    <Box>
+      <Title order={3} mb="sm">
+        {t('summary.title')}
+      </Title>
+      <Text ml="md">{t('summary.text')}</Text>
+      <Text ml="md">{t('summary.text')}</Text>
+      <Text ml="md">{t('summary.text')}</Text>
+      <Text ml="md">{t('summary.text')}</Text>
+      <Text ml="md">{t('summary.text')}</Text>
+      <Text ml="md">{t('summary.text')}</Text>
     </Box>
   );
 }

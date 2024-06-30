@@ -64,27 +64,43 @@
     "title": "Top skills",
     "react": "React.js",
     "next": "Next.js",
-    "typescript": "Typescript"
+    "typescript": "Typescript",
+    "more": "and more"
+  },
+  "projects": {
+    "title": "Contributions",
+    "separator": "&",
+    "caption": "Some projects I've worked on",
+    "advania": "Advania Iceland",
+    "cata": "Cata",
+    "smastund": "Smástund",
+    "or": "<p>Reykjavík Energy</p>",
+    "alheidur": "Intranet",
+    "arion": "Arion",
+    "arionbank": "arionbanki.is"
   },
   "languages": {
     "title": "Languages",
     "icelandic": "Icelandic",
     "english": "English",
-    "japanese": "Japanese"
+    "native-proficiency": "Native proficiency",
+    "professional-proficiency": "Professional proficiency"
   },
   "education": {
     "title": "Education",
     "college": "Technical College of Iceland",
-    "college-date": "2009 - 2013",
-    "college-degree": "Associate's degree in Computer Science",
+    "college-date": "2013",
+    "college-degree": "Associate's degree",
+    "college-programme": "Computer programme",
     "university": "Reykjavík University",
-    "university-date": "2013 - 2016",
-    "university-degree": "Bachelor's degree in Computer Science"
+    "university-date": "2016",
+    "university-degree": "Bachelor's degree",
+    "university-programme": "Computer science"
   },
   "experience": {
     "title": "Experience",
-    "company-advania-name": "Advania",
-    "company-advania-date": "2016 - 2024",
+    "company-advania-name": "Advania Iceland",
+    "company-advania-date": "2016 to 2024",
     "company-advania-role": "Senior Frontend Developer",
     "company-university-name": "Reykjavík University",
     "company-university-date": "2016",
@@ -93,7 +109,7 @@
     "company-shell-date": "2015",
     "company-shell-role": "Attendant",
     "company-outcome-name": "Outcome",
-    "company-outcome-date": "2012-2014",
+    "company-outcome-date": "2012 to 2014",
     "company-outcome-role": "Technician"
   },
   "summary": {
