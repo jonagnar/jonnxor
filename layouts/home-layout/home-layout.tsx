@@ -8,7 +8,6 @@ import { Selfie } from '@/features/selfie/selfie';
 import { Skills } from '@/features/skills/skills';
 import { Social } from '@/features/social/social';
 import { Summary } from '@/features/summary/summary';
-import { Projects } from '@/features/projects/projects';
 import { Languages } from '@/features/languages/languages';
 import { Education } from '@/features/education/education';
 import { Experience } from '@/features/experience/experience';
@@ -42,21 +41,19 @@ export function HomeLayout() {
         </GridCol>
       </Grid>
       <Grid gutter={0}>
-        <GridCol span={{ base: 12, xs: 6 }}>
-          <Space h="md" hiddenFrom="xs" />
-          <Education />
-          <Space h="md" />
-          <Experience />
-          <Space h="md" />
-          <Languages />
-        </GridCol>
-        <GridCol span={{ base: 12, xs: 6 }}>
+        <GridCol span={{ base: 12, xs: 6 }} order={2}>
           <Space h="md" hiddenFrom="xs" />
           <Summary />
           <Space h="md" />
           <Skills />
+        </GridCol>
+        <GridCol span={{ base: 12, xs: 6 }} order={1}>
+          <Space h="md" hiddenFrom="xs" />
+          <Experience />
           <Space h="md" />
-          <Projects />
+          <Education />
+          <Space h="md" />
+          <Languages />
         </GridCol>
       </Grid>
 

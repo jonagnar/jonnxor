@@ -1,19 +1,6 @@
 .page {
   padding: 0 var(--mantine-spacing-md);
 
-  .header {
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-
-    @media (min-width: $mantine-breakpoint-xs) {
-      flex-direction: row;
-    }
-
-    @media print {
-      display: none;
-    }
-  }
-
   .title {
     text-align: right;
 
@@ -23,8 +10,21 @@
   }
 }
 
+.header {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+
+  @media (min-width: $mantine-breakpoint-xs) {
+    flex-direction: row;
+  }
+
+  @media print {
+    display: none;
+  }
+}
+
 @media print {
-  .space,
+  .header,
   .tooltip,
   .social {
     display: none;

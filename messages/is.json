@@ -62,10 +62,28 @@
   },
   "skills": {
     "title": "Hæfni",
+    "git": "Git",
+    "npm": "npm",
+    "yarn": "yarn",
+    "node": "Node.js",
+    "vscode": "VS Code",
+    "visual-studio": "Visual Studio",
+    "vue": "Vue.js",
     "react": "React.js",
+    "react-native": "React Native",
     "next": "Next.js",
+    "remix": "Remix",
+    "expo": "Expo",
+    "ionic": "Ionic",
+    "mantine": "Mantine",
+    "chakra-ui": "Chakra UI",
+    "material-ui": "Material-UI",
+    "tailwind-css": "Tailwind CSS",
+    "javascript": "JavaScript",
     "typescript": "Typescript",
-    "more": "og fleira"
+    "c-sharp": "C#",
+    "graphql": "GraphQL",
+    "sql": "SQL"
   },
   "projects": {
     "title": "Verkefni",
@@ -114,6 +132,6 @@
   },
   "summary": {
     "title": "Um mig",
-    "text": "Frammendaforritari með 10 ára reynslu í upplýsingatækni."
+    "text": "<p>Web Developer with 10 years of experience working with various popular web technologies and methodologies.</p><p>Proficient in a wide variety of web frameworks, focusing on project architecture, code readability, and strict adherence to best practices.</p><p>I am a principled and passionate professional, dedicated to learning and knowledge sharing. Known for my visionary and creative approach, I enjoy challenging the status quo like Hermes or Loki, striving to make a positive and ethical impact.</p><p>Additionally, I have a vested interested in art, culture, language, ancient history, mythology, and philosophy.</p>"
   }
 }

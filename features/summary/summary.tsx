@@ -11,7 +11,9 @@ export function Summary() {
       <Title order={3} mb="sm">
         {t('summary.title')}
       </Title>
-      <Text ml="md">{t('summary.text')}</Text>
+      {t.rich('summary.text', {
+        p: (chunks) => <Text mb="xs">{chunks}</Text>,
+      })}
     </Box>
   );
 }

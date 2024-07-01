@@ -12,7 +12,6 @@ import {
   TableTd,
   Anchor,
   TableCaption,
-  Stack,
 } from '@mantine/core';
 
 export function Projects() {

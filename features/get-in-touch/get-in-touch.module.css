@@ -9,6 +9,6 @@
   height: rem(24px);
 
   @media print {
-    color: var(--mantine-color-black);
+    display: none;
   }
 }

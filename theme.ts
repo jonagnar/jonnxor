@@ -34,15 +34,15 @@ export const theme = createTheme({
     textWrap: 'nowrap',
     sizes: {
       h1: {
-        fontSize: rem(32),
+        fontSize: rem(24),
         lineHeight: '1.5',
       },
       h2: {
-        fontSize: rem(20),
+        fontSize: rem(18),
         lineHeight: '1.5',
       },
       h3: {
-        fontSize: rem(24),
+        fontSize: rem(20),
         lineHeight: '1.5',
       },
     },

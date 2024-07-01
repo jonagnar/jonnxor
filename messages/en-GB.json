@@ -61,11 +61,29 @@
     "birthday-value": "1993"
   },
   "skills": {
-    "title": "Top skills",
+    "title": "Skills",
+    "git": "Git",
+    "npm": "npm",
+    "yarn": "yarn",
+    "node": "Node.js",
+    "vscode": "VS Code",
+    "visual-studio": "Visual Studio",
+    "vue": "Vue.js",
     "react": "React.js",
+    "react-native": "React Native",
     "next": "Next.js",
+    "remix": "Remix",
+    "expo": "Expo",
+    "ionic": "Ionic",
+    "mantine": "Mantine",
+    "chakra-ui": "Chakra UI",
+    "material-ui": "Material-UI",
+    "tailwind-css": "Tailwind CSS",
+    "javascript": "JavaScript",
     "typescript": "Typescript",
-    "more": "and more"
+    "c-sharp": "C#",
+    "graphql": "GraphQL",
+    "sql": "SQL"
   },
   "projects": {
     "title": "Contributions",
@@ -83,24 +101,24 @@
     "title": "Languages",
     "icelandic": "Icelandic",
     "english": "English",
-    "native-proficiency": "Native proficiency",
-    "professional-proficiency": "Professional proficiency"
+    "native-proficiency": "Native",
+    "professional-proficiency": "Professional"
   },
   "education": {
     "title": "Education",
     "college": "Technical College of Iceland",
     "college-date": "2013",
     "college-degree": "Associate's degree",
-    "college-programme": "Computer programme",
+    "college-programme": "Computer Programme",
     "university": "Reykjavík University",
     "university-date": "2016",
-    "university-degree": "Bachelor's degree",
-    "university-programme": "Computer science"
+    "university-degree": "Bachelor's Degree",
+    "university-programme": "Computer Science"
   },
   "experience": {
     "title": "Experience",
     "company-advania-name": "Advania Iceland",
-    "company-advania-date": "2016 to 2024",
+    "company-advania-date": "2016 - 2024",
     "company-advania-role": "Senior Frontend Developer",
     "company-university-name": "Reykjavík University",
     "company-university-date": "2016",
@@ -109,11 +127,11 @@
     "company-shell-date": "2015",
     "company-shell-role": "Attendant",
     "company-outcome-name": "Outcome",
-    "company-outcome-date": "2012 to 2014",
+    "company-outcome-date": "2012 - 2014",
     "company-outcome-role": "Technician"
   },
   "summary": {
     "title": "Summary",
-    "text": "Senior frontend developer with 10 years of experience working in the Information Technology Industry."
+    "text": "<p>Web Developer with 10 years of experience working with various popular web technologies and methodologies.</p><p>Proficient in a wide variety of web frameworks, focusing on project architecture, code readability, and strict adherence to best practices.</p><p>I am a principled and passionate professional, dedicated to learning and knowledge sharing. Known for my visionary and creative approach, I enjoy challenging the status quo like Hermes or Loki, striving to make a positive and ethical impact.</p><p>Additionally, I have a vested interested in art, culture, language, ancient history, mythology, and philosophy.</p>"
   }
 }

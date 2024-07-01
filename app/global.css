@@ -4,12 +4,14 @@
 }
 
 ::selection {
+  color: var(--mantine-color-text);
+
   @mixin light {
-    background: var(--mantine-color-blue-filled);
+    background: var(--mantine-color-blue-filled-hover);
   }
 
   @mixin dark {
-    background: var(--mantine-color-yellow-filled);
+    background: var(--mantine-color-yellow-filled-hover);
   }
 }
 
