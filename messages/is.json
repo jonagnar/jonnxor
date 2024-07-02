@@ -62,6 +62,11 @@
   },
   "skills": {
     "title": "Hæfni",
+    "title-tools": "Tól",
+    "title-tech": "Tækni",
+    "title-ui": "UI",
+    "title-web": "Frameworks",
+    "title-lang": "Forritunarmál",
     "git": "Git",
     "npm": "npm",
     "yarn": "yarn",
@@ -132,6 +137,6 @@
   },
   "summary": {
     "title": "Um mig",
-    "text": "<p>Web Developer with 10 years of experience working with various popular web technologies and methodologies.</p><p>Proficient in a wide variety of web frameworks, focusing on project architecture, code readability, and strict adherence to best practices.</p><p>I am a principled and passionate professional, dedicated to learning and knowledge sharing. Known for my visionary and creative approach, I enjoy challenging the status quo like Hermes or Loki, striving to make a positive and ethical impact.</p><p>Additionally, I have a vested interested in art, culture, language, ancient history, mythology, and philosophy.</p>"
+    "text": "<p>Web Developer with one decade's worth of experience in popular web technologies and methodologies.</p><p>Worked on multiple projects in a wide variety of web frameworks, with a strong focus on project architecture, maintainability, readability, performance optimizations, and strict adherence to best practices.</p><p>I have had a passion for technology since a young age and am always interested in ways to improve my skills and knowledge through continuous learning and knowledge-sharing opportunities.</p><p>Additionally, other interests include art, culture, language, history, mythology, philosophy, and more.</p>"
   }
 }

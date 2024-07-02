@@ -1,13 +1,14 @@
 'use client';
 
-import { forwardRef } from 'react';
 import { IconPrinter } from '@tabler/icons-react';
-import { type ActionIconProps, ActionIcon } from '@mantine/core';
+import { type MouseEvent, forwardRef } from 'react';
+import { type ActionIconProps, ActionIcon, ElementProps } from '@mantine/core';
 
-export type PrintProps = ActionIconProps & {};
+export type PrintProps = ActionIconProps & ElementProps<'button', keyof ActionIconProps> & {};
 
-export const Print = forwardRef<HTMLButtonElement, PrintProps>((props, ref) => {
-  const handlePrint = () => {
+export const Print = forwardRef<HTMLButtonElement, PrintProps>(({ onClick, ...props }, ref) => {
+  const handlePrint = (event: MouseEvent<HTMLButtonElement>) => {
+    onClick?.(event);
     window.print();
   };
 

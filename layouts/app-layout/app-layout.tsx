@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { useDisclosure, useHeadroom } from '@mantine/hooks';
 import {
@@ -13,6 +14,7 @@ import {
   Title,
   Burger,
   ScrollArea,
+  Center,
 } from '@mantine/core';
 
 import { Logo } from '@/features/logo/logo';
@@ -30,6 +32,19 @@ export function AppLayout({ children }: Props) {
   const t = useTranslations();
   const [opened, { toggle }] = useDisclosure();
   const pinned = useHeadroom({ fixedAt: 160 });
+
+  useEffect(() => {
+    if (opened) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+
+    // Clean up on component unmount
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [opened]);
 
   return (
     <AppShell
@@ -60,10 +75,12 @@ export function AppLayout({ children }: Props) {
           </Group>
         </AppShellSection>
         <AppShellSection my="lg" grow component={ScrollArea}>
-          <Selfie />
+          <Center h="100%">
+            <Selfie />
+          </Center>
         </AppShellSection>
         <AppShellSection>
-          <Toolbar reverse justify="space-evenly" />
+          <Toolbar toggle={toggle} reverse justify="space-evenly" />
         </AppShellSection>
       </AppShellNavbar>
       <AppShellMain className={classes.main}>{children}</AppShellMain>

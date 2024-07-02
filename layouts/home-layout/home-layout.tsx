@@ -41,13 +41,13 @@ export function HomeLayout() {
         </GridCol>
       </Grid>
       <Grid gutter={0}>
-        <GridCol span={{ base: 12, xs: 6 }} order={2}>
+        <GridCol span={{ base: 12, xs: 6 }} className={classes.right}>
           <Space h="md" hiddenFrom="xs" />
           <Summary />
           <Space h="md" />
           <Skills />
         </GridCol>
-        <GridCol span={{ base: 12, xs: 6 }} order={1}>
+        <GridCol span={{ base: 12, xs: 6 }} className={classes.left}>
           <Space h="md" hiddenFrom="xs" />
           <Experience />
           <Space h="md" />

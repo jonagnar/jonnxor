@@ -57,7 +57,7 @@ export default async function RootLayout({ params: { locale }, children }: Props
       <head>
         <ColorSchemeScript />
         <IntlPolyfillsScript />
-        <link rel="shortcut icon" href="/favicon.svg" />
+        <link rel="shortcut icon" href="data:;base64,iVBORw0KGgo=" />
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"

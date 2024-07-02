@@ -17,9 +17,21 @@
   @media (min-width: $mantine-breakpoint-xs) {
     flex-direction: row;
   }
+}
 
-  @media print {
-    display: none;
+.right {
+  order: 1;
+
+  @media (min-width: $mantine-breakpoint-xs) {
+    order: 2;
+  }
+}
+
+.left {
+  order: 2;
+
+  @media (min-width: $mantine-breakpoint-xs) {
+    order: 1;
   }
 }
 

@@ -1,18 +1,25 @@
 'use client';
 
-import { forwardRef } from 'react';
 import { IconSun, IconMoon } from '@tabler/icons-react';
-import { useMantineColorScheme, type ActionIconProps, ActionIcon } from '@mantine/core';
+import { type MouseEvent, forwardRef } from 'react';
+import {
+  type ElementProps,
+  type ActionIconProps,
+  useMantineColorScheme,
+  ActionIcon,
+} from '@mantine/core';
 
 import classes from './color-scheme-toggle.module.css';
 
-export type ColorSchemeToggleProps = ActionIconProps & {};
+export type ColorSchemeToggleProps = ActionIconProps &
+  ElementProps<'button', keyof ActionIconProps> & {};
 
 export const ColorSchemeToggle = forwardRef<HTMLButtonElement, ColorSchemeToggleProps>(
-  (props, ref) => {
+  ({ onClick, ...props }, ref) => {
     const { toggleColorScheme } = useMantineColorScheme();
 
-    const handleToggle = () => {
+    const handleToggle = (event: MouseEvent<HTMLButtonElement>) => {
+      onClick?.(event);
       toggleColorScheme();
     };
 

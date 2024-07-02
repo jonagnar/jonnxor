@@ -11,11 +11,13 @@ import { ColorSchemeToggle } from '@/features/color-scheme-toggle/color-scheme-t
 import classes from './toolbar.module.css';
 
 export type ToolbarProps = GroupProps & {
+  toggle?: () => void;
   reverse?: boolean;
   withColorSchemeToggle?: boolean;
 };
 
 export function Toolbar({
+  toggle,
   reverse,
   withColorSchemeToggle = true,
   className,
@@ -27,14 +29,14 @@ export function Toolbar({
     <TooltipGroup>
       <Group {...props} className={clsx(className, reverse && classes.reverse)}>
         <Tooltip label={t('toolbar.pdf')} className={classes.tooltip}>
-          <PDF size={40} />
+          <PDF size={40} onClick={toggle} />
         </Tooltip>
         <Tooltip label={t('toolbar.print')} className={classes.tooltip}>
-          <Print size={40} />
+          <Print size={40} onClick={toggle} />
         </Tooltip>
         {withColorSchemeToggle && (
           <Tooltip label={t('toolbar.color-scheme')} className={classes.tooltip}>
-            <ColorSchemeToggle size={40} />
+            <ColorSchemeToggle size={40} onClick={toggle} />
           </Tooltip>
         )}
       </Group>
