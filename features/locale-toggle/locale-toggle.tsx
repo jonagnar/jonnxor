@@ -37,12 +37,11 @@ export const LocaleToggle = forwardRef<HTMLButtonElement, LocaleToggleProps>(
     return (
       <Avatar
         ref={ref}
+        onClick={handleLocale}
         {...props}
         component="button"
-        variant="filled"
-        onClick={handleLocale}
-        disabled={isPending}
         className={clsx(classes.toggle, className)}
+        disabled={isPending}
       >
         {t('toolbar.locale')}
       </Avatar>

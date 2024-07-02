@@ -29,14 +29,14 @@ export function Toolbar({
     <TooltipGroup>
       <Group {...props} className={clsx(className, reverse && classes.reverse)}>
         <Tooltip label={t('toolbar.pdf')} className={classes.tooltip}>
-          <PDF size={40} onClick={toggle} />
+          <PDF size={40} onClick={toggle} variant="filled" />
         </Tooltip>
         <Tooltip label={t('toolbar.print')} className={classes.tooltip}>
-          <Print size={40} onClick={toggle} />
+          <Print size={40} onClick={toggle} variant="filled" />
         </Tooltip>
         {withColorSchemeToggle && (
           <Tooltip label={t('toolbar.color-scheme')} className={classes.tooltip}>
-            <ColorSchemeToggle size={40} onClick={toggle} />
+            <ColorSchemeToggle size={40} onClick={toggle} variant="filled" />
           </Tooltip>
         )}
       </Group>

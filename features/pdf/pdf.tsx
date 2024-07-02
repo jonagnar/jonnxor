@@ -1,18 +1,29 @@
 'use client';
 
+import { useLocale } from 'next-intl';
 import { IconPdf } from '@tabler/icons-react';
 import { type MouseEvent, forwardRef } from 'react';
 import { type ElementProps, type ActionIconProps, ActionIcon } from '@mantine/core';
 
-export type PDFProps = ActionIconProps & ElementProps<'button', keyof ActionIconProps> & {};
+export type PDFProps = ActionIconProps & ElementProps<'a', keyof ActionIconProps> & {};
 
-export const PDF = forwardRef<HTMLButtonElement, PDFProps>(({ onClick, ...props }, ref) => {
-  const handlePDF = (event: MouseEvent<HTMLButtonElement>) => {
+export const PDF = forwardRef<HTMLAnchorElement, PDFProps>(({ onClick, ...props }, ref) => {
+  const locale = useLocale();
+
+  const handlePDF = (event: MouseEvent<HTMLAnchorElement>) => {
     onClick?.(event);
   };
 
   return (
-    <ActionIcon ref={ref} variant="filled" {...props} onClick={handlePDF}>
+    <ActionIcon
+      ref={ref}
+      onClick={handlePDF}
+      {...props}
+      component="a"
+      href={`/jon-agnar-stefansson-${locale}.pdf`}
+      target="_blank"
+      download
+    >
       <IconPdf style={{ width: '70%', height: '70%' }} />
     </ActionIcon>
   );

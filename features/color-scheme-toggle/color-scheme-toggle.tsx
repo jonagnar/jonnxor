@@ -24,7 +24,7 @@ export const ColorSchemeToggle = forwardRef<HTMLButtonElement, ColorSchemeToggle
     };
 
     return (
-      <ActionIcon ref={ref} variant="filled" {...props} onClick={handleToggle}>
+      <ActionIcon ref={ref} {...props} onClick={handleToggle}>
         <IconSun className={classes.light} style={{ width: '70%', height: '70%' }} />
         <IconMoon className={classes.dark} style={{ width: '70%', height: '70%' }} />
       </ActionIcon>

@@ -13,7 +13,7 @@ export const Print = forwardRef<HTMLButtonElement, PrintProps>(({ onClick, ...pr
   };
 
   return (
-    <ActionIcon ref={ref} variant="filled" {...props} onClick={handlePrint}>
+    <ActionIcon ref={ref} {...props} onClick={handlePrint}>
       <IconPrinter style={{ width: '70%', height: '70%' }} />
     </ActionIcon>
   );
