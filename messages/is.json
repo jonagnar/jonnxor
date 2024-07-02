@@ -64,7 +64,7 @@
     "title": "Hæfni",
     "title-tools": "Tól",
     "title-tech": "Tækni",
-    "title-ui": "UI",
+    "title-ui": "UI Frameworks",
     "title-web": "Frameworks",
     "title-lang": "Forritunarmál",
     "git": "Git",
@@ -137,6 +137,6 @@
   },
   "summary": {
     "title": "Um mig",
-    "text": "<p>Web Developer with one decade's worth of experience in popular web technologies and methodologies.</p><p>Worked on multiple projects in a wide variety of web frameworks, with a strong focus on project architecture, maintainability, readability, performance optimizations, and strict adherence to best practices.</p><p>I have had a passion for technology since a young age and am always interested in ways to improve my skills and knowledge through continuous learning and knowledge-sharing opportunities.</p><p>Additionally, other interests include art, culture, language, history, mythology, philosophy, and more.</p>"
+    "text": "<p>Vefforritari með 10 ára reynslu í upplýsingatækni við þróun, smíði og viðhald viðmóta fyrir veflausnir, applausnir og innri kerfi.</p><p>Hef haft áhuga á tölvum frá unga aldri ...</p><p>Önnur áhugamál eru list, menning, tungumál, saga, goðafræði, heimspeki og fleiri.</p>"
   }
 }
