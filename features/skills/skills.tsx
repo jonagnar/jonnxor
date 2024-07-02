@@ -40,18 +40,18 @@ export function Skills() {
         <ListItem>
           <Text fz="sm">
             <Text mr="xs" fw="bold" span>
-              {t('skills.title-lang')}
+              {t('skills.title-ui')}
             </Text>
-            {t('skills.typescript')}, {t('skills.c-sharp')}, {t('skills.graphql')},{' '}
-            {t('skills.sql')}
+            {t('skills.tailwind-css')}, {t('skills.mantine')}, {t('skills.chakra-ui')}
           </Text>
         </ListItem>
         <ListItem>
           <Text fz="sm">
             <Text mr="xs" fw="bold" span>
-              {t('skills.title-ui')}
+              {t('skills.title-lang')}
             </Text>
-            {t('skills.tailwind-css')}, {t('skills.mantine')}, {t('skills.chakra-ui')}
+            {t('skills.javascript')}, {t('skills.typescript')}, {t('skills.c-sharp')},{' '}
+            {t('skills.sql')}
           </Text>
         </ListItem>
       </List>

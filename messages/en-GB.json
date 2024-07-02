@@ -64,7 +64,7 @@
     "title": "Skills",
     "title-tools": "Tools",
     "title-tech": "Technologies",
-    "title-ui": "UI",
+    "title-ui": "UI Frameworks",
     "title-web": "Frameworks",
     "title-lang": "Languages",
     "git": "Git",
@@ -137,6 +137,6 @@
   },
   "summary": {
     "title": "Summary",
-    "text": "<p>Web Developer with one decade's worth of experience in popular web technologies and methodologies.</p><p>Worked on multiple projects in a wide variety of web frameworks, with a strong focus on project architecture, maintainability, readability, performance optimizations, and strict adherence to best practices.</p><p>I have had a passion for technology since a young age and am always interested in ways to improve my skills and knowledge through continuous learning and knowledge-sharing opportunities.</p><p>Additionally, other interests include art, culture, language, history, mythology, philosophy, and more.</p>"
+    "text": "<p>Web Developer with one decade's worth of experience in popular web technologies and methodologies.</p><p>Worked on multiple projects in a wide variety of web frameworks, with a strong focus on project architecture, maintainability, readability, performance optimizations, and strict adherence to best practices.</p><p>Have had a fascination with technology from a young age and am always interested in ways to improve my skills and knowledge through continuous learning and knowledge-sharing opportunities.</p><p>Additionally, other notable interests are art, culture, language, history, mythology, philosophy, and others.</p>"
   }
 }
