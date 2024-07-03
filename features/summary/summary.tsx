@@ -22,3 +22,5 @@ export function Summary() {
 }
 
 export default Summary;
+
+/* Ég er prinsipp maður sem trúir því að maður verði að lifa með ákvörðunum sínum, er mjög vandvirkur og tek lífið almennt einn dag í einu, hef alltaf reynt að vera fyrirmyndarborgari og ávalt í leit að tækifærum við að bæta mína hæfni, þekkingu, eða önnur skilningarvit. */
