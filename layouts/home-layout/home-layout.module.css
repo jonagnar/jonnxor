@@ -1,5 +1,6 @@
-.page {
-  padding: 0 var(--mantine-spacing-md);
+.header {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
 
   .title {
     text-align: right;
@@ -8,14 +9,17 @@
       text-align: left;
     }
   }
-}
-
-.header {
-  flex-direction: row-reverse;
-  justify-content: flex-end;
 
   @media (min-width: $mantine-breakpoint-xs) {
     flex-direction: row;
+  }
+}
+
+.space {
+  height: var(--mantine-spacing-md);
+
+  @media print {
+    height: var(--mantine-spacing-sm);
   }
 }
 
