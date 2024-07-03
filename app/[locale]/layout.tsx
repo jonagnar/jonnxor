@@ -43,6 +43,7 @@ export async function generateMetadata({ params: { locale } }: Params) {
   return {
     title: t('metadata.title'),
     description: t('metadata.description'),
+    metadataBase: new URL('https://jonnxor.is'),
   };
 }
 
