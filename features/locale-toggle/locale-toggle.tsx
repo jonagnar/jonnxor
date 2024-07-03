@@ -40,6 +40,7 @@ export const LocaleToggle = forwardRef<HTMLButtonElement, LocaleToggleProps>(
         onClick={handleLocale}
         {...props}
         component="button"
+        variant="filled"
         className={clsx(classes.toggle, className)}
         disabled={isPending}
       >
