@@ -12,9 +12,10 @@ export function Summary() {
         {t('summary.title')}
       </Title>
       <Stack gap="xs">
-        {t.rich('summary.text', {
-          p: (chunks) => <Text>{chunks}</Text>,
-        })}
+        <Text>{t('summary.p1')}</Text>
+        <Text>{t('summary.p2')}</Text>
+        <Text>{t('summary.p3')}</Text>
+        <Text>{t('summary.p4')}</Text>
       </Stack>
     </Box>
   );

@@ -137,6 +137,9 @@
   },
   "summary": {
     "title": "Summary",
-    "text": "<p>Senior Web Developer with 10 years of experience in popular web technologies and methodologies.</p><p>I have worked on multiple large projects across various web frameworks, with a strong focus on project architecture, maintainability, readability, performance optimizations, and strict adherence to best practices.</p><p>I describe myself as a man of principle who likes to take life one day at a time, continuously seeking out new challenges and opportunities to improve my skills, knowledge, and understanding.</p><p>Additionally, my other interests include art, culture, language, history, mythology, philosophy, and more.</p>"
+    "p1": "Senior Web Developer with 10 years of experience in popular web technologies and methodologies.",
+    "p2": "I have worked on multiple large projects across various web frameworks, with a strong focus on project architecture, maintainability, readability, performance optimizations, and strict adherence to best practices.",
+    "p3": "I describe myself as a man of principle who likes to take life one day at a time, continuously seeking out new challenges and opportunities to improve my skills, knowledge, and understanding.",
+    "p4": "Additionally, my other interests include art, culture, language, history, mythology, philosophy, and more."
   }
 }
