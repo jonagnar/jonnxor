@@ -20,7 +20,7 @@ export const PDF = forwardRef<HTMLAnchorElement, PDFProps>(({ onClick, ...props 
       onClick={handlePDF}
       {...props}
       component="a"
-      href={`/jon-agnar-stefansson-${locale === 'is' ? 'is' : 'en'}.pdf`}
+      href={`/jon-agnar-stefansson-cv-${locale === 'is' ? 'is' : 'en'}.pdf`}
       target="_blank"
       download
     >
