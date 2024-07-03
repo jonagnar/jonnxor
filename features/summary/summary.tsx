@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { Box, Title, Text } from '@mantine/core';
+import { Box, Stack, Title, Text } from '@mantine/core';
 
 export function Summary() {
   const t = useTranslations();
@@ -11,9 +11,11 @@ export function Summary() {
       <Title order={3} mb="sm">
         {t('summary.title')}
       </Title>
-      {t.rich('summary.text', {
-        p: (chunks) => <Text mb="xs">{chunks}</Text>,
-      })}
+      <Stack gap="xs">
+        {t.rich('summary.text', {
+          p: (chunks) => <Text>{chunks}</Text>,
+        })}
+      </Stack>
     </Box>
   );
 }
