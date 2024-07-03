@@ -16,7 +16,7 @@ export function Skills() {
         <ListItem>
           <Text fz="sm">
             <Text mr="xs" fw="bold" span>
-              {t('skills.title-tools')}
+              {t('skills.title-tools')}:
             </Text>
             {t('skills.node')}, {t('skills.npm')}, {t('skills.yarn')}
           </Text>
@@ -24,7 +24,7 @@ export function Skills() {
         <ListItem>
           <Text fz="sm">
             <Text mr="xs" fw="bold" span>
-              {t('skills.title-tech')}
+              {t('skills.title-tech')}:
             </Text>
             {t('skills.react')}, {t('skills.react-native')}, {t('skills.vue')}
           </Text>
@@ -32,7 +32,7 @@ export function Skills() {
         <ListItem>
           <Text fz="sm">
             <Text mr="xs" fw="bold" span>
-              {t('skills.title-web')}
+              {t('skills.title-web')}:
             </Text>
             {t('skills.next')}, {t('skills.remix')}, {t('skills.expo')}, {t('skills.ionic')}
           </Text>
@@ -40,7 +40,7 @@ export function Skills() {
         <ListItem>
           <Text fz="sm">
             <Text mr="xs" fw="bold" span>
-              {t('skills.title-ui')}
+              {t('skills.title-ui')}:
             </Text>
             {t('skills.tailwind-css')}, {t('skills.mantine')}, {t('skills.chakra-ui')}
           </Text>
@@ -48,7 +48,7 @@ export function Skills() {
         <ListItem>
           <Text fz="sm">
             <Text mr="xs" fw="bold" span>
-              {t('skills.title-lang')}
+              {t('skills.title-lang')}:
             </Text>
             {t('skills.javascript')}, {t('skills.typescript')}, {t('skills.c-sharp')},{' '}
             {t('skills.sql')}

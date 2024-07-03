@@ -11,7 +11,7 @@ export function Education() {
       <Title order={3} mb="sm">
         {t('education.title')}
       </Title>
-      <List spacing="xs" listStyleType="none">
+      <List spacing="xs" listStyleType="none" withPadding>
         <ListItem>
           <List spacing={0} listStyleType="none">
             <ListItem>

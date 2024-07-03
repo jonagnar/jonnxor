@@ -11,7 +11,7 @@ export function Experience() {
       <Title order={3} mb="sm">
         {t('experience.title')}
       </Title>
-      <List spacing="xs" listStyleType="none">
+      <List spacing="xs" listStyleType="none" withPadding>
         <ListItem>
           <List spacing={0} listStyleType="none">
             <ListItem>

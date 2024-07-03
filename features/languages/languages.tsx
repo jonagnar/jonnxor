@@ -12,7 +12,7 @@ export function Languages() {
       <Title order={3} mb="sm">
         {t('languages.title')}
       </Title>
-      <List spacing="xs" listStyleType="none">
+      <List spacing="xs" listStyleType="none" withPadding>
         <ListItem>
           <Text fw="bold" span>
             {t('languages.icelandic')}
