@@ -66,6 +66,7 @@ export function AppLayout({ children }: Props) {
           <Toolbar visibleFrom="xs" />
         </Group>
       </AppShellHeader>
+      <AppShellMain className={classes.main}>{children}</AppShellMain>
       <AppShellNavbar p="md" className={classes.navbar}>
         <AppShellSection>
           <Group h="100%" justify="center">
@@ -83,7 +84,6 @@ export function AppLayout({ children }: Props) {
           <Toolbar toggle={toggle} reverse justify="space-evenly" />
         </AppShellSection>
       </AppShellNavbar>
-      <AppShellMain className={classes.main}>{children}</AppShellMain>
       <AppShellFooter px="md" className={classes.footer}>
         <Group h="100%" wrap="nowrap" className={classes.wrapper}>
           <Toolbar reverse withColorSchemeToggle={false} visibleFrom="xs" />
