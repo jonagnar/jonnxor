@@ -1,3 +1,5 @@
+import type { Metadata } from 'next';
+
 import '@mantine/core/styles.css';
 import '@mantine/dates/styles.css';
 import '@mantine/charts/styles.css';
@@ -13,6 +15,10 @@ import './global.css';
 
 type Props = {
   children: React.ReactNode;
+};
+
+export const metadata: Metadata = {
+  metadataBase: new URL(`https://${process.env.VERCEL_URL}`),
 };
 
 // Since we have a `not-found.tsx` page on the root, a layout file
