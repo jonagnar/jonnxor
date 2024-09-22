@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   description: 'Personal Website',
 };
 
-export default async function RootLayout({ children }: Props) {
+export default function RootLayout({ children }: Props) {
   return (
     <html lang="en" className={`${montserrat.variable} ${orbitron.variable}`}>
       <head>
