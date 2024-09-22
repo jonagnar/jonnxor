@@ -1,33 +1,26 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
 import { Title, List, ListItem, Anchor, Text } from '@mantine/core';
 
 export function Education() {
-  const t = useTranslations();
-
   return (
     <>
       <Title order={3} mb="sm">
-        {t('education.title')}
+        Education
       </Title>
       <List spacing="xs" listStyleType="none" withPadding>
         <ListItem>
           <List spacing={0} listStyleType="none">
             <ListItem>
               <Anchor fw="bold" href="https://www.ru.is" target="_blank">
-                {t('education.university')}
+                Reykjavík University
               </Anchor>
             </ListItem>
             <ListItem>
-              <Text size="sm">
-                {t('education.university-degree')}
-                {' • '}
-                {t('education.university-programme')}
-              </Text>
+              <Text size="sm">Bachelor Degree in Computer Science</Text>
             </ListItem>
             <ListItem>
-              <Text size="sm">{t('education.university-date')}</Text>
+              <Text size="sm">2016</Text>
             </ListItem>
           </List>
         </ListItem>
@@ -35,18 +28,14 @@ export function Education() {
           <List spacing={0} listStyleType="none">
             <ListItem>
               <Anchor fw="bold" href="https://tskoli.is" target="_blank">
-                {t('education.college')}
+                Technical College of Iceland
               </Anchor>
             </ListItem>
             <ListItem>
-              <Text size="sm">
-                {t('education.college-degree')}
-                {' • '}
-                {t('education.college-programme')}
-              </Text>
+              <Text size="sm">Associate Degree in Computer Studies</Text>
             </ListItem>
             <ListItem>
-              <Text size="sm">{t('education.college-date')}</Text>
+              <Text size="sm">2013</Text>
             </ListItem>
           </List>
         </ListItem>
@@ -54,5 +43,3 @@ export function Education() {
     </>
   );
 }
-
-export default Education;

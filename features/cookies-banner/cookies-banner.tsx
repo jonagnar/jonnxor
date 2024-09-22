@@ -2,7 +2,6 @@
 
 import { useEffect } from 'react';
 import { useDisclosure } from '@mantine/hooks';
-import { useTranslations } from 'next-intl';
 import { Dialog, Title, Text, Group, Button } from '@mantine/core';
 
 import { hasCookies, acceptCookies, declineCookies } from '@/app/actions';
@@ -10,7 +9,6 @@ import { hasCookies, acceptCookies, declineCookies } from '@/app/actions';
 import classes from './cookies-banner.module.css';
 
 export function CookiesBanner() {
-  const t = useTranslations();
   const [opened, { open, close }] = useDisclosure(false);
 
   useEffect(() => {
@@ -37,19 +35,17 @@ export function CookiesBanner() {
   return (
     <Dialog opened={opened} withBorder withCloseButton={false} className={classes.dialog}>
       <Title order={2} mb="sm">
-        {t('cookies.title')}
+        Cookies!
       </Title>
-      <Text>{t('cookies.text')}</Text>
+      <Text>This website has cookies.</Text>
       <Group mt="sm" justify="flex-end">
         <Button variant="default" onClick={reject}>
-          {t('cookies.reject')}
+          Resist your fate
         </Button>
         <Button variant="outline" onClick={accept} className={classes.button}>
-          {t('cookies.accept')}
+          Accept your fate
         </Button>
       </Group>
     </Dialog>
   );
 }
-
-export default CookiesBanner;

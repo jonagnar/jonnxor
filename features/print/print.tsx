@@ -18,5 +18,3 @@ export const Print = forwardRef<HTMLButtonElement, PrintProps>(({ onClick, ...pr
     </ActionIcon>
   );
 });
-
-export default Print;

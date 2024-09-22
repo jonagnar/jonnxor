@@ -31,5 +31,3 @@ export function Social({ ...props }: SocialProps) {
     </Group>
   );
 }
-
-export default Social;

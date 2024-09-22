@@ -1,62 +1,56 @@
 'use client';
 
 import React from 'react';
-import { useTranslations } from 'next-intl';
-import { Title, List, ListItem, Text } from '@mantine/core';
+import { Box, Title, List, ListItem, Text } from '@mantine/core';
 
 export function Skills() {
-  const t = useTranslations();
-
   return (
     <>
-      <Title order={3} mb="sm">
-        {t('skills.title')}
-      </Title>
-      <List spacing="xs">
+      <Box mb="sm">
+        <Title order={3}>Skills</Title>
+      </Box>
+      <List spacing="xs" listStyleType="none">
         <ListItem>
           <Text fz="sm">
             <Text mr="xs" fw="bold" span>
-              {t('skills.title-tools')}:
+              Dev. Tools:
             </Text>
-            {t('skills.node')}, {t('skills.npm')}, {t('skills.yarn')}
+            NodeJS, npm, git, etc.
           </Text>
         </ListItem>
         <ListItem>
           <Text fz="sm">
             <Text mr="xs" fw="bold" span>
-              {t('skills.title-tech')}:
+              Web Technologies:
             </Text>
-            {t('skills.react')}, {t('skills.react-native')}, {t('skills.vue')}
+            React, React Native, Vue
           </Text>
         </ListItem>
         <ListItem>
           <Text fz="sm">
             <Text mr="xs" fw="bold" span>
-              {t('skills.title-web')}:
+              Web Frameworks:
             </Text>
-            {t('skills.next')}, {t('skills.remix')}, {t('skills.expo')}, {t('skills.ionic')}
+            NextJS, Expo, Ionic
           </Text>
         </ListItem>
         <ListItem>
           <Text fz="sm">
             <Text mr="xs" fw="bold" span>
-              {t('skills.title-ui')}:
+              UI Frameworks:
             </Text>
-            {t('skills.tailwind-css')}, {t('skills.mantine')}, {t('skills.chakra-ui')}
+            Bootstrap, Material UI, Tailwind CSS
           </Text>
         </ListItem>
         <ListItem>
           <Text fz="sm">
             <Text mr="xs" fw="bold" span>
-              {t('skills.title-lang')}:
+              Programming Languages:
             </Text>
-            {t('skills.javascript')}, {t('skills.typescript')}, {t('skills.c-sharp')},{' '}
-            {t('skills.sql')}
+            Javascript, Typescript, C#, SQL
           </Text>
         </ListItem>
       </List>
     </>
   );
 }
-
-export default Skills;

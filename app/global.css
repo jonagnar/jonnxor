@@ -5,57 +5,30 @@
 
 ::selection {
   color: var(--mantine-color-text);
-
-  @mixin light {
-    background: var(--mantine-color-blue-filled-hover);
-  }
-
-  @mixin dark {
-    background: var(--mantine-color-yellow-filled-hover);
-  }
+  background: var(--mantine-color-yellow-filled-hover);
 }
 
 .link {
-  color: var(--mantine-color-blue-filled);
+  color: var(--mantine-color-yellow-filled);
   transition: color 300ms ease;
-
-  @mixin hover {
-    color: var(--mantine-color-blue-filled-hover);
-  }
-
-  @mixin dark {
-    color: var(--mantine-color-yellow-filled);
-
-    @media print {
-      color: var(--mantine-color-text);
-    }
-
-    @mixin hover {
-      color: var(--mantine-color-yellow-filled-hover);
-    }
-  }
 
   @media print {
     color: var(--mantine-color-text);
+  }
+
+  @mixin hover {
+    color: var(--mantine-color-yellow-filled-hover);
   }
 }
 
 .button,
 .action-icon {
   &[data-variant='filled'] {
-    background: var(--mantine-color-blue-filled);
+    background: var(--mantine-color-yellow-filled);
     transition: background 300ms ease;
 
     @mixin hover {
-      background: var(--mantine-color-blue-filled-hover);
-    }
-
-    @mixin dark {
-      background: var(--mantine-color-yellow-filled);
-
-      @mixin hover {
-        background: var(--mantine-color-yellow-filled-hover);
-      }
+      background: var(--mantine-color-yellow-filled-hover);
     }
   }
 }

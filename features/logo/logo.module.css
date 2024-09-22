@@ -1,23 +1,14 @@
 .link {
   display: inline-block;
+  text-decoration: none;
 
   @mixin hover {
-    text-decoration: none;
-
     .title {
-      color: var(--mantine-color-blue-filled-hover);
-
-      @mixin dark {
-        color: var(--mantine-color-yellow-filled-hover);
-      }
+      color: var(--mantine-color-yellow-filled-hover);
     }
 
     .avatar span {
-      background: var(--mantine-color-blue-filled-hover);
-
-      @mixin dark {
-        background: var(--mantine-color-yellow-filled-hover);
-      }
+      background: var(--mantine-color-yellow-filled-hover);
     }
   }
 }
@@ -37,11 +28,7 @@
 
   span {
     transition: background 300ms ease;
-    background: var(--mantine-color-blue-filled);
-
-    @mixin dark {
-      background: var(--mantine-color-yellow-filled);
-    }
+    background: var(--mantine-color-yellow-filled);
   }
 
   @media (min-width: $mantine-breakpoint-xs) {

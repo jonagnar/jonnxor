@@ -1,66 +1,40 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
 import { Title, List, ListItem, Anchor, Text } from '@mantine/core';
 
 export function Experience() {
-  const t = useTranslations();
-
   return (
     <>
       <Title order={3} mb="sm">
-        {t('experience.title')}
+        Experience
       </Title>
       <List spacing="xs" listStyleType="none" withPadding>
         <ListItem>
           <List spacing={0} listStyleType="none">
             <ListItem>
               <Anchor fw="bold" href="https://advania.is" target="_blank">
-                {t('experience.company-advania-name')}
+                Advania
               </Anchor>
             </ListItem>
-            <ListItem>
-              <Text size="sm">{t('experience.company-advania-role')}</Text>
-            </ListItem>
-            <ListItem>
-              <Text size="sm">{t('experience.company-advania-date')}</Text>
-            </ListItem>
+            <ListItem>Senior Frontend Developer</ListItem>
+            <ListItem>2016 - 2024</ListItem>
           </List>
         </ListItem>
         <ListItem>
           <List spacing={0} listStyleType="none">
             <ListItem>
               <Anchor fw="bold" href="https://www.ru.is" target="_blank">
-                {t('experience.company-university-name')}
+                Reykjavík University
               </Anchor>
             </ListItem>
             <ListItem>
               <Text size="sm" span>
-                {t('experience.company-university-role')}
+                Teaching Assistant
               </Text>
             </ListItem>
             <ListItem>
               <Text size="sm" span>
-                {t('experience.company-university-date')}
-              </Text>
-            </ListItem>
-          </List>
-        </ListItem>
-        <ListItem>
-          <List spacing={0} listStyleType="none">
-            <ListItem>
-              <Anchor fw="bold" href="https://www.skeljungur.is" target="_blank">
-                {t('experience.company-shell-name')}
-              </Anchor>
-            </ListItem>
-            <ListItem>
-              <Text size="sm" span>
-                {t('experience.company-shell-role')}
-              </Text>
-            </ListItem>
-            <ListItem>
-              <Text size="sm" span>
-                {t('experience.company-shell-date')}
+                2016
               </Text>
             </ListItem>
           </List>
@@ -69,17 +43,17 @@ export function Experience() {
           <List spacing={0} listStyleType="none">
             <ListItem>
               <Text fw="bold" span>
-                {t('experience.company-outcome-name')}
+                Outcome
               </Text>
             </ListItem>
             <ListItem>
               <Text size="sm" span>
-                {t('experience.company-outcome-role')}
+                Technician
               </Text>
             </ListItem>
             <ListItem>
               <Text size="sm" span>
-                {t('experience.company-outcome-date')}
+                2012 - 2014
               </Text>
             </ListItem>
           </List>
@@ -88,5 +62,3 @@ export function Experience() {
     </>
   );
 }
-
-export default Experience;

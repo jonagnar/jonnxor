@@ -22,5 +22,3 @@ export function ContactIcon({ icon, label, input, ...props }: ContactIconProps) 
     </Group>
   );
 }
-
-export default ContactIcon;

@@ -13,18 +13,5 @@ module.exports = {
   rules: {
     'react/react-in-jsx-scope': 'off',
     'import/extensions': 'off',
-    // Consistently import navigation APIs from `@/navigation`
-    'no-restricted-imports': [
-      'error',
-      {
-        name: 'next/link',
-        message: 'Please import from `@/navigation` instead.',
-      },
-      {
-        name: 'next/navigation',
-        importNames: ['redirect', 'permanentRedirect', 'useRouter', 'usePathname'],
-        message: 'Please import from `@/navigation` instead.',
-      },
-    ],
   },
 };

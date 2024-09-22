@@ -3,22 +3,12 @@
 }
 
 .button {
-  color: var(--mantine-color-blue-filled);
-  border-color: var(--mantine-color-blue-filled);
+  color: var(--mantine-color-yellow-filled);
+  border-color: var(--mantine-color-yellow-filled);
 
   @mixin hover {
-    color: var(--mantine-color-blue-filled-hover);
-    border-color: var(--mantine-color-blue-filled-hover);
-  }
-
-  @mixin dark {
-    color: var(--mantine-color-yellow-filled);
-    border-color: var(--mantine-color-yellow-filled);
-
-    @mixin hover {
-      color: var(--mantine-color-yellow-filled-hover);
-      border-color: var(--mantine-color-yellow-filled-hover);
-    }
+    color: var(--mantine-color-yellow-filled-hover);
+    border-color: var(--mantine-color-yellow-filled-hover);
   }
 }
 
