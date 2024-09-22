@@ -8,7 +8,6 @@ import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
 
 import { theme } from '@/theme';
 import { hasCookies } from '@/app/actions';
-import { ScrollToTop } from '@/features/scroll-to-top/scroll-to-top';
 import { CookiesBanner } from '@/features/cookies-banner/cookies-banner';
 
 import '@mantine/core/styles.css';
