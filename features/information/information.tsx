@@ -18,7 +18,7 @@ export function Information() {
         Jón Agnar Stefánsson
       </Title>
       <Text mb="md" fz="lg" lh={1}>
-        Senior Frontend Web Developer
+        Frontend Web & App Developer
       </Text>
       <Stack gap="xs">
         <Group gap="md">
