@@ -16,7 +16,7 @@
     "jsx": "preserve",
     "incremental": true,
     "paths": {
-      "@/*": ["./*"]
+      "@jonnxor/*": ["./*"]
     },
     "plugins": [{ "name": "next" }]
   },

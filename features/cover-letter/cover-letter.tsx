@@ -1,54 +1,66 @@
-'use client';
-
-import { Box, Group, Paper, Title, Text } from '@mantine/core';
+import { Box, Paper, Title, Text, List, ListItem } from '@mantine/core';
 
 export function CoverLetter() {
   return (
-    <Box>
-      <Group justify="flex-end">
-        <Title order={2} mb="lg">
-          Cover Letter
-        </Title>
-      </Group>
-      <Paper mb="lg" p="md" radius="md" shadow="md" withBorder>
+    <Box mb="lg" className="hidden-print" component="section">
+      <Title mb="lg" order={2}>
+        Cover Letter
+      </Title>
+      <Paper p="lg" withBorder>
         <Text>
-          Dear Reader
+          Dear Hiring Manager, <br />
+          <br />
+          I am a highly skilled Senior Frontend Web Developer with over 8 years of professional
+          experience in building scalable, responsive, and user-centric web applications. My
+          expertise spans a wide range of modern web technologies, frameworks, and tools, including
+          React, Vue, NextJS, and TypeScript, making me a versatile and valuable asset for any
+          project requiring high-quality frontend solutions.
           <br />
           <br />
-          I am a Senior Web Developer with a decade of experience in the field of web technologies
-          and methodologies. Over the years, I have worked on numerous large-scale projects across
-          various web frameworks, with a strong focus on project architecture, maintainability,
-          readability, performance optimizations, and strict adherence to best practices.
+          During my tenure as a Senior Frontend Developer at Advania, I contributed to numerous
+          projects for companies such as Arion bank, Reykjavík Energy, Advania and Landspítalinn. My
+          role involved closely collaborating with cross-functional teams to create efficient and
+          maintainable codebases, ensuring the seamless integration of frontend interfaces with
+          backend systems. I also have experience working with various UI frameworks, such as
+          Bootstrap, Material UI, and Tailwind CSS, allowing me to create visually appealing and
+          responsive designs.
           <br />
           <br />
-          In my previous roles I have worked on numerous projects that required a blend of technical
-          expertise and creative problem-solving. I have a strong command of tools like Node.js,
-          npm, and yarn, and am proficient in technologies such as React.js, React Native, and
-          Vue.js. My experiences with frameworks like Next.js, Remix, Expo, and Ionic have enabled
-          me to deliver robust and scalable web solutions.
+        </Text>
+        <Text mb="xs">Some of my key skills and experiences include:</Text>
+        <List spacing="xs" withPadding>
+          <ListItem>
+            Frontend Technologies: Advanced proficiency in React, React Native, and Vue,
+            complemented by hands-on experience with frameworks like NextJS, Expo, and Ionic.
+          </ListItem>
+          <ListItem>
+            DevOps and Development Tools: Strong experience with NodeJS, npm, git, and other
+            essential development tools, enabling me to manage projects efficiently from start to
+            deployment.
+          </ListItem>
+          <ListItem>
+            Programming Languages: Expertise in JavaScript, TypeScript, C#, and SQL, providing a
+            comprehensive foundation for developing dynamic and data-driven applications.
+          </ListItem>
+        </List>
+        <br />
+        <Text>
+          I hold a Bachelor&apos;s Degree in Computer Science from Reykjavík University, and I am
+          fluent in both Icelandic and English. My technical background, combined with a strong
+          understanding of frontend development best practices, makes me confident in my ability to
+          contribute meaningfully to any organization or project.
           <br />
           <br />
-          I pride myself on being meticulous, punctual, reliable and honest. Dedicated to continuous
-          learning and constantly seeking out knowledge to enhance my skills. My collaborative
-          nature and passion for learning have allowed me to effectively share my expertise with
-          colleagues and contribute to team success.
-          <br />
-          <br />
-          In addition to my technical abilities, I have a deep appreciation for art, culture,
-          language, history, mythology, and philosophy. These interests enrich my perspective and
-          fuel my creativity.
-          <br />
-          <br />
-          Thank you for visiting my website and considering my qualifications. I invite you to
-          explore my portfolio and CV to learn more about my professional journey and the projects I
-          have worked on. I am excited about the opportunity to bring my expertise in web
-          development to help drive human development, For Science!
+          Thank you for considering my qualifications. I look forward to bringing my expertise to
+          challenging and innovative projects that value quality, performance, and user experience.
           <br />
           <br />
           Sincerely, <br />
-          Jón Agnar
+          Jón Agnar Stefánsson
         </Text>
       </Paper>
     </Box>
   );
 }
+
+export default CoverLetter;

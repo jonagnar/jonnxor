@@ -1,28 +1,20 @@
-'use client';
+import { Button } from '@mantine/core';
 
-import { type MouseEvent, forwardRef } from 'react';
-import { type ElementProps, type ButtonProps, Button } from '@mantine/core';
+export function Download() {
+  return (
+    <Button
+      size="md"
+      color="var(--mantine-color-lime-5)"
+      variant="outline"
+      visibleFrom="xs"
+      component="a"
+      href="/jon-agnar-stefansson.zip"
+      target="_blank"
+      download
+    >
+      Download
+    </Button>
+  );
+}
 
-export type DownloadProps = ButtonProps & ElementProps<'a', keyof ButtonProps> & {};
-
-export const Download = forwardRef<HTMLAnchorElement, DownloadProps>(
-  ({ onClick, ...props }, ref) => {
-    const handleDownload = (event: MouseEvent<HTMLAnchorElement>) => {
-      onClick?.(event);
-    };
-
-    return (
-      <Button
-        ref={ref}
-        onClick={handleDownload}
-        {...props}
-        component="a"
-        href="/jon-agnar-stefansson.zip"
-        target="_blank"
-        download
-      >
-        Download
-      </Button>
-    );
-  }
-);
+export default Download;

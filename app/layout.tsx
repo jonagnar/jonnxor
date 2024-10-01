@@ -1,9 +1,8 @@
 import type { Metadata } from 'next';
-
 import { MantineProvider } from '@mantine/core';
 import { Orbitron, Montserrat } from 'next/font/google';
 
-import { theme } from '@/theme';
+import { theme } from '@jonnxor/theme';
 
 import '@mantine/core/styles.css';
 import '@mantine/dates/styles.css';
@@ -17,10 +16,6 @@ import '@mantine/notifications/styles.css';
 import '@mantine/code-highlight/styles.css';
 
 import './global.css';
-
-type Props = {
-  children: React.ReactNode;
-};
 
 const montserrat = Montserrat({
   weight: ['400', '700'],
@@ -41,7 +36,11 @@ export const metadata: Metadata = {
   description: 'Personal Website',
 };
 
-export default function RootLayout({ children }: Props) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="en" className={`${montserrat.variable} ${orbitron.variable}`}>
       <head>
@@ -53,7 +52,7 @@ export default function RootLayout({ children }: Props) {
         <link rel="shortcut icon" href="data:;base64,iVBORw0KGgo=" />
       </head>
       <body>
-        <MantineProvider theme={theme} defaultColorScheme="dark">
+        <MantineProvider theme={theme} forceColorScheme="dark">
           {children}
         </MantineProvider>
       </body>

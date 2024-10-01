@@ -1,64 +1,54 @@
-'use client';
-
-import { Title, List, ListItem, Anchor, Text } from '@mantine/core';
+import { Box, Title, Anchor, List, ListItem } from '@mantine/core';
 
 export function Experience() {
   return (
-    <>
-      <Title order={3} mb="sm">
+    <Box component="section">
+      <Title mb="md" order={3}>
         Experience
       </Title>
-      <List spacing="xs" listStyleType="none" withPadding>
+      <List spacing="xs" listStyleType="none">
         <ListItem>
           <List spacing={0} listStyleType="none">
             <ListItem>
-              <Anchor fw="bold" href="https://advania.is" target="_blank">
+              <Anchor
+                c="var(--mantine-color-lime-5)"
+                fw="bold"
+                href="https://advania.is"
+                target="_blank"
+              >
                 Advania
               </Anchor>
             </ListItem>
-            <ListItem>Senior Frontend Developer</ListItem>
-            <ListItem>2016 - 2024</ListItem>
+            <ListItem fz="sm">Senior Frontend Developer</ListItem>
+            <ListItem fz="sm">2016 - 2024</ListItem>
           </List>
         </ListItem>
         <ListItem>
           <List spacing={0} listStyleType="none">
             <ListItem>
-              <Anchor fw="bold" href="https://www.ru.is" target="_blank">
+              <Anchor
+                c="var(--mantine-color-lime-5)"
+                fw="bold"
+                href="https://www.ru.is"
+                target="_blank"
+              >
                 Reykjavík University
               </Anchor>
             </ListItem>
-            <ListItem>
-              <Text size="sm" span>
-                Teaching Assistant
-              </Text>
-            </ListItem>
-            <ListItem>
-              <Text size="sm" span>
-                2016
-              </Text>
-            </ListItem>
+            <ListItem fz="sm">Teaching Assistant</ListItem>
+            <ListItem fz="sm">2016</ListItem>
           </List>
         </ListItem>
         <ListItem>
           <List spacing={0} listStyleType="none">
-            <ListItem>
-              <Text fw="bold" span>
-                Outcome
-              </Text>
-            </ListItem>
-            <ListItem>
-              <Text size="sm" span>
-                Technician
-              </Text>
-            </ListItem>
-            <ListItem>
-              <Text size="sm" span>
-                2012 - 2014
-              </Text>
-            </ListItem>
+            <ListItem fw="bold">Outcome</ListItem>
+            <ListItem fz="sm">Technician</ListItem>
+            <ListItem fz="sm">2012 - 2014</ListItem>
           </List>
         </ListItem>
       </List>
-    </>
+    </Box>
   );
 }
+
+export default Experience;
