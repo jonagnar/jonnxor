@@ -6,7 +6,7 @@ export function CoverLetter() {
       <Title mb="lg" order={2}>
         Cover Letter
       </Title>
-      <Paper p="lg" withBorder>
+      <Paper className="cover-letter" withBorder>
         <Text>
           Dear Hiring Manager, <br />
           <br />

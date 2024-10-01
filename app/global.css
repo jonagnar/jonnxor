@@ -17,6 +17,12 @@ body {
   grid-template-columns: minmax(0, 1fr);
 }
 
+.cv,
+.cover-letter {
+  padding: var(--mantine-spacing-lg);
+  border-color: var(--mantine-color-lime-5);
+}
+
 /* Typography */
 ::selection {
   background-color: var(--mantine-color-lime-5);
@@ -40,6 +46,11 @@ body {
 
 /* Print */
 @media print {
+  .cv {
+    padding: 0;
+    border: 0;
+  }
+
   /* Typography */
   body {
     --mantine-font-family-headings: var(--mantine-font-family);
