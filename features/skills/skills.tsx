@@ -1,61 +1,44 @@
-'use client';
-
-import React from 'react';
-import { useTranslations } from 'next-intl';
-import { Title, List, ListItem, Text } from '@mantine/core';
+import { Box, Title, Text, List, ListItem } from '@mantine/core';
 
 export function Skills() {
-  const t = useTranslations();
-
   return (
-    <>
-      <Title order={3} mb="sm">
-        {t('skills.title')}
+    <Box component="section">
+      <Title mb="md" order={3}>
+        Skills
       </Title>
-      <List spacing="xs">
+      <List spacing="xs" listStyleType="none">
         <ListItem>
-          <Text fz="sm">
-            <Text mr="xs" fw="bold" span>
-              {t('skills.title-tools')}:
-            </Text>
-            {t('skills.node')}, {t('skills.npm')}, {t('skills.yarn')}
+          <Text fz="sm" fw="bold">
+            Dev. Tools:
           </Text>
+          NodeJS, npm, git, etc.
         </ListItem>
         <ListItem>
-          <Text fz="sm">
-            <Text mr="xs" fw="bold" span>
-              {t('skills.title-tech')}:
-            </Text>
-            {t('skills.react')}, {t('skills.react-native')}, {t('skills.vue')}
+          <Text fz="sm" fw="bold">
+            Web Technologies:
           </Text>
+          React, React Native, Vue
         </ListItem>
         <ListItem>
-          <Text fz="sm">
-            <Text mr="xs" fw="bold" span>
-              {t('skills.title-web')}:
-            </Text>
-            {t('skills.next')}, {t('skills.remix')}, {t('skills.expo')}, {t('skills.ionic')}
+          <Text fz="sm" fw="bold">
+            Web Frameworks:
           </Text>
+          NextJS, Expo, Ionic
         </ListItem>
         <ListItem>
-          <Text fz="sm">
-            <Text mr="xs" fw="bold" span>
-              {t('skills.title-ui')}:
-            </Text>
-            {t('skills.tailwind-css')}, {t('skills.mantine')}, {t('skills.chakra-ui')}
+          <Text fz="sm" fw="bold">
+            UI Frameworks:
           </Text>
+          Bootstrap, Material UI, Tailwind CSS
         </ListItem>
         <ListItem>
-          <Text fz="sm">
-            <Text mr="xs" fw="bold" span>
-              {t('skills.title-lang')}:
-            </Text>
-            {t('skills.javascript')}, {t('skills.typescript')}, {t('skills.c-sharp')},{' '}
-            {t('skills.sql')}
+          <Text fz="sm" fw="bold">
+            Programming Languages:
           </Text>
+          Javascript, Typescript, C#, SQL
         </ListItem>
       </List>
-    </>
+    </Box>
   );
 }
 

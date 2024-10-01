@@ -1,71 +1,56 @@
 'use client';
 
-import { ActionIcon, Anchor, Button, createTheme, rem } from '@mantine/core';
+import { createTheme, rem } from '@mantine/core';
 
 export const theme = createTheme({
-  /* Put your mantine theme override here */
-  spacing: {
-    xs: rem(5),
-    sm: rem(10),
-    md: rem(20),
-    lg: rem(40),
-    xl: rem(80),
+  breakpoints: {
+    xs: '40em',
+    sm: '48em',
+    md: '64em',
+    lg: '80em',
+    xl: '96em',
   },
-  fontFamily:
-    'var(--font-montserrat), -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji',
+  spacing: {
+    xs: '0.25rem',
+    sm: '0.5rem',
+    md: '1rem',
+    lg: '1.5rem',
+    xl: '3rem',
+  },
+
+  /* Typography */
+  fontFamily: 'var(--font-montserrat)',
   fontSizes: {
-    xs: rem(12),
-    sm: rem(14),
-    md: rem(16),
-    lg: rem(18),
-    xl: rem(20),
+    xs: rem(13.33), // 10pt
+    sm: rem(14.67), // 11pt
+    md: rem(16), // 12pt
+    lg: rem(18.67), // 14pt
+    xl: rem(21.33), // 16pt
   },
   lineHeights: {
-    xs: '1.5',
-    sm: '1.5',
-    md: '1.5',
-    lg: '1.5',
-    xl: '1.5',
+    xs: '1.375',
+    sm: '1.375',
+    md: '1.375',
+    lg: '1.375',
+    xl: '1.375',
   },
   headings: {
-    fontFamily:
-      'var(--font-orbitron), -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji',
+    fontFamily: 'var(--font-orbitron)',
     fontWeight: '600',
     textWrap: 'nowrap',
     sizes: {
       h1: {
-        fontSize: rem(24),
-        lineHeight: '1.5',
+        fontSize: rem(32), // 24pt
+        lineHeight: '1',
       },
       h2: {
-        fontSize: rem(18),
-        lineHeight: '1.5',
+        fontSize: rem(29.33), // 22pt
+        lineHeight: '1',
       },
       h3: {
-        fontSize: rem(20),
-        lineHeight: '1.5',
+        fontSize: rem(26.67), // 20pt
+        lineHeight: '1',
       },
     },
-  },
-  components: {
-    Anchor: Anchor.extend({
-      defaultProps: {
-        classNames: { root: 'link' },
-      },
-    }),
-    Button: Button.extend({
-      defaultProps: {
-        classNames: {
-          root: 'button',
-        },
-      },
-    }),
-    ActionIcon: ActionIcon.extend({
-      defaultProps: {
-        classNames: {
-          root: 'action-icon',
-        },
-      },
-    }),
   },
 });

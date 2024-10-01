@@ -1,38 +1,26 @@
-'use client';
-
-import React from 'react';
-import { useTranslations } from 'next-intl';
-import { Title, List, ListItem, Text } from '@mantine/core';
+import { Box, Title, Text, List, ListItem } from '@mantine/core';
 
 export function Languages() {
-  const t = useTranslations();
-
   return (
-    <>
-      <Title order={3} mb="sm">
-        {t('languages.title')}
+    <Box component="section">
+      <Title mb="md" order={3}>
+        Languages
       </Title>
-      <List spacing="xs" listStyleType="none" withPadding>
-        <ListItem>
-          <Text fw="bold" span>
-            {t('languages.icelandic')}
-          </Text>
-          {' • '}
-          <Text size="sm" span>
-            {t('languages.native-proficiency')}
-          </Text>
+      <List spacing="xs" listStyleType="none">
+        <ListItem fz="sm">
+          <Text fw="bold">Icelandic</Text>
+          Native Proficiency
         </ListItem>
-        <ListItem>
-          <Text fw="bold" span>
-            {t('languages.english')}
-          </Text>
-          {' • '}
-          <Text size="sm" span>
-            {t('languages.professional-proficiency')}
-          </Text>
+        <ListItem fz="sm">
+          <Text fw="bold">English</Text>
+          Full Professional Proficiency
+        </ListItem>
+        <ListItem fz="sm">
+          <Text fw="bold">Japanese</Text>
+          Elementary Proficiency
         </ListItem>
       </List>
-    </>
+    </Box>
   );
 }
 
