@@ -1,4 +1,4 @@
-import { Box, Stack, Paper, Title, Space } from '@mantine/core';
+import { Box, Stack, Paper, Title } from '@mantine/core';
 
 import { Image } from '@jonnxor/features/image/image';
 import { Skills } from '@jonnxor/features/skills/skills';
@@ -22,7 +22,7 @@ export function CV() {
             <Education />
           </Stack>
           <Box component="hr" />
-          <Stack>
+          <Stack style={{ justifySelf: 'center' }}>
             <Image />
             <Certification />
             <Skills />

@@ -18,7 +18,7 @@ body {
 }
 
 .holy-grail--rows {
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: 1fr auto 1fr;
 }
 
 .holy-grail--columns {
@@ -59,7 +59,7 @@ hr {
 
 /* Mobile */
 @media (max-width: em(640px)) {
-  .grid {
+  .cv .holy-grail {
     display: block;
   }
 }
