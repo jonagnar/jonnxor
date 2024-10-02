@@ -10,11 +10,24 @@ body {
   height: 100%;
 }
 
-.holy-grail {
+.holy-grail,
+.grid {
   height: 100%;
   display: grid;
+}
+
+.holy-grail {
   grid-template-rows: auto 1fr auto;
   grid-template-columns: minmax(0, 1fr);
+}
+
+.grid {
+  gap: var(--mantine-spacing-xl);
+
+  grid-template-rows: minmax(0, 1fr);
+  grid-template-columns: 1fr auto 1fr;
+
+  justify-items: center;
 }
 
 .cv,
@@ -23,8 +36,9 @@ body {
   border-color: var(--mantine-color-lime-5);
 }
 
-.grid {
-  gap: var(--mantine-spacing-md);
+hr {
+  border: 0;
+  border-right: 1px solid var(--mantine-color-lime-5);
 }
 
 /* Typography */
@@ -53,6 +67,10 @@ body {
   .cv {
     padding: 0;
     border: 0;
+  }
+
+  hr {
+    border-right: 2px solid #000;
   }
 
   /* Typography */

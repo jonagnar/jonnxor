@@ -6,23 +6,26 @@ import { Languages } from '@jonnxor/features/languages/languages';
 import { Education } from '@jonnxor/features/education/education';
 import { Experience } from '@jonnxor/features/experience/experience';
 import { Information } from '@jonnxor/features/information/information';
+import { Certification } from '@jonnxor/features/certification/certification';
 
 export function CV() {
   return (
     <Box>
       <Paper className="cv" withBorder>
-        <SimpleGrid cols={{ base: 1, xs: 2 }} className="grid">
-          <Stack>
+        <Box className="grid">
+          <Stack w="100%">
             <Information />
             <Experience />
             <Education />
           </Stack>
-          <Stack>
+          <hr />
+          <Stack w="100%">
             <Image />
+            <Certification />
             <Skills />
             <Languages />
           </Stack>
-        </SimpleGrid>
+        </Box>
       </Paper>
     </Box>
   );
