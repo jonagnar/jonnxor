@@ -19,8 +19,8 @@ export function Education() {
                 Reykjavík University
               </Anchor>
             </ListItem>
-            <ListItem fz="sm">Bachelor Degree in Computer Science</ListItem>
-            <ListItem fz="sm">2016</ListItem>
+            <ListItem>Bachelor Degree in Computer Science</ListItem>
+            <ListItem>2016</ListItem>
           </List>
         </ListItem>
         <ListItem>
@@ -35,8 +35,8 @@ export function Education() {
                 Technical College of Iceland
               </Anchor>
             </ListItem>
-            <ListItem fz="sm">Associate Degree in Computer Studies</ListItem>
-            <ListItem fz="sm">2013</ListItem>
+            <ListItem>Associate Degree in Computer Studies</ListItem>
+            <ListItem>2013</ListItem>
           </List>
         </ListItem>
       </List>

@@ -7,15 +7,15 @@ export function Languages() {
         Languages
       </Title>
       <List spacing="xs" listStyleType="none">
-        <ListItem fz="sm">
+        <ListItem>
           <Text fw="bold">Icelandic</Text>
           Native Proficiency
         </ListItem>
-        <ListItem fz="sm">
+        <ListItem>
           <Text fw="bold">English</Text>
           Full Professional Proficiency
         </ListItem>
-        <ListItem fz="sm">
+        <ListItem>
           <Text fw="bold">Japanese</Text>
           Elementary Proficiency
         </ListItem>

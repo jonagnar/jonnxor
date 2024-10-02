@@ -8,33 +8,23 @@ export function Skills() {
       </Title>
       <List spacing="xs" listStyleType="none">
         <ListItem>
-          <Text fz="sm" fw="bold">
-            Dev. Tools:
-          </Text>
-          NodeJS, npm, git, etc.
+          <Text fw="bold">Dev. Tools:</Text>
+          Node.js, npm, git, etc.
         </ListItem>
         <ListItem>
-          <Text fz="sm" fw="bold">
-            Web Technologies:
-          </Text>
+          <Text fw="bold">Web Technologies:</Text>
           React, React Native, Vue
         </ListItem>
         <ListItem>
-          <Text fz="sm" fw="bold">
-            Web Frameworks:
-          </Text>
+          <Text fw="bold">Web Frameworks:</Text>
           NextJS, Expo, Ionic
         </ListItem>
         <ListItem>
-          <Text fz="sm" fw="bold">
-            UI Frameworks:
-          </Text>
+          <Text fw="bold">UI Frameworks:</Text>
           Bootstrap, Material UI, Tailwind CSS
         </ListItem>
         <ListItem>
-          <Text fz="sm" fw="bold">
-            Programming Languages:
-          </Text>
+          <Text fw="bold">Programming Languages:</Text>
           Javascript, Typescript, C#, SQL
         </ListItem>
       </List>

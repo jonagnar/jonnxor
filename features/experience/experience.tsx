@@ -19,8 +19,9 @@ export function Experience() {
                 Advania
               </Anchor>
             </ListItem>
-            <ListItem fz="sm">Senior Frontend Developer</ListItem>
-            <ListItem fz="sm">2016 - 2024</ListItem>
+            <ListItem>Frontend Web/App Developer</ListItem>
+            <ListItem>2016 - 2024</ListItem>
+            <ListItem>Design, build and maintain webs/apps</ListItem>
           </List>
         </ListItem>
         <ListItem>
@@ -35,15 +36,17 @@ export function Experience() {
                 Reykjavík University
               </Anchor>
             </ListItem>
-            <ListItem fz="sm">Teaching Assistant</ListItem>
-            <ListItem fz="sm">2016</ListItem>
+            <ListItem>Teaching Assistant</ListItem>
+            <ListItem>2016</ListItem>
+            <ListItem>Course: Web Development</ListItem>
           </List>
         </ListItem>
         <ListItem>
           <List spacing={0} listStyleType="none">
             <ListItem fw="bold">Outcome</ListItem>
-            <ListItem fz="sm">Technician</ListItem>
-            <ListItem fz="sm">2012 - 2014</ListItem>
+            <ListItem>Technician</ListItem>
+            <ListItem>2012 - 2014</ListItem>
+            <ListItem>HTML Email Marketing & IT Support</ListItem>
           </List>
         </ListItem>
       </List>

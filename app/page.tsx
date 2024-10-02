@@ -17,7 +17,7 @@ export default function HomePage() {
           </Group>
         </Container>
       </Box>
-      <Box component="main" my="lg">
+      <Box component="main" mt="lg" mb="xl">
         <Container h="100%" px="lg">
           <CoverLetter />
           <CV />

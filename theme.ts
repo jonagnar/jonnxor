@@ -28,11 +28,11 @@ export const theme = createTheme({
     xl: rem(21.33), // 16pt
   },
   lineHeights: {
-    xs: '1.375',
-    sm: '1.375',
-    md: '1.375',
-    lg: '1.375',
-    xl: '1.375',
+    xs: '1.5',
+    sm: '1.5',
+    md: '1.5',
+    lg: '1.5',
+    xl: '1.5',
   },
   headings: {
     fontFamily: 'var(--font-orbitron)',

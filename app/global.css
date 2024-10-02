@@ -23,6 +23,10 @@ body {
   border-color: var(--mantine-color-lime-5);
 }
 
+.grid {
+  gap: var(--mantine-spacing-md);
+}
+
 /* Typography */
 ::selection {
   background-color: var(--mantine-color-lime-5);
@@ -55,13 +59,15 @@ body {
   body {
     --mantine-font-family-headings: var(--mantine-font-family);
     --mantine-heading-font-weight: 700;
+    --mantine-color-body: #fff;
+    --mantine-color-text: #000;
   }
 
   a {
     color: #000 !important;
   }
 
-  .icon {
+  svg {
     color: #000;
   }
 

@@ -10,19 +10,18 @@ export function CoverLetter() {
         <Text>
           Dear Hiring Manager, <br />
           <br />
-          I am a highly skilled Senior Frontend Web Developer with over 8 years of professional
-          experience in building scalable, responsive, and user-centric web applications. My
+          I am a highly skilled Frontend Web/App Developer with over 8 years of professional
+          experience in building scalable, responsive, and user-centric web/mobile applications. My
           expertise spans a wide range of modern web technologies, frameworks, and tools, including
-          React, Vue, NextJS, and TypeScript, making me a versatile and valuable asset for any
+          React, TypeScript, Next.js, and Vue, making me a versatile and valuable asset for any
           project requiring high-quality frontend solutions.
           <br />
           <br />
-          During my tenure as a Senior Frontend Developer at Advania, I contributed to numerous
-          projects for companies such as Arion bank, Reykjavík Energy, Advania and Landspítalinn. My
-          role involved closely collaborating with cross-functional teams to create efficient and
+          During my tenure as a Frontend Developer at Advania, I contributed to numerous projects.
+          My role involved closely collaborating with cross-functional teams to create efficient and
           maintainable codebases, ensuring the seamless integration of frontend interfaces with
           backend systems. I also have experience working with various UI frameworks, such as
-          Bootstrap, Material UI, and Tailwind CSS, allowing me to create visually appealing and
+          Bootstrap, Tailwind CSS, and Ionic, allowing me to create visually appealing and
           responsive designs.
           <br />
           <br />
@@ -31,10 +30,10 @@ export function CoverLetter() {
         <List spacing="xs" withPadding>
           <ListItem>
             Frontend Technologies: Advanced proficiency in React, React Native, and Vue,
-            complemented by hands-on experience with frameworks like NextJS, Expo, and Ionic.
+            complemented by hands-on experience with frameworks like Next.js, Expo, and Ionic.
           </ListItem>
           <ListItem>
-            DevOps and Development Tools: Strong experience with NodeJS, npm, git, and other
+            DevOps and Development Tools: Strong experience with Node.js, npm, git, and other
             essential development tools, enabling me to manage projects efficiently from start to
             deployment.
           </ListItem>

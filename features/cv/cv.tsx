@@ -9,17 +9,17 @@ import { Information } from '@jonnxor/features/information/information';
 
 export function CV() {
   return (
-    <Box mb="lg">
+    <Box>
       <Paper className="cv" withBorder>
-        <SimpleGrid cols={{ base: 1, xs: 2 }}>
+        <SimpleGrid cols={{ base: 1, xs: 2 }} className="grid">
           <Stack>
             <Information />
             <Experience />
-            <Skills />
+            <Education />
           </Stack>
           <Stack>
             <Image />
-            <Education />
+            <Skills />
             <Languages />
           </Stack>
         </SimpleGrid>
