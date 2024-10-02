@@ -1,4 +1,4 @@
-import { Box, Title, Anchor, List, ListItem } from '@mantine/core';
+import { Box, Title, Text, Anchor, List, ListItem } from '@mantine/core';
 
 export function Certification() {
   return (
@@ -12,10 +12,11 @@ export function Certification() {
           <Anchor
             c="var(--mantine-color-lime-5)"
             href="https://www.dalecarnegie.com"
-            td="line-through"
             target="_blank"
           >
-            Dale Carnegie
+            <Text td="line-through" span>
+              Dale Carnegie
+            </Text>
           </Anchor>{' '}
           (work in progress)
         </ListItem>
