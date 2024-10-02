@@ -11,10 +11,7 @@ import { Box, Stack, Group, Title, Text, Anchor, rem } from '@mantine/core';
 export function Information() {
   return (
     <Box component="section">
-      <Title mb="lg" order={2} className="hidden-print">
-        CV
-      </Title>
-      <Title mb="xs" order={3} ff="text">
+      <Title mb="xs" order={3} ff="text" textWrap="wrap">
         Jón Agnar Stefánsson
       </Title>
       <Text mb="md" fz="lg" lh={1}>

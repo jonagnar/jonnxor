@@ -1,4 +1,4 @@
-import { Box, Paper, Stack } from '@mantine/core';
+import { Box, Stack, Paper, Title, Space } from '@mantine/core';
 
 import { Image } from '@jonnxor/features/image/image';
 import { Skills } from '@jonnxor/features/skills/skills';
@@ -10,16 +10,19 @@ import { Certification } from '@jonnxor/features/certification/certification';
 
 export function CV() {
   return (
-    <Box>
+    <Box component="section">
+      <Title mb="lg" order={2} className="hidden-print">
+        CV
+      </Title>
       <Paper className="cv" withBorder>
-        <Box className="grid">
-          <Stack w="100%">
+        <Box className="holy-grail holy-grail--rows">
+          <Stack>
             <Information />
             <Experience />
             <Education />
           </Stack>
-          <hr />
-          <Stack w="100%">
+          <Box component="hr" />
+          <Stack>
             <Image />
             <Certification />
             <Skills />
