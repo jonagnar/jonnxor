@@ -1,7 +1,7 @@
 import NextImage from 'next/image';
 import { Box, Image as MantineImage, rem } from '@mantine/core';
 
-import image from '@jonnxor/public/jon-agnar-stefansson/jon-agnar-stefansson.jpg';
+import image from '@jonnxor/public/jon-agnar-stefansson.jpg';
 
 export function Image() {
   return (
