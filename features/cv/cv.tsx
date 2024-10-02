@@ -1,4 +1,4 @@
-import { Box, Paper, SimpleGrid, Stack } from '@mantine/core';
+import { Box, Paper, Stack } from '@mantine/core';
 
 import { Image } from '@jonnxor/features/image/image';
 import { Skills } from '@jonnxor/features/skills/skills';
