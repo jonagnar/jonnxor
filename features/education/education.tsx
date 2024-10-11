@@ -1,43 +1,25 @@
-import { Box, Title, Anchor, List, ListItem } from '@mantine/core';
+import { Box, Group, Title, List, ListItem, Text, Anchor } from '@mantine/core';
 
 export function Education() {
   return (
     <Box component="section">
-      <Title mb="md" order={3}>
+      <Title mb="sm" order={3}>
         Education
       </Title>
-      <List spacing="xs" listStyleType="none">
+      <List listStyleType="none">
         <ListItem>
-          <List spacing={0} listStyleType="none">
-            <ListItem>
-              <Anchor
-                c="var(--mantine-color-lime-5)"
-                fw="bold"
-                href="https://www.ru.is"
-                target="_blank"
-              >
-                Reykjavík University
-              </Anchor>
-            </ListItem>
-            <ListItem>Bachelor Degree in Computer Science</ListItem>
-            <ListItem>2016</ListItem>
-          </List>
+          <Text fw="bold">Bachelor Degree in Computer Science</Text>
+          <Anchor c="var(--mantine-color-lime-5)" href="https://www.ru.is" target="_blank">
+            Reykjavík University
+          </Anchor>
+          , 2013 - 2016
         </ListItem>
         <ListItem>
-          <List spacing={0} listStyleType="none">
-            <ListItem>
-              <Anchor
-                c="var(--mantine-color-lime-5)"
-                fw="bold"
-                href="https://tskoli.is"
-                target="_blank"
-              >
-                Technical College of Iceland
-              </Anchor>
-            </ListItem>
-            <ListItem>Associate Degree in Computer Studies</ListItem>
-            <ListItem>2013</ListItem>
-          </List>
+          <Text fw="bold">Associate Degree in Computer Studies</Text>
+          <Anchor c="var(--mantine-color-lime-5)" href="https://tskoli.is" target="_blank">
+            Technical College of Iceland
+          </Anchor>
+          , 2009 - 2013
         </ListItem>
       </List>
     </Box>

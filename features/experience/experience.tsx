@@ -3,50 +3,59 @@ import { Box, Title, Anchor, List, ListItem } from '@mantine/core';
 export function Experience() {
   return (
     <Box component="section">
-      <Title mb="md" order={3}>
+      <Title mb="sm" order={3}>
         Experience
       </Title>
-      <List spacing="xs" listStyleType="none">
+      <List listStyleType="none">
         <ListItem>
-          <List spacing={0} listStyleType="none">
+          <List listStyleType="none">
+            <ListItem fw="bold">Software Specialist</ListItem>
             <ListItem>
-              <Anchor
-                c="var(--mantine-color-lime-5)"
-                fw="bold"
-                href="https://advania.is"
-                target="_blank"
-              >
+              <Anchor c="var(--mantine-color-lime-5)" href="https://advania.is" target="_blank">
                 Advania
               </Anchor>
+              , 2016 - 2024
             </ListItem>
-            <ListItem>Frontend Web/App Developer</ListItem>
-            <ListItem>2016 - 2024</ListItem>
-            <ListItem>Design, build and maintain webs/apps</ListItem>
+            <ListItem>
+              <List listStyleType="square" withPadding>
+                <ListItem>Conducted code review processes.</ListItem>
+                <ListItem>Utilized Agile for project management.</ListItem>
+                <ListItem>Collaborated with cross-functional teams.</ListItem>
+                <ListItem>Provided mentorship to junior developers.</ListItem>
+                <ListItem>Automate deployments using CI/CD tools.</ListItem>
+                <ListItem>Frontend Development & API Integrations.</ListItem>
+              </List>
+            </ListItem>
           </List>
         </ListItem>
         <ListItem>
-          <List spacing={0} listStyleType="none">
+          <List listStyleType="none">
+            <ListItem fw="bold">Teaching Assistant</ListItem>
             <ListItem>
-              <Anchor
-                c="var(--mantine-color-lime-5)"
-                fw="bold"
-                href="https://www.ru.is"
-                target="_blank"
-              >
+              <Anchor c="var(--mantine-color-lime-5)" href="https://www.ru.is" target="_blank">
                 Reykjavík University
               </Anchor>
+              , 2016
             </ListItem>
-            <ListItem>Teaching Assistant</ListItem>
-            <ListItem>2016</ListItem>
-            <ListItem>Course: Web Development</ListItem>
+            <ListItem>
+              <List listStyleType="square" withPadding>
+                <ListItem>Conducted weekly study sessions.</ListItem>
+                <ListItem>Assisted students with coursework.</ListItem>
+              </List>
+            </ListItem>
           </List>
         </ListItem>
         <ListItem>
-          <List spacing={0} listStyleType="none">
-            <ListItem fw="bold">Outcome</ListItem>
-            <ListItem>Technician</ListItem>
-            <ListItem>2012 - 2014</ListItem>
-            <ListItem>HTML Email Marketing & IT Support</ListItem>
+          <List listStyleType="none">
+            <ListItem fw="bold">Technician</ListItem>
+            <ListItem>Outcome, 2012 - 2014</ListItem>
+            <ListItem>
+              <List listStyleType="square" withPadding>
+                <ListItem>Developed HTML marketing emails.</ListItem>
+                <ListItem>Computer maintenance & debugging.</ListItem>
+                <ListItem>Provided customer service & IT support.</ListItem>
+              </List>
+            </ListItem>
           </List>
         </ListItem>
       </List>

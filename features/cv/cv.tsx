@@ -1,12 +1,13 @@
 import { Box, Stack, Paper, Title } from '@mantine/core';
 
-import { Image } from '@jonnxor/features/image/image';
 import { Skills } from '@jonnxor/features/skills/skills';
 import { Languages } from '@jonnxor/features/languages/languages';
 import { Education } from '@jonnxor/features/education/education';
+import { Interests } from '@jonnxor/features/interests/interests';
 import { Experience } from '@jonnxor/features/experience/experience';
 import { Information } from '@jonnxor/features/information/information';
 import { Certification } from '@jonnxor/features/certification/certification';
+import Projects from '../projects/projects';
 
 export function CV() {
   return (
@@ -16,17 +17,18 @@ export function CV() {
       </Title>
       <Paper className="cv" withBorder>
         <Box className="holy-grail holy-grail--rows">
-          <Stack>
+          <Stack gap="lg">
             <Information />
             <Experience />
             <Education />
-          </Stack>
-          <Box component="hr" />
-          <Stack style={{ justifySelf: 'center' }}>
-            <Image />
             <Certification />
+          </Stack>
+          <Box component="hr" m={0} />
+          <Stack gap="lg" style={{ justifySelf: 'center' }}>
             <Skills />
+            <Projects />
             <Languages />
+            <Interests />
           </Stack>
         </Box>
       </Paper>

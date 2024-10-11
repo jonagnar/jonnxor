@@ -1,24 +1,15 @@
-import { Box, Title, Text, List, ListItem } from '@mantine/core';
+import { Box, Title, List, ListItem } from '@mantine/core';
 
 export function Languages() {
   return (
     <Box component="section">
-      <Title mb="md" order={3}>
+      <Title mb="sm" order={3}>
         Languages
       </Title>
-      <List spacing="xs" listStyleType="none">
-        <ListItem>
-          <Text fw="bold">Icelandic</Text>
-          Native Proficiency
-        </ListItem>
-        <ListItem>
-          <Text fw="bold">English</Text>
-          Full Professional Proficiency
-        </ListItem>
-        <ListItem>
-          <Text fw="bold">Japanese</Text>
-          Elementary Proficiency
-        </ListItem>
+      <List listStyleType="none">
+        <ListItem>Icelandic - Native Proficiency</ListItem>
+        <ListItem>English - Professional Proficiency</ListItem>
+        <ListItem>Japanese - Elementary Proficiency</ListItem>
       </List>
     </Box>
   );

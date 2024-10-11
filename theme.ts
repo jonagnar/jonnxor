@@ -40,16 +40,16 @@ export const theme = createTheme({
     textWrap: 'nowrap',
     sizes: {
       h1: {
-        fontSize: rem(32), // 24pt
-        lineHeight: '1',
+        fontSize: rem(29.33), // 22pt
+        lineHeight: '1.5',
       },
       h2: {
-        fontSize: rem(29.33), // 22pt
-        lineHeight: '1',
+        fontSize: rem(26.67), // 20pt
+        lineHeight: '1.5',
       },
       h3: {
-        fontSize: rem(26.67), // 20pt
-        lineHeight: '1',
+        fontSize: rem(24), // 18pt
+        lineHeight: '1.5',
       },
     },
   },

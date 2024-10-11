@@ -9,7 +9,7 @@ import { CoverLetter } from '@jonnxor/features/cover-letter/cover-letter';
 export default function HomePage() {
   return (
     <Box className="holy-grail holy-grail--columns">
-      <Box component="header" py="md" className="border-b hidden-print">
+      <Box component="header" py="lg" className="header">
         <Container h="100%" px="lg">
           <Group h="100%" align="center" justify="space-between">
             <Header />
@@ -17,13 +17,13 @@ export default function HomePage() {
           </Group>
         </Container>
       </Box>
-      <Box component="main" mt="lg" mb="xl">
+      <Box component="main" my="lg">
         <Container h="100%" px="lg">
           <CoverLetter />
           <CV />
         </Container>
       </Box>
-      <Box component="footer" py="md" className="border-t hidden-print">
+      <Box component="footer" py="md" className="footer">
         <Container h="100%" px="lg">
           <Group h="100%" align="center" justify="space-between">
             <Download />

@@ -2,7 +2,7 @@ import { Group, Avatar, Title, Text } from '@mantine/core';
 
 export function Header() {
   return (
-    <Group gap="lg">
+    <Group>
       <Avatar color="var(--mantine-color-lime-5)" variant="filled">
         <Text c="dark" fz="lg" fw="bold">
           JA

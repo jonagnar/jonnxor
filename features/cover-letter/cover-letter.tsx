@@ -2,35 +2,33 @@ import { Box, Paper, Title, Text, List, ListItem } from '@mantine/core';
 
 export function CoverLetter() {
   return (
-    <Box mb="lg" className="hidden-print" component="section">
+    <Box mb="xl" className="hidden-print" component="section">
       <Title mb="lg" order={2}>
         Cover Letter
       </Title>
       <Paper className="cover-letter" withBorder>
         <Text>
-          Dear Hiring Manager, <br />
+          Dear Reader, <br />
           <br />
-          I am a highly skilled Frontend Web/App Developer with over 8 years of professional
-          experience in building scalable, responsive, and user-centric web/mobile applications. My
+          I am a skilled frontend web & app developer with over 8 years of professional experience
+          in building scalable, responsive, and user-centric web and mobile applications. My
           expertise spans a wide range of modern web technologies, frameworks, and tools, including
-          React, TypeScript, Next.js, and Vue, making me a versatile and valuable asset for any
-          project requiring high-quality frontend solutions.
-          <br />
+          React, TypeScript, and Next.js, making me a versatile and valuable asset for any project
+          requiring high-quality frontend solutions. <br />
           <br />
           During my tenure as a Frontend Developer at Advania, I contributed to numerous projects.
           My role involved closely collaborating with cross-functional teams to create efficient and
           maintainable codebases, ensuring the seamless integration of frontend interfaces with
           backend systems. I also have experience working with various UI frameworks, such as
           Bootstrap, Tailwind CSS, and Ionic, allowing me to create visually appealing and
-          responsive designs.
-          <br />
+          responsive designs. <br />
           <br />
         </Text>
         <Text mb="xs">Some of my key skills and experiences include:</Text>
-        <List spacing="xs" withPadding>
+        <List mb="lg" spacing="xs" withPadding>
           <ListItem>
-            Frontend Technologies: Advanced proficiency in React, React Native, and Vue,
-            complemented by hands-on experience with frameworks like Next.js, Expo, and Ionic.
+            Frontend Technologies: Advanced proficiency in React, React Native, and Typescript,
+            complemented by hands-on experience with frameworks like Next.js, Ionic and Mantine.
           </ListItem>
           <ListItem>
             DevOps and Development Tools: Strong experience with Node.js, npm, git, and other
@@ -42,7 +40,6 @@ export function CoverLetter() {
             comprehensive foundation for developing dynamic and data-driven applications.
           </ListItem>
         </List>
-        <br />
         <Text>
           I hold a Bachelor&apos;s Degree in Computer Science from Reykjavík University, and I am
           fluent in both Icelandic and English. My technical background, combined with a strong
