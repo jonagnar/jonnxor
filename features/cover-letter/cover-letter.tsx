@@ -10,11 +10,11 @@ export function CoverLetter() {
         <Text>
           Dear Reader, <br />
           <br />
-          I am a skilled frontend web & app developer with over 8 years of professional experience
-          in building scalable, responsive, and user-centric web and mobile applications. My
-          expertise spans a wide range of modern web technologies, frameworks, and tools, including
-          React, TypeScript, and Next.js, making me a versatile and valuable asset for any project
-          requiring high-quality frontend solutions. <br />
+          I am a highly skilled frontend web, app and cross-platform developer with over 8 years of
+          professional experience in building scalable, responsive, and user-centric web and mobile
+          applications. My expertise spans a wide range of modern web technologies, frameworks, and
+          tools, including React, TypeScript, and Next.js, making me a versatile and valuable asset
+          for any project requiring high-quality frontend solutions. <br />
           <br />
           During my tenure as a Frontend Developer at Advania, I contributed to numerous projects.
           My role involved closely collaborating with cross-functional teams to create efficient and
@@ -44,8 +44,7 @@ export function CoverLetter() {
           I hold a Bachelor&apos;s Degree in Computer Science from Reykjavík University, and I am
           fluent in both Icelandic and English. My technical background, combined with a strong
           understanding of frontend development best practices, makes me confident in my ability to
-          contribute meaningfully to any organization or project.
-          <br />
+          contribute meaningfully to any organization or project. <br />
           <br />
           Thank you for considering my qualifications. I look forward to bringing my expertise to
           challenging and innovative projects that value quality, performance, and user experience.
