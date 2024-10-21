@@ -4,7 +4,6 @@ import { CV } from '@jonnxor/features/cv/cv';
 import { Header } from '@jonnxor/features/header/header';
 import { Download } from '@jonnxor/features/download/download';
 import { SocialMedia } from '@jonnxor/features/social-media/social-media';
-import { CoverLetter } from '@jonnxor/features/cover-letter/cover-letter';
 
 export default function HomePage() {
   return (
@@ -19,7 +18,6 @@ export default function HomePage() {
       </Box>
       <Box component="main" my="lg">
         <Container h="100%" px="lg">
-          <CoverLetter />
           <CV />
         </Container>
       </Box>

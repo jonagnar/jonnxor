@@ -13,8 +13,6 @@ body {
 .holy-grail {
   height: 100%;
   display: grid;
-
-  gap: var(--mantine-spacing-lg);
 }
 
 .holy-grail--rows {
