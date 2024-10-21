@@ -1,27 +1,27 @@
-# Project Title
+# JonnXor.is
 
-A short description about the project and/or client.
+Personal cv/resume/portfolio website + Cover Letter.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+```
+$ npm i
+$ npm run dev
+```
 
 ### Prerequisites
 
 The things you need before installing the software.
 
-- You need this
-- And you need this
-- Oh, and don't forget this
+- Node.js
+- Terminal
 
 ### Installation
 
 A step by step guide that will tell you how to get the development environment up and running.
 
 ```
-$ First step
-$ Another step
-$ Final step
+$ npm i
 ```
 
 ## Usage
@@ -29,31 +29,28 @@ $ Final step
 A few examples of useful commands and/or tasks.
 
 ```
-$ First example
-$ Second example
-$ And keep this in mind
+$ npm run dev
+$ npm run build
+$ npm run start
+$ npm run lint
+$ npm run prettier:write
+$ npm run test
 ```
 
 ## Deployment
 
-Additional notes on how to deploy this on a live or release system. Explaining the most important branches, what pipelines they trigger and how to update the database (if anything special).
+CI/CD Pipeline through vercel, push to main, and vercel deploys automagically.
 
 ### Server
 
-- Live:
-- Release:
-- Development:
+- Live: https://www.jonnxor.is
+- Development: preview.jonnxor.is
 
 ### Branches
 
-- Master:
-- Feature:
-- Bugfix:
-- etc...
+- Main: Live
+- Preview: Development
 
 ## Additional Documentation and Acknowledgments
 
-- Project folder on server:
-- Confluence link:
-- Asana board:
-- etc...
+- TODO: Integrate with Supabase.
