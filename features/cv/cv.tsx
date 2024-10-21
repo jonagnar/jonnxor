@@ -1,13 +1,13 @@
 import { Box, Stack, Paper, Title } from '@mantine/core';
 
 import { Skills } from '@jonnxor/features/skills/skills';
+import { Projects } from '@jonnxor/features/projects/projects';
 import { Languages } from '@jonnxor/features/languages/languages';
 import { Education } from '@jonnxor/features/education/education';
 import { Interests } from '@jonnxor/features/interests/interests';
 import { Experience } from '@jonnxor/features/experience/experience';
 import { Information } from '@jonnxor/features/information/information';
 import { Certification } from '@jonnxor/features/certification/certification';
-import Projects from '../projects/projects';
 
 export function CV() {
   return (

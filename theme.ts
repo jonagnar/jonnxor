@@ -41,15 +41,15 @@ export const theme = createTheme({
     sizes: {
       h1: {
         fontSize: rem(29.33), // 22pt
-        lineHeight: '1.5',
+        lineHeight: '1',
       },
       h2: {
         fontSize: rem(26.67), // 20pt
-        lineHeight: '1.5',
+        lineHeight: '1',
       },
       h3: {
         fontSize: rem(24), // 18pt
-        lineHeight: '1.5',
+        lineHeight: '1',
       },
     },
   },
